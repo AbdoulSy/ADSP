@@ -1,0 +1,20 @@
+---
+resources:
+- name: glacius
+  type: git
+  source:
+    uri: http://rose.abdoulsy.eu/asy/Glacius.git 
+
+jobs:
+- name: job-deploy
+  plan:
+  - get: glacius
+  - task: deploy
+    config:
+      platform: linux
+      image: docker:///busybox
+      inputs:
+        - name: glacius-imp
+      run:
+        path: npm
+        args: [start]
