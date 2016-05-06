@@ -14,8 +14,6 @@ jobs:
     config:
       platform: linux
       image: docker:///node#argon
-      inputs:
-      - name: resource-glacius
       run:
         path: resource-glacius/bin/install.sh
         args: [glacius]
@@ -29,8 +27,6 @@ jobs:
     config:
       platform: linux
       image: docker:///node#argon
-      inputs:
-      - name: resource-glacius
       run:
         path: resource-glacius/bin/test.sh
         echo: [glacius]
