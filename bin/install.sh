@@ -1,4 +1,3 @@
-ls
-pwd
+cd resource-glacius
 npm install
 
