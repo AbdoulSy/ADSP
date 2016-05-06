@@ -1,20 +1,36 @@
 ---
 resources:
-- name: glacius
+- name: resource-glacius
   type: git
   source:
-    uri: http://rose.abdoulsy.eu/asy/Glacius.git 
+    uri: https://github.com/AbdoulSy/Glacius.git
 
 jobs:
-- name: job-deploy
+- name: job-install
+  serial: true
   plan:
-  - get: glacius
-  - task: deploy
+  - get: resource-glacius
+  - task: run-install
     config:
       platform: linux
-      image: docker:///busybox
+      image: docker:///node#argon
       inputs:
-        - name: glacius-imp
+      - name: resource-glacius
       run:
-        path: npm
-        args: [start]
+        path: resource-glacius/bin/install.sh
+        args: [glacius]
+
+- name: job-test
+  plan:
+  - get: resource-glacius
+    passed: [job-install]
+    trigger: true
+  - task: show-test
+    config:
+      platform: linux
+      image: docker:///node#argon
+      inputs:
+      - name: resource-glacius
+      run:
+        path: resource-glacius/bin/test.sh
+        echo: [glacius]
