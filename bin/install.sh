@@ -1,2 +1,4 @@
+ls
+pwd
 npm install
 
