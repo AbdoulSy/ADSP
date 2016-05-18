@@ -11,7 +11,14 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.webkit.WebView;
 import android.view.MenuItem;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.StringBufferInputStream;
 
 public class EyedolNavigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -80,22 +87,60 @@ public class EyedolNavigation extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
+        if (id == R.id.nav_about) {
+            setContentView(R.layout.activity_eyedol_navigation);
+        } else if (id == R.id.nav_projects) {
+
         } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_cv) {
+            setContentView(R.layout.cv_layout);
+            WebView wv = (WebView) findViewById(R.id.webView);
+            wv.getSettings().setJavaScriptEnabled(true);
+            InputStream cv = getResources().openRawResource(R.raw.cv);
+            BufferedReader r = new BufferedReader(new InputStreamReader(cv));
+            StringBuilder total = new StringBuilder();
+            String line;
+            try {
+                while ((line = r.readLine()) != null) {
+                    total.append(line).append('\n');
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            wv.loadData(String.valueOf(total.toString()), "text/html", "utf-8");
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_geo_message) {
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_geo_send) {
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+
         return true;
     }
 }
