@@ -102,6 +102,10 @@ public class EyedolNavigation extends AppCompatActivity
         } else if (id == R.id.nav_projects) {
 
         } else if (id == R.id.nav_gallery) {
+            setContentView(R.layout.timeline_layout);
+            WebView tv = (WebView) findViewById(R.id.timelineWebView);
+            tv.getSettings().setJavaScriptEnabled(true);
+            tv.loadUrl("https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1TY0RgpoNU8l8I9CNsF1_Gk0cb7kd9MOxZjWuU-gqPSY&font=Default&lang=en&initial_zoom=2&height=650");
 
         } else if (id == R.id.nav_cv) {
             setContentView(R.layout.cv_layout);
