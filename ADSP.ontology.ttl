@@ -15,9 +15,152 @@
 
 #################################################################
 #
+#    Object Properties
+#
+#################################################################
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#contains_people
+
+:contains_people rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_Permissions
+
+:has_Permissions rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_active_email
+
+:has_active_email rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_commit_hash
+
+:has_commit_hash rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_filename
+
+:has_filename rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_name
+
+:has_name rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_os
+
+:has_os rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_os_path
+
+:has_os_path rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_owner
+
+:has_owner rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_phone
+
+:has_phone rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_phone_number
+
+:has_phone_number rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_problem_since_commit_hash
+
+:has_problem_since_commit_hash rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_team
+
+:has_team rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_valid_syntax
+
+:has_valid_syntax rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_dir
+
+:is_dir rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_empty
+
+:is_empty rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_file
+
+:is_file rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_in_project
+
+:is_in_project rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_in_project_milestone
+
+:is_in_project_milestone rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_versionned
+
+:is_versionned rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#runs_in_os
+
+:runs_in_os rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
 #    Classes
 #
 #################################################################
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Author
+
+:Author rdf:type owl:Class ;
+        
+        rdfs:subClassOf :User .
+
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_Versioning_System
@@ -104,6 +247,18 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#People
+
+:People rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Person
+
+:Person rdf:type owl:Class .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Program
 
 :Program rdf:type owl:Class ;
@@ -117,6 +272,28 @@
 :Project rdf:type owl:Class ;
          
          rdfs:comment "The Concept of a Project"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_Milestone
+
+:Project_Milestone rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Project .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Team
+
+:Team rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User
+
+:User rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Person .
 
 
 
