@@ -1,0 +1,25 @@
+{
+  "name": "adsp",
+  "version": "1.0.0",
+  "description": "Application Development Surveillance Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "node bin/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdoulSy/ADSP.git"
+  },
+  "keywords": [
+    "Code",
+    "Management",
+    "AI",
+    "Sparql"
+  ],
+  "author": "Abdoul Sy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdoulSy/ADSP/issues"
+  },
+  "homepage": "https://github.com/AbdoulSy/ADSP#readme"
+}
