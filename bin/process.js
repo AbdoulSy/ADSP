@@ -1,14 +1,33 @@
 /* jshint esversion: 6 */
-var CDocParser = require('cdocparser');
+const CDocParser = require('cdocparser');
 
-var walk    = require('walk');
-var fs      = require('fs');
-var path    = require('path');
-var _       = require('lodash');
-var walker  = walk.walk("./projects", { followLinks: true});
-var MarklogicClient = require('marklogic');
-var assert = require('assert');
-// Connection URL
+const walk    = require('walk');
+const fs      = require('fs');
+const path    = require('path');
+const _       = require('lodash');
+const my      = require('../env/env.js');
+
+const walker  = walk.walk("./projects", { followLinks: true});
+const MarklogicClient = require('marklogic');
+//connecting to Marklogic
+
+var db = MarklogicClient.createDatabaseClient(my.connection);
+//
+
+console.log("\n CONNEXION ESTABLISHED");
+var previousProcess;
+
+db.documents.read('/ps/process.json')
+   .result( function(documents) {
+      previousProcess = documents;
+      console.log(documents);
+      console.log("element retrieved");
+      documents.forEach(function(document) {
+       // console.log(JSON.stringify(document));
+      });
+    }, function(error) {
+      console.log(JSON.stringify(error, null, 2));
+    });
 
 var resultsOfParsing = {};
 
@@ -86,7 +105,24 @@ function endHandler() {
   resultsOfParsing.walkEnd = Date.now();
   resultsOfParsing.walkTime = resultsOfParsing.walkEnd - resultsOfParsing.walkStart + "ms";
   console.log("all done");
-  console.log(JSON.stringify(resultsOfParsing));
+  console.log(resultsOfParsing);
+  var documents = [
+    { uri: '/ps/process.json',
+      content: resultsOfParsing 
+    }
+  ];
+  db.documents.write(documents)
+  .result(function(response) {
+    console.log("parsing results sent successfully");
+    console.log('Loaded the following documents:');
+    response.documents.forEach( function(document) {
+      console.log('  ' + document.uri);
+    });
+  }, function (error) {
+    console.log(JSON.stringify(error,null,2));
+  });
+
+
   console.log(`begining watching the root directory for all projects to feed the board realtime on ${resultsOfParsing.directories[0].root}`);
   fs.watch(resultsOfParsing.directories[0].root, (eventType, filename) => {
     console.log(`event type is: ${eventType}`);
