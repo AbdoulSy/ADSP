@@ -22,127 +22,220 @@
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#contains_people
 
-:contains_people rdf:type owl:ObjectProperty .
+:contains_people rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:domain :Team ;
+                 
+                 rdfs:range :People .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_Permissions
 
-:has_Permissions rdf:type owl:ObjectProperty .
+:has_Permissions rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:domain :Directory ,
+                             :File .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_active_email
 
-:has_active_email rdf:type owl:ObjectProperty .
+:has_active_email rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:domain :Member ;
+                  
+                  rdfs:range :Email .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_commit_hash
 
-:has_commit_hash rdf:type owl:ObjectProperty .
+:has_commit_hash rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:domain :Commit ;
+                 
+                 rdfs:range :Commit_Hash .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_filename
 
-:has_filename rdf:type owl:ObjectProperty .
+:has_filename rdf:type owl:ObjectProperty ;
+              
+              rdfs:domain :File ;
+              
+              rdfs:range :File_Name .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_name
 
-:has_name rdf:type owl:ObjectProperty .
+:has_name rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :People ;
+          
+          rdfs:range :Name .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_os
 
-:has_os rdf:type owl:ObjectProperty .
+:has_os rdf:type owl:ObjectProperty ;
+        
+        rdfs:domain :Computer ,
+                    :OS_Path ;
+        
+        rdfs:range :OS .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_os_path
 
-:has_os_path rdf:type owl:ObjectProperty .
+:has_os_path rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain :Directory ,
+                         :File ;
+             
+             rdfs:range :OS_Path .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_owner
 
-:has_owner rdf:type owl:ObjectProperty .
+:has_owner rdf:type owl:ObjectProperty ;
+           
+           rdfs:domain :Directory ,
+                       :File ;
+           
+           rdfs:range :People ,
+                      :Person .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_phone
 
-:has_phone rdf:type owl:ObjectProperty .
-
-
-
-###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_phone_number
-
-:has_phone_number rdf:type owl:ObjectProperty .
+:has_phone rdf:type owl:ObjectProperty ;
+           
+           rdfs:domain :Cross_Functional_Team ,
+                       :Member .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_problem_since_commit_hash
 
-:has_problem_since_commit_hash rdf:type owl:ObjectProperty .
+:has_problem_since_commit_hash rdf:type owl:ObjectProperty ;
+                               
+                               rdfs:domain :Program ;
+                               
+                               rdfs:range :Problem .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_team
 
-:has_team rdf:type owl:ObjectProperty .
+:has_team rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :Project ;
+          
+          rdfs:range :Team .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_valid_syntax
 
-:has_valid_syntax rdf:type owl:ObjectProperty .
+:has_valid_syntax rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:domain :Valid_File ;
+                  
+                  rdfs:range :Code_File .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_dir
 
-:is_dir rdf:type owl:ObjectProperty .
+:is_dir rdf:type owl:ObjectProperty ;
+        
+        rdfs:domain :Directory ;
+        
+        rdfs:range :OS_Path .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_empty
 
-:is_empty rdf:type owl:ObjectProperty .
+:is_empty rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :Empty_Directory ,
+                      :Empty_File .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_file
 
-:is_file rdf:type owl:ObjectProperty .
+:is_file rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain :File ;
+         
+         rdfs:range :OS_Path .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_group_of
+
+:is_group_of rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain :People ,
+                         :Task ,
+                         :Tasks ,
+                         :Team ;
+             
+             rdfs:range :Action ,
+                        :Member ,
+                        :Person ,
+                        :Task .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_in_project
 
-:is_in_project rdf:type owl:ObjectProperty .
+:is_in_project rdf:type owl:ObjectProperty ;
+               
+               rdfs:domain :Action ,
+                           :Code_Versioning_System ,
+                           :Directory ,
+                           :File ,
+                           :People ,
+                           :Person ,
+                           :Program ,
+                           :Project_Event ,
+                           :Project_Milestone ,
+                           :Task ,
+                           :Tasks ;
+               
+               rdfs:range :Project .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_in_project_milestone
 
-:is_in_project_milestone rdf:type owl:ObjectProperty .
-
-
-
-###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_versionned
-
-:is_versionned rdf:type owl:ObjectProperty .
+:is_in_project_milestone rdf:type owl:ObjectProperty ;
+                         
+                         rdfs:domain :Project_Event ,
+                                     :Task ,
+                                     :Tasks ;
+                         
+                         rdfs:range :Project_Milestone .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#runs_in_os
 
-:runs_in_os rdf:type owl:ObjectProperty .
+:runs_in_os rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :Program ;
+            
+            rdfs:range :OS .
 
 
 
@@ -155,11 +248,43 @@
 #################################################################
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Action
+
+:Action rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Application_Name
+
+:Application_Name rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :Name .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Author
 
 :Author rdf:type owl:Class ;
         
         rdfs:subClassOf :User .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#CSS_File
+
+:CSS_File rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Code_File ;
+          
+          rdfs:comment "The Class of All CSS Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_File
+
+:Code_File rdf:type owl:Class ;
+           
+           rdfs:subClassOf :File .
 
 
 
@@ -199,6 +324,54 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Complementary_Dysfunctional_Team
+
+:Complementary_Dysfunctional_Team rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf :Team ;
+                                  
+                                  rdfs:comment "The Class of Teams Where each member does its things and when all combined, the project can go forwards, but somehow a member is failing the project"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Complementary_Functional_Team
+
+:Complementary_Functional_Team rdf:type owl:Class ;
+                               
+                               rdfs:subClassOf :Team ;
+                               
+                               rdfs:comment """The Class of Teams Where Each Member knows its own things and when all are combined
+The work should go fine, however is a member fails, it COULD be dysfunctional"""^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Computer
+
+:Computer rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Configuration_File
+
+:Configuration_File rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Code_File ;
+                    
+                    rdfs:comment "The Class of all Configuration Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Cross_Functional_Team
+
+:Cross_Functional_Team rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Team ;
+                       
+                       rdfs:comment """The Class of Team of People where Each Member Could do the Work of the Other.
+And the process is working soundly (rational)"""^^xsd:string .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Directory
 
 :Directory rdf:type owl:Class ;
@@ -207,11 +380,113 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Documentation_File
+
+:Documentation_File rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Code_File ;
+                    
+                    rdfs:comment "The Class of All Documentation Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Dysfunctional_team
+
+:Dysfunctional_team rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Team ;
+                    
+                    rdfs:comment "The Class of all dysfunctional teams"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ES5_JS_File
+
+:ES5_JS_File rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Javascript_File ;
+             
+             rdfs:comment "The Class of All ES5 JS Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ES6_JS_File
+
+:ES6_JS_File rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Javascript_File ;
+             
+             rdfs:comment "The Class of All ES6 Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Email
+
+:Email rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Empty_Directory
+
+:Empty_Directory rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Directory .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Empty_File
+
+:Empty_File rdf:type owl:Class ;
+            
+            rdfs:subClassOf :File .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Erlang_File
+
+:Erlang_File rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Code_File ;
+             
+             rdfs:comment "The Class of All Erlang Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Error
+
+:Error rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Problem .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Errors
+
+:Errors rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Problem .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Event
+
+:Event rdf:type owl:Class .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#File
 
 :File rdf:type owl:Class ;
       
       rdfs:comment "A Document using the file:// protocol"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#File_Name
+
+:File_Name rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Name .
 
 
 
@@ -225,9 +500,87 @@
 
 
 
-###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Mac_OSX
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Go_File
 
-:Mac_OSX rdf:type owl:Class .
+:Go_File rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Code_File ;
+         
+         rdfs:comment "The Class of all Go Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Group
+
+:Group rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Group_Name
+
+:Group_Name rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#HTML_File
+
+:HTML_File rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Code_File ;
+           
+           rdfs:comment "The Class of All HTML Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Javascript_File
+
+:Javascript_File rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Code_File ;
+                 
+                 rdfs:comment "The Class of all Javascript Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Laptop
+
+:Laptop rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Computer .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Markdown_File
+
+:Markdown_File rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Documentation_File ;
+               
+               rdfs:comment "The Class of All Markdown Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Member
+
+:Member rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Person .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Name
+
+:Name rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#OS
+
+:OS rdf:type owl:Class ;
+    
+    owl:equivalentClass :Operating_System .
 
 
 
@@ -241,9 +594,40 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Older_JS_Files
+
+:Older_JS_Files rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Javascript_File ;
+                
+                rdfs:comment "The Class of All Older JS Files"^^xsd:string .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Operating_System
 
 :Operating_System rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#PC
+
+:PC rdf:type owl:Class ;
+    
+    owl:equivalentClass :Personal_Computer ;
+    
+    rdfs:subClassOf :Computer .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Parallel_Functionning_Team
+
+:Parallel_Functionning_Team rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Team ;
+                            
+                            rdfs:comment """The Class of Teams of People where each member does the same thing
+and that would somewhat work"""^^xsd:string .
 
 
 
@@ -256,6 +640,40 @@
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Person
 
 :Person rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Person_Name
+
+:Person_Name rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Personal_Computer
+
+:Personal_Computer rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Computer .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Phone
+
+:Phone rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Practice
+
+:Practice rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Problem
+
+:Problem rdf:type owl:Class .
 
 
 
@@ -275,6 +693,14 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_Event
+
+:Project_Event rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Event .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_Milestone
 
 :Project_Milestone rdf:type owl:Class ;
@@ -283,9 +709,95 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Ruby_File
+
+:Ruby_File rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Code_File ;
+           
+           rdfs:comment "The Class of All Ruby Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Sass_Files
+
+:Sass_Files rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Code_File ;
+            
+            rdfs:comment "The Class of all Sass Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Scala_File
+
+:Scala_File rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Code_File ;
+            
+            rdfs:comment "The Class of all scala files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Smart_Car
+
+:Smart_Car rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Computer .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Smart_Thing
+
+:Smart_Thing rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Computer .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Smartphone
+
+:Smartphone rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Computer .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Smartwatch
+
+:Smartwatch rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Computer .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Task
+
+:Task rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Tasks
+
+:Tasks rdf:type owl:Class .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Team
 
-:Team rdf:type owl:Class .
+:Team rdf:type owl:Class ;
+      
+      rdfs:subClassOf :People .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Transpiled_File
+
+:Transpiled_File rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Code_File ;
+                 
+                 rdfs:comment "The Class of All Transpiled Files"^^xsd:string .
 
 
 
@@ -297,9 +809,27 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Valid_File
+
+:Valid_File rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Code_File ;
+            
+            rdfs:comment "the Class of All valid files - you may want to show valid classes in your visual representation as green or something"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Versionned_File
+
+:Versionned_File rdf:type owl:Class .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Virtual_Machine
 
-:Virtual_Machine rdf:type owl:Class .
+:Virtual_Machine rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Computer .
 
 
 
