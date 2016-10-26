@@ -1,4 +1,6 @@
+/* jshint esversion: 6 */
 var CDocParser = require('cdocparser');
+
 var walk    = require('walk');
 var fs      = require('fs');
 var path    = require('path');
@@ -7,12 +9,36 @@ var walker  = walk.walk("./projects", { followLinks: true});
 var MarklogicClient = require('marklogic');
 var assert = require('assert');
 // Connection URL
-var url = 'mongodb://localhost:27017/todos';
 
+var resultsOfParsing = {};
+
+//TODO: get the last result as json from Marklogic 
+
+
+//trying to implement an idempotent method to preserve resources
+//we store when the walk Has started to monitor the speed of the crawling
+resultsOfParsing.walkStart = Date.now(); 
+
+walker.on("directories", dirHandler);
 walker.on("file", fileHandler);
 walker.on("errors", errorsHandler); // plural
 walker.on("end", endHandler);
 
+
+resultsOfParsing.directories = [];
+var d = resultsOfParsing.directories;
+function dirHandler(root, dirStatsArray, next) {
+	let theDir = {};
+	theDir.root = root;
+	theDir.dirs = _.map(dirStatsArray, function (dir) {
+		return {
+			name: dir.name,
+			mtime: dir.mtime
+		};
+	});
+	d.push(theDir);
+	next();
+}
 
 function fileHandler(root, fileStat, next) {
   fs.readFile(path.resolve(root, fileStat.name), "utf-8", function (err, buffer) {
@@ -54,15 +80,23 @@ function errorsHandler(root, nodeStatsArray, next) {
   next();
 }
 
-var resultsOfParsing = [];
+resultsOfParsing.files = [];
 
 function endHandler() {
+  resultsOfParsing.walkEnd = Date.now();
+  resultsOfParsing.walkTime = resultsOfParsing.walkEnd - resultsOfParsing.walkStart + "ms";
   console.log("all done");
-
-  resultsOfParsing.forEach(function(item){
-     console.log(item.file, item.author, item.TODO, item.project, item.milestone, item.collabs);
-  
+  console.log(JSON.stringify(resultsOfParsing));
+  console.log(`begining watching the root directory for all projects to feed the board realtime on ${resultsOfParsing.directories[0].root}`);
+  fs.watch(resultsOfParsing.directories[0].root, (eventType, filename) => {
+    console.log(`event type is: ${eventType}`);
+      if (filename) {
+          console.log(`filename provided: ${filename}`);
+      } else {
+	        console.log('filename not provided');
+      }
   });
+  console.log("press ^C (Ctrl C) to quit");
 }
 
 function initiateCommentReader(opts, code) {
@@ -147,8 +181,8 @@ function initiateCommentReader(opts, code) {
 	if(comment.collabs !== '--') {
 	  ext.collabs= comment.collabs;
 	}   
-	var a = _.extend(comment,ext);
-        resultsOfParsing.push(a);
+	var a = _.extend(comment, ext);
+        resultsOfParsing.files.push(a);
     });
 
 }

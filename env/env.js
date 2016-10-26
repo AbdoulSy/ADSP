@@ -5,7 +5,7 @@ var dev =  {
   user: "writer",        // Our newly-created user with at least the rest-writer role
   password: "stupid password",  // writer's password
   authType: "DIGEST"     // The default auth
-}
+};
 
 // Another connection. Change the module.exports below to 
 // use it without having to change consuming code.
@@ -16,8 +16,8 @@ var test =  {
   user: "app-writer",
   password: "********",
   authType: "DIGEST"
-}
+};
 
 module.exports = {
   connection: dev       // Export the development connection
-}
+};
