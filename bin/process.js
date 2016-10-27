@@ -12,16 +12,32 @@ const MarklogicClient = require('marklogic');
 //connecting to Marklogic
 
 var db = MarklogicClient.createDatabaseClient(my.connection);
+var qb = MarklogicClient.queryBuilder;
 //
 
 console.log("\n CONNEXION ESTABLISHED");
 var previousProcess;
+var els;
+db.documents.query(
+   qb.where(qb.collection("events"))
+).result()
+.then(function (documents) {
+	let a = [];
+	if(documents.length > 0) {
+           documents.forEach(function (document) {
+	     _.extend(a, document.contents);
+	   });
+           els = a;	   
+	}
+
+    
+    }, function (error) {
+    	console.log(JSON.stringify(error));
+    });
 
 db.documents.read('/ps/process.json')
    .result( function(documents) {
       previousProcess = documents;
-      console.log(documents);
-      console.log("element retrieved");
       documents.forEach(function(document) {
        // console.log(JSON.stringify(document));
       });
@@ -42,7 +58,6 @@ walker.on("directories", dirHandler);
 walker.on("file", fileHandler);
 walker.on("errors", errorsHandler); // plural
 walker.on("end", endHandler);
-
 
 resultsOfParsing.directories = [];
 var d = resultsOfParsing.directories;
@@ -105,7 +120,8 @@ function endHandler() {
   resultsOfParsing.walkEnd = Date.now();
   resultsOfParsing.walkTime = resultsOfParsing.walkEnd - resultsOfParsing.walkStart + "ms";
   console.log("all done");
-  console.log(resultsOfParsing);
+  
+
   var documents = [
     { uri: '/ps/process.json',
       content: resultsOfParsing 
@@ -124,13 +140,24 @@ function endHandler() {
 
 
   console.log(`begining watching the root directory for all projects to feed the board realtime on ${resultsOfParsing.directories[0].root}`);
-  fs.watch(resultsOfParsing.directories[0].root, (eventType, filename) => {
-    console.log(`event type is: ${eventType}`);
-      if (filename) {
-          console.log(`filename provided: ${filename}`);
+  fs.watch(resultsOfParsing.directories[0].root, true,  function(eventType, filename)  {
+      console.log(`event type is: ${eventType}`);
+      let a = {
+        ctime: Date.now(),
+        eventType: eventType,
+        filename: filename
+       };
+      if(!els) {
+        
+        els  = [];
+	els.push(a);
+	db.createCollection('events', els).result();
+	
       } else {
-	        console.log('filename not provided');
+        els.push(a);
+	db.writeCollection('events', els).result();
       }
+
   });
   console.log("press ^C (Ctrl C) to quit");
 }
