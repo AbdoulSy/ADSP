@@ -59,6 +59,16 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_file_extension
+
+:has_file_extension rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:domain :File ;
+                    
+                    rdfs:range :File_Extension .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_filename
 
 :has_filename rdf:type owl:ObjectProperty ;
@@ -243,6 +253,362 @@
 
 #################################################################
 #
+#    Data properties
+#
+#################################################################
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#action_name
+
+:action_name rdf:type owl:DatatypeProperty ;
+             
+             rdfs:domain :Action ;
+             
+             rdfs:range xsd:token .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#application_name_value
+
+:application_name_value rdf:type owl:DatatypeProperty ;
+                        
+                        rdfs:domain :Application ;
+                        
+                        rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#commit_description
+
+:commit_description rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:domain :Commit ,
+                                :Commit_Message ;
+                    
+                    rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#commit_hash
+
+:commit_hash rdf:type owl:DatatypeProperty ;
+             
+             rdfs:domain :Commit ,
+                         :Commit_Hash ;
+             
+             rdfs:range xsd:hexBinary .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#commit_message
+
+:commit_message rdf:type owl:DatatypeProperty ;
+                
+                rdfs:domain :Commit ,
+                            :Commit_Message ;
+                
+                rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#computer_name
+
+:computer_name rdf:type owl:DatatypeProperty ;
+               
+               rdfs:domain :Computer ;
+               
+               rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#email_value
+
+:email_value rdf:type owl:DatatypeProperty ;
+             
+             rdfs:domain :Email ;
+             
+             rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#error_message
+
+:error_message rdf:type owl:DatatypeProperty ;
+               
+               rdfs:domain :Error ;
+               
+               rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#event_created_date
+
+:event_created_date rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:domain :Event ;
+                    
+                    rdfs:range xsd:dateTimeStamp .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#event_description_value
+
+:event_description_value rdf:type owl:DatatypeProperty ;
+                         
+                         rdfs:domain :Event ;
+                         
+                         rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#event_end_date
+
+:event_end_date rdf:type owl:DatatypeProperty ;
+                
+                rdfs:domain :Event ;
+                
+                rdfs:range xsd:dateTimeStamp .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#event_event_date
+
+:event_event_date rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:domain :Event ;
+                  
+                  rdfs:range xsd:dateTimeStamp .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#event_name
+
+:event_name rdf:type owl:DatatypeProperty ;
+            
+            rdfs:domain :Event ;
+            
+            rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#file_extension_value
+
+:file_extension_value rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:domain :File_Extension ;
+                      
+                      rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#file_name_value
+
+:file_name_value rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:domain :File ;
+                 
+                 rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#firstname
+
+:firstname rdf:type owl:DatatypeProperty ;
+           
+           rdfs:domain :Person ;
+           
+           rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#full_filename_value
+
+:full_filename_value rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:domain :File ;
+                     
+                     rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#group_name_value
+
+:group_name_value rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:domain :Group ;
+                  
+                  rdfs:range xsd:token .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#last_name
+
+:last_name rdf:type owl:DatatypeProperty ;
+           
+           rdfs:domain :Person ;
+           
+           rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#middle_name
+
+:middle_name rdf:type owl:DatatypeProperty ;
+             
+             rdfs:domain :Person ;
+             
+             rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#milestone_name_value
+
+:milestone_name_value rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:domain :Project_Milestone ;
+                      
+                      rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#os_name_valie
+
+:os_name_valie rdf:type owl:DatatypeProperty ;
+               
+               rdfs:domain :OS ;
+               
+               rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#os_path_filename_value
+
+:os_path_filename_value rdf:type owl:DatatypeProperty ;
+                        
+                        rdfs:domain :Directory ,
+                                    :File ,
+                                    :Program ;
+                        
+                        rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#path_value
+
+:path_value rdf:type owl:DatatypeProperty ;
+            
+            rdfs:domain :Directory ,
+                        :File ,
+                        :Program ;
+            
+            rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#phone_number_value
+
+:phone_number_value rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:domain :Smartphone ;
+                    
+                    rdfs:range xsd:integer .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_name_value
+
+:project_name_value rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:domain :Project ;
+                    
+                    rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#task_attachment_file_name
+
+:task_attachment_file_name rdf:type owl:DatatypeProperty ;
+                           
+                           rdfs:domain :Card ;
+                           
+                           rdfs:range xsd:token .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#task_closed_date
+
+:task_closed_date rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:domain :Card ;
+                  
+                  rdfs:range xsd:dateTimeStamp .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#task_created_date
+
+:task_created_date rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:domain :Card ;
+                   
+                   rdfs:range xsd:dateTimeStamp .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#task_description_value
+
+:task_description_value rdf:type owl:DatatypeProperty ;
+                        
+                        rdfs:domain :Card ;
+                        
+                        rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#task_name
+
+:task_name rdf:type owl:DatatypeProperty ;
+           
+           rdfs:domain :Card ;
+           
+           rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#task_worked_on_time_value
+
+:task_worked_on_time_value rdf:type owl:DatatypeProperty ;
+                           
+                           rdfs:domain :Card ;
+                           
+                           rdfs:range xsd:integer .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#team_function_name
+
+:team_function_name rdf:type owl:DatatypeProperty ;
+                    
+                    rdfs:domain :Team ;
+                    
+                    rdfs:range xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#team_name
+
+:team_name rdf:type owl:DatatypeProperty ;
+           
+           rdfs:domain :Team ;
+           
+           rdfs:range xsd:string .
+
+
+
+
+
+#################################################################
+#
 #    Classes
 #
 #################################################################
@@ -251,6 +617,12 @@
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Action
 
 :Action rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Application
+
+:Application rdf:type owl:Class .
 
 
 
@@ -277,6 +649,14 @@
           rdfs:subClassOf :Code_File ;
           
           rdfs:comment "The Class of All CSS Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Card
+
+:Card rdf:type owl:Class ;
+      
+      owl:equivalentClass :Task .
 
 
 
@@ -479,6 +859,12 @@ And the process is working soundly (rational)"""^^xsd:string .
 :File rdf:type owl:Class ;
       
       rdfs:comment "A Document using the file:// protocol"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#File_Extension
+
+:File_Extension rdf:type owl:Class .
 
 
 
