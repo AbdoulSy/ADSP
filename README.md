@@ -18,13 +18,19 @@
 ## The Front-End Interface
 
 
-### Phoenix Trello
+### Phoenix Trello by [@bigardone](https://github.com/bigardone/phoenix-trello) 
 [![Build Status](https://travis-ci.org/bigardone/phoenix-trello.svg?branch=master)](https://travis-ci.org/bigardone/phoenix-trello)
 
 
 [Trello](http://trello.com) tribute done with [Elixir](https://github.com/elixir-lang/elixir), [Phoenix Framework](https://github.com/phoenixframework/phoenix), [Webpack](https://github.com/webpack/webpack), [React](https://github.com/facebook/react) and [Redux](https://github.com/rackt/redux).
 
 ![`board`](http://codeloveandboards.com/images/blog/trello_tribute_pt_1/sign-in-a8fa19da.jpg)
+
+
+## The Ontology
+ I've written the ontology using Protégé, the ontology is a set of RDF Triples written both in jsonld and in turtle, through protege's interface :
+
+![`Protege's Web Development Ontology`](https://github.com/AbdoulSy/ADSP/raw/master/protege.png)
 
 
 ### Requirements
