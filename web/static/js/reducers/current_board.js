@@ -42,6 +42,12 @@ export default function reducer(state = initialState, action = {}) {
 
       return { ...state, lists: lists, showForm: false };
 
+    case Constants.CURRENT_BOARD_GENERATED_LIST_CREATED:
+      generated_lists = state.generated_lists;
+      generated_lists.push(generated.list);
+
+      return { ...state, generated_lists: generated_lists, showForm: false };
+
     case Constants.CURRENT_BOARD_CARD_CREATED:
       lists = state.lists;
       const { card } = action;
@@ -50,6 +56,15 @@ export default function reducer(state = initialState, action = {}) {
       lists[listIndex].cards.push(card);
 
       return { ...state, lists: lists };
+
+      ase Constants.CURRENT_BOARD_GENERATED_CARD_CREATED:
+      generated_lists = state.generated_lists;
+      const { card } = action;
+
+      const generatedListIndex = generatedLists.findIndex((generatedList) => { return generated_list.id == card.generated_list_id; });
+      generatedLists[generatedListIndex].cards.push(card);
+
+      return { ...state, generatedLists: generatedLists };
 
     case Constants.CURRENT_BOARD_MEMBER_ADDED:
       const { members } = state;

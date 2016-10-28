@@ -13,7 +13,7 @@ export default class BoardCard extends React.Component {
     return (
       <div id={this.props.id} className="board" >
         <div className="inner">
-          <h5 onClick={::this._handleMileClick}>|@@|</h5>
+          <h5 onClick={::this._handleMileClick}>|     |@@|    |</h5>
           <h4 onClick={::this._handleClick}>{this.props.name}</h4>
         </div>
       </div>

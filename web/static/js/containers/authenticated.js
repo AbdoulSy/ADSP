@@ -31,6 +31,8 @@ const mapStateToProps = (state) => ({
   socket: state.session.socket,
   channel: state.session.channel,
   boards: state.boards,
+  miles: state.miles,
+  currentMile: state.currentMile,
   currentBoard: state.currentBoard,
 });
 
