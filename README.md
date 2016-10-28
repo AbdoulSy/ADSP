@@ -30,7 +30,7 @@
 ## The Ontology
  I've written the ontology using Protégé, the ontology is a set of RDF Triples written both in jsonld and in turtle, through protege's interface :
 
-![`Protege's Web Development Ontology`](//raw.githubusercontent.com/AbdoulSy/ADSP/master/protege.png)
+![`Protege's Web Development Ontology`](https://drive.google.com/file/d/0B69BD_M3GcwXT25oTTV3LXJBRE0/view?usp=sharing)
 
 
 ### Requirements
