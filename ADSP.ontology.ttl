@@ -59,6 +59,16 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_email_status
+
+:has_email_status rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:domain :Email ;
+                  
+                  rdfs:range :Email_Status .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_file_extension
 
 :has_file_extension rdf:type owl:ObjectProperty ;
@@ -128,7 +138,9 @@
 :has_phone rdf:type owl:ObjectProperty ;
            
            rdfs:domain :Cross_Functional_Team ,
-                       :Member .
+                       :Member ;
+           
+           rdfs:range :Phone .
 
 
 
@@ -149,6 +161,18 @@
           rdfs:domain :Project ;
           
           rdfs:range :Team .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_team_member
+
+:has_team_member rdf:type owl:ObjectProperty ;
+                 
+                 owl:inverseOf :is_in_team ;
+                 
+                 rdfs:domain :Team ;
+                 
+                 rdfs:range :Member .
 
 
 
@@ -236,6 +260,16 @@
                                      :Tasks ;
                          
                          rdfs:range :Project_Milestone .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_in_team
+
+:is_in_team rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :Member ;
+            
+            rdfs:range :Team .
 
 
 
@@ -806,6 +840,12 @@ And the process is working soundly (rational)"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Email_Status
+
+:Email_Status rdf:type owl:Class .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Empty_Directory
 
 :Empty_Directory rdf:type owl:Class ;
@@ -880,9 +920,7 @@ And the process is working soundly (rational)"""^^xsd:string .
 
 :Git rdf:type owl:Class ;
      
-     rdfs:subClassOf :Code_Versioning_System ;
-     
-     rdfs:comment "The Git Versioning system allows to create different retro-compatible versions of the code associated with a project"^^xsd:string .
+     rdfs:subClassOf :Code_Versioning_System .
 
 
 
@@ -1226,6 +1264,552 @@ and that would somewhat work"""^^xsd:string .
              rdfs:subClassOf :Project ;
              
              rdfs:comment "A project destined to be on a Web Server for internet use"^^xsd:string .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ADSP
+
+:ADSP rdf:type owl:NamedIndividual ,
+               :Project ;
+      
+      :has_owner :Abdoul_Sy ;
+      
+      :has_team :Senforsce_team ;
+      
+      :project_name_value "ADSP"^^xsd:string ,
+                          "Application Development Surveillance Platform"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Abdoul_Sy
+
+:Abdoul_Sy rdf:type owl:NamedIndividual ,
+                    :Author ,
+                    :Member ;
+           
+           :has_active_email :abdouls_gmail ,
+                             :abdouls_live_email ;
+           
+           :has_phone :abdouls_english_phone ;
+           
+           :is_in_team :Senforsce_team ;
+           
+           :firstname "Abdoul"^^xsd:string ;
+           
+           :last_name "Sy"^^xsd:string ;
+           
+           :middle_name "Assane"^^xsd:string ;
+           
+           rdfs:comment "Myself - The author of this Ontology"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Active_Email_Status
+
+:Active_Email_Status rdf:type owl:NamedIndividual ,
+                              :Email_Status .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Apple_Watch
+
+:Apple_Watch rdf:type owl:NamedIndividual ,
+                      :Smartwatch .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Bower_file
+
+:Bower_file rdf:type owl:NamedIndividual ,
+                     :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Commit_Action
+
+:Commit_Action rdf:type owl:NamedIndividual ,
+                        :Action .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Docker
+
+:Docker rdf:type owl:NamedIndividual ,
+                 :Program .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Docker_File
+
+:Docker_File rdf:type owl:NamedIndividual ,
+                      :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#File_change_event
+
+:File_change_event rdf:type owl:NamedIndividual ,
+                            :Event .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#File_changed
+
+:File_changed rdf:type owl:NamedIndividual ,
+                       :Action .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Full_Stack_Developers
+
+:Full_Stack_Developers rdf:type owl:NamedIndividual ,
+                                :Group .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Gemfile
+
+:Gemfile rdf:type owl:NamedIndividual ,
+                  :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Git
+
+:Git rdf:type owl:NamedIndividual ,
+              :Code_Versioning_System .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Grunt_file
+
+:Grunt_file rdf:type owl:NamedIndividual ,
+                     :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Javascript_Developers
+
+:Javascript_Developers rdf:type owl:NamedIndividual ,
+                                :Group .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Javascript_extension
+
+:Javascript_extension rdf:type owl:NamedIndividual ,
+                               :File_Extension ;
+                      
+                      :file_extension_value "js"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Macbook_air
+
+:Macbook_air rdf:type owl:NamedIndividual ,
+                      :Laptop .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Mix
+
+:Mix rdf:type owl:NamedIndividual ,
+              :Program .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Moto_360
+
+:Moto_360 rdf:type owl:NamedIndividual ,
+                   :Smartwatch .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Node
+
+:Node rdf:type owl:NamedIndividual ,
+               :Program .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Npm
+
+:Npm rdf:type owl:NamedIndividual ,
+              :Program .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Npm_package_file
+
+:Npm_package_file rdf:type owl:NamedIndividual ,
+                           :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Phoenix_Trello
+
+:Phoenix_Trello rdf:type owl:NamedIndividual ,
+                         :Project .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Process
+
+:Process rdf:type owl:NamedIndividual ,
+                  :Program .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_Configuration_Directory
+
+:Project_Configuration_Directory rdf:type owl:NamedIndividual ,
+                                          :Directory .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_directory
+
+:Project_directory rdf:type owl:NamedIndividual ,
+                            :Directory .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_images_directory
+
+:Project_images_directory rdf:type owl:NamedIndividual ,
+                                   :Directory .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_list_directory
+
+:Project_list_directory rdf:type owl:NamedIndividual ,
+                                 :Directory .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Protégé
+
+:Protégé rdf:type owl:NamedIndividual ,
+                  :Application .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#README_files
+
+:README_files rdf:type owl:NamedIndividual ,
+                       :Markdown_File .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Reame_file
+
+:Reame_file rdf:type owl:NamedIndividual ,
+                     :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Root_Project_directory
+
+:Root_Project_directory rdf:type owl:NamedIndividual ,
+                                 :Directory .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Seems_Busy_Email_Status
+
+:Seems_Busy_Email_Status rdf:type owl:NamedIndividual ,
+                                  :Email_Status .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Seems_Inactive_email_status
+
+:Seems_Inactive_email_status rdf:type owl:NamedIndividual ,
+                                      :Email_Status .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Senforsce_team
+
+:Senforsce_team rdf:type owl:NamedIndividual ,
+                         :Team .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Surface_PC
+
+:Surface_PC rdf:type owl:NamedIndividual ,
+                     :Personal_Computer .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Surface_book
+
+:Surface_book rdf:type owl:NamedIndividual ,
+                       :Laptop .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Svn
+
+:Svn rdf:type owl:NamedIndividual ,
+              :Code_Versioning_System .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Task_Resolved
+
+:Task_Resolved rdf:type owl:NamedIndividual ,
+                        :Action .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Task_generated
+
+:Task_generated rdf:type owl:NamedIndividual ,
+                         :Action .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Tesla_Model_3
+
+:Tesla_Model_3 rdf:type owl:NamedIndividual ,
+                        :Smart_Car .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Tesla_Model_S
+
+:Tesla_Model_S rdf:type owl:NamedIndividual ,
+                        :Smart_Car .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Tesla_Model_X
+
+:Tesla_Model_X rdf:type owl:NamedIndividual ,
+                        :Smart_Car .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Told_busy_email_status
+
+:Told_busy_email_status rdf:type owl:NamedIndividual ,
+                                 :Email_Status .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Urien_Salamander
+
+:Urien_Salamander rdf:type owl:NamedIndividual ,
+                           :Project ;
+                  
+                  :has_owner :Abdoul_Sy ;
+                  
+                  :project_name_value "Urien/Salamander"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Vmware_machine
+
+:Vmware_machine rdf:type owl:NamedIndividual ,
+                         :Virtual_Machine .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Web_scraping_event
+
+:Web_scraping_event rdf:type owl:NamedIndividual ,
+                             :Event .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#abdouls_english_phone
+
+:abdouls_english_phone rdf:type owl:NamedIndividual ,
+                                :Phone .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#abdouls_gmail
+
+:abdouls_gmail rdf:type owl:NamedIndividual ,
+                        :Email ;
+               
+               :has_email_status :told_active_email_status ;
+               
+               :email_value "dreescan@gmail.com"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#abdouls_live_email
+
+:abdouls_live_email rdf:type owl:NamedIndividual ,
+                             :Email ;
+                    
+                    :has_email_status :Active_Email_Status ;
+                    
+                    :email_value "abdoul-sy@live.com"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#abdouls_ymail
+
+:abdouls_ymail rdf:type owl:NamedIndividual ,
+                        :Email ;
+               
+               :has_active_email :abdouls_gmail .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#coffeescript_extension
+
+:coffeescript_extension rdf:type owl:NamedIndividual ,
+                                 :File_Extension ;
+                        
+                        :file_extension_value "coffee"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#css_extension
+
+:css_extension rdf:type owl:NamedIndividual ,
+                        :File_Extension ;
+               
+               :file_extension_value "css"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#empty_project_directory
+
+:empty_project_directory rdf:type owl:NamedIndividual ,
+                                  :Empty_Directory .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#erlang_extension
+
+:erlang_extension rdf:type owl:NamedIndividual ,
+                           :File_Extension ;
+                  
+                  :file_extension_value "erl"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#google_pixel
+
+:google_pixel rdf:type owl:NamedIndividual ,
+                       :Smartphone .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#html_extension
+
+:html_extension rdf:type owl:NamedIndividual ,
+                         :File_Extension ;
+                
+                :file_extension_value "html"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#iMac
+
+:iMac rdf:type owl:NamedIndividual ,
+               :Personal_Computer .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#json_extension
+
+:json_extension rdf:type owl:NamedIndividual ,
+                         :File_Extension ;
+                
+                :file_extension_value "json"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#jsonld_extension
+
+:jsonld_extension rdf:type owl:NamedIndividual ,
+                           :File_Extension ;
+                  
+                  :file_extension_value "jsonld"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#nexus_5
+
+:nexus_5 rdf:type owl:NamedIndividual ,
+                  :Smartphone .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#nexus_6x
+
+:nexus_6x rdf:type owl:NamedIndividual ,
+                   :Smartphone .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#package_json
+
+:package_json rdf:type owl:NamedIndividual ,
+                       :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#sass_extension
+
+:sass_extension rdf:type owl:NamedIndividual ,
+                         :File_Extension ;
+                
+                :file_extension_value "scss"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#told_active_email_status
+
+:told_active_email_status rdf:type owl:NamedIndividual ,
+                                   :Email_Status .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#told_inactive_email_status
+
+:told_inactive_email_status rdf:type owl:NamedIndividual ,
+                                     :Email_Status .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#turtle_extension
+
+:turtle_extension rdf:type owl:NamedIndividual ,
+                           :File_Extension ;
+                  
+                  :file_extension_value "ttl"^^xsd:string .
+
+
+
+
+
+#################################################################
+#
+#    Annotations
+#
+#################################################################
+
+
+:Git rdfs:comment "The Git Versioning system allows to create different retro-compatible versions of the code associated with a project"^^xsd:string .
 
 
 
