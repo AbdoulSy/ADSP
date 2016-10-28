@@ -30,6 +30,17 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#friend_of
+
+:friend_of rdf:type owl:ObjectProperty ,
+                    owl:SymmetricProperty ;
+           
+           rdfs:domain :Friend ;
+           
+           rdfs:range :Friend .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_Permissions
 
 :has_Permissions rdf:type owl:ObjectProperty ;
@@ -916,6 +927,14 @@ And the process is working soundly (rational)"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Friend
+
+:Friend rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Person .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Git
 
 :Git rdf:type owl:Class ;
@@ -1163,6 +1182,14 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Sibling
+
+:Sibling rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Person .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Smart_Car
 
 :Smart_Car rdf:type owl:Class ;
@@ -1276,6 +1303,14 @@ and that would somewhat work"""^^xsd:string .
 #################################################################
 
 
+###  http://aria.abdoulsy.eu/ontology#Ozzy
+
+<http://aria.abdoulsy.eu/ontology#Ozzy> rdf:type owl:NamedIndividual ;
+                                        
+                                        owl:sameAs :Ousmane_Ndiaye .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ADSP
 
 :ADSP rdf:type owl:NamedIndividual ,
@@ -1294,7 +1329,14 @@ and that would somewhat work"""^^xsd:string .
 
 :Abdoul_Sy rdf:type owl:NamedIndividual ,
                     :Author ,
+                    :Friend ,
                     :Member ;
+           
+           owl:sameAs :Asy ,
+                      :Doul ;
+           
+           :friend_of :Geraud_Mathe ,
+                      :Ousmane_Ndiaye ;
            
            :has_active_email :abdouls_gmail ,
                              :abdouls_live_email ;
@@ -1327,6 +1369,36 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Arthanan_Tharmaratnam
+
+:Arthanan_Tharmaratnam rdf:type owl:NamedIndividual ,
+                                :Friend ;
+                       
+                       owl:sameAs :Arthy .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Arthy
+
+:Arthy rdf:type owl:NamedIndividual ,
+                :User .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Asy
+
+:Asy rdf:type owl:NamedIndividual ,
+              :User .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Batt
+
+:Batt rdf:type owl:NamedIndividual ,
+               :User .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Bower_file
 
 :Bower_file rdf:type owl:NamedIndividual ,
@@ -1341,6 +1413,15 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Djo
+
+:Djo rdf:type owl:NamedIndividual ,
+              :Friend ,
+              :Member ,
+              :User .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Docker
 
 :Docker rdf:type owl:NamedIndividual ,
@@ -1352,6 +1433,13 @@ and that would somewhat work"""^^xsd:string .
 
 :Docker_File rdf:type owl:NamedIndividual ,
                       :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Doul
+
+:Doul rdf:type owl:NamedIndividual ,
+               :User .
 
 
 
@@ -1380,6 +1468,23 @@ and that would somewhat work"""^^xsd:string .
 
 :Gemfile rdf:type owl:NamedIndividual ,
                   :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Geraud_Mathe
+
+:Geraud_Mathe rdf:type owl:NamedIndividual ,
+                       :Friend ;
+              
+              owl:sameAs :Gerry .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Gerry
+
+:Gerry rdf:type owl:NamedIndividual ,
+                :Friend ,
+                :User .
 
 
 
@@ -1452,6 +1557,22 @@ and that would somewhat work"""^^xsd:string .
 
 :Npm_package_file rdf:type owl:NamedIndividual ,
                            :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Ornous
+
+:Ornous rdf:type owl:NamedIndividual ,
+                 :Friend ,
+                 :Member ,
+                 :User .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Ousmane_Ndiaye
+
+:Ousmane_Ndiaye rdf:type owl:NamedIndividual ,
+                         :Friend .
 
 
 
@@ -1542,7 +1663,10 @@ and that would somewhat work"""^^xsd:string .
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Senforsce_team
 
 :Senforsce_team rdf:type owl:NamedIndividual ,
-                         :Team .
+                         :Team ;
+                
+                :has_team_member <http://aria.abdoulsy.eu/ontology#Ozzy> ,
+                                 :Djo .
 
 
 
