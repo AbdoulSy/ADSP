@@ -636,6 +636,16 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_file_tree
+
+:has_file_tree rdf:type owl:DatatypeProperty ;
+               
+               rdfs:domain :project_versionning ;
+               
+               rdfs:range xsd:string .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_username
 
 :has_username rdf:type owl:DatatypeProperty ;
@@ -1686,6 +1696,115 @@ and that would somewhat work"""^^xsd:string .
       
       :has_team :Senforsce_team ;
       
+      :has_file_tree """{ parent: '',
+  path: '',
+  name: '.',
+  type: 'directory',
+  children: 
+   [ { parent: '',
+       path: 'lib',
+       name: 'lib',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: 'env',
+       name: 'env',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: 'bin',
+       name: 'bin',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: 'config',
+       name: 'config',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: 'deps',
+       name: 'deps',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: '.git',
+       name: '.git',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: '_build',
+       name: '_build',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: 'node_modules',
+       name: 'node_modules',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: 'priv',
+       name: 'priv',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: 'projects',
+       name: 'projects',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: 'test',
+       name: 'test',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: 'todo-list',
+       name: 'todo-list',
+       type: 'directory',
+       children: [Object] },
+     { parent: '',
+       path: 'web',
+       name: 'web',
+       type: 'directory',
+       children: [Object] },
+     { parent: '', path: 'LICENSE', name: 'LICENSE', type: 'file' },
+     { parent: '', path: 'README.md', name: 'README.md', type: 'file' },
+     { parent: '', path: 'mix.exs', name: 'mix.exs', type: 'file' },
+     { parent: '', path: 'mix.lock', name: 'mix.lock', type: 'file' },
+     { parent: '', path: '.DS_Store', name: '.DS_Store', type: 'file' },
+     { parent: '',
+       path: 'package.json',
+       name: 'package.json',
+       type: 'file' },
+     { parent: '',
+       path: 'phoenix_static_buildpack.config',
+       name: 'phoenix_static_buildpack.config',
+       type: 'file' },
+     { parent: '',
+       path: '.gitignore',
+       name: '.gitignore',
+       type: 'file' },
+     { parent: '', path: 'compile', name: 'compile', type: 'file' },
+     { parent: '',
+       path: 'protege.png',
+       name: 'protege.png',
+       type: 'file' },
+     { parent: '',
+       path: 'ADSP.ontology.jsonld.owl',
+       name: 'ADSP.ontology.jsonld.owl',
+       type: 'file' },
+     { parent: '',
+       path: 'ADSP.ontology.ttl',
+       name: 'ADSP.ontology.ttl',
+       type: 'file' },
+     { parent: '',
+       path: 'elixir_buildpack.config',
+       name: 'elixir_buildpack.config',
+       type: 'file' },
+     { parent: '',
+       path: 'webpack.config.js',
+       name: 'webpack.config.js',
+       type: 'file' } ] }"""^^xsd:string ;
+      
       :project_name_value "ADSP"^^xsd:string ,
                           "Application Development Surveillance Platform"^^xsd:string .
 
@@ -2005,6 +2124,8 @@ and that would somewhat work"""^^xsd:string .
                           :Project_convention ;
                  
                  :has_rule :must_generate_documentation ,
+                           :must_have_node_installed ,
+                           :must_have_npm_installed ,
                            :must_have_package_json ,
                            :must_have_valid_testing .
 
@@ -2257,6 +2378,13 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Webpack_convention
+
+:Webpack_convention rdf:type owl:NamedIndividual ,
+                             :Project_convention .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#abdouls_english_phone
 
 :abdouls_english_phone rdf:type owl:NamedIndividual ,
@@ -2378,6 +2506,7 @@ and that would somewhat work"""^^xsd:string .
                                  :Project_convention ;
                         
                         :has_rule :must_have_a_current_branch ,
+                                  :must_have_a_readme_file ,
                                   :must_have_author_comments .
 
 
@@ -2472,6 +2601,13 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_readme_file
+
+:must_have_a_readme_file rdf:type owl:NamedIndividual ,
+                                  :project_convention_rule .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_test_reporter
 
 :must_have_a_test_reporter rdf:type owl:NamedIndividual ,
@@ -2490,6 +2626,20 @@ and that would somewhat work"""^^xsd:string .
 
 :must_have_function_description rdf:type owl:NamedIndividual ,
                                          :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_node_installed
+
+:must_have_node_installed rdf:type owl:NamedIndividual ,
+                                   :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_npm_installed
+
+:must_have_npm_installed rdf:type owl:NamedIndividual ,
+                                  :project_convention_rule .
 
 
 

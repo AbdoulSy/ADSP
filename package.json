@@ -43,6 +43,7 @@
     "bourbon-neat": "^1.7.2",
     "cdocparser": "^0.13.0",
     "classnames": "^2.2.1",
+    "dir-to-json": "0.0.3",
     "es6-promise": "^3.0.2",
     "history": "^1.17.0",
     "invariant": "^2.2.0",

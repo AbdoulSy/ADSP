@@ -1,0 +1,715 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://aria.abdoulsy.eu/ontology#hasNumberName" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#One"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#I"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Core_Number"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://aria.abdoulsy.eu/ontology#hasNumberName" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Ten"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#IIIIIIIIII"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Core_Number"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://aria.abdoulsy.eu/ontology#hasNumberName" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Two"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#II"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Core_Number"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://aria.abdoulsy.eu/ontology#hasNumberName" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Three"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#III"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Core_Number"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://aria.abdoulsy.eu/ontology#hasNumberName" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Four"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#IIII"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Core_Number"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://aria.abdoulsy.eu/ontology#hasNumberName" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Five"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#IIIII"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Core_Number"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://aria.abdoulsy.eu/ontology#hasNumberName" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Six"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#IIIIII"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Core_Number"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://aria.abdoulsy.eu/ontology#hasNumberName" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Seven"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#IIIIIII"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Core_Number"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://aria.abdoulsy.eu/ontology#hasNumberName" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Eight"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#IIIIIIII"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Core_Number"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://aria.abdoulsy.eu/ontology#hasNumberName" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Nine"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#IIIIIIIII"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology#Core_Number"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Hindu_Arabic_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Hindu_Arabic_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Hindu_Arabic_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Hindu_Arabic_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Hindu_Arabic_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Hindu_Arabic_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Hindu_Arabic_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Hindu_Arabic_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Hindu_Arabic_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Hindu_Arabic_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Abdoul",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Developer" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Abdouls_Fallback_Website",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Webpage" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Abook_Pro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Computer" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Airbnb_CodeStyle_Github_Page",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Github_Page" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Airbnb_Code_Style_Github_Page_URL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#URI" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Angular_JS_Dependency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Dependency" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Aria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Codename" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Aria_OWL_File",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#File" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Backbone_Dependency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Dependency" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Bash",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Software" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Bourne_Again_Shell",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Program" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Build",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Build_Step",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Build_Step_Task",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Build_Step_Task_Order",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Busy_Mood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Mood" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#CA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Tracker" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#CSS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Programming_Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Chrome_Browser",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Program" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Code_Style",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Code_Style_Test",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Codename",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Command",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Command_Bus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Commit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Company",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Component_Test",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Computer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Concourse_CI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Program", "http://aria.abdoulsy.eu/ontology#Software", "http://aria.abdoulsy.eu/ontology#Trigger" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Concourse_Configuration_Object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Configuration_Object" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Configuration_Object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Core_Configuration_file",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#File" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Core_Github_Page",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Github_Page" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Core_Interface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Interface" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Core_Number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Core_Repository_Github_Page",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#URI" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Core_Unit_js_file",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#URI" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#D3_Dependency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Dependency" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Dependency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Depressed_Mood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Mood" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Design_Pattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Developer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Docker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Software" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Docker_Configuration_Object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Configuration_Object" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Domain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#E2E_Test",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#ES6_Code_Style",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Code_Style" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#ES6_Reporter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Reporter" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#ES6_Setup_Tutorial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Setup_Tutorial" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Editor_Config_Files",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#File" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Eight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Number_Name" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#English",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Event_Bus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Event_Listener",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Exception",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Fighting_Game",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#File",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Five",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Number_Name" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Four",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Number_Name" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#French",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Fulgore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Codename" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Function",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Function_Call",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Garbage_Collection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#General_Assembly",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Company" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Gerry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Developer", "http://aria.abdoulsy.eu/ontology#Teacher" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Git",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Software" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Github_Page",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Glacius",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Codename" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#GlaciusApplicationComponentTest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Component_Test" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#GlaciusApplicationE2ETest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#E2E_Test" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#GlaciusApplicationUnitTest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Unit_Test" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Glacius_Pipeline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Pipeline" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Glacius_Web_Page",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Webpage" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Go",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Programming_Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Good_Mood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Mood" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Great_Mood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Mood" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Grunt_Configuration_Object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Configuration_Object" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Guy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Codename" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#HTML",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Programming_Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Hindu_Arabic_Number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#I",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Core_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#II",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Core_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#III",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Core_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#IIII",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Core_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#IIIII",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Core_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#IIIIII",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Core_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#IIIIIII",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Core_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#IIIIIIII",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Core_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#IIIIIIIII",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Core_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#IIIIIIIIII",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Core_Number" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Ibuki",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Codename" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Interface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#JS_Bundle_Application",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Build_Step_Task" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#JS_Code_Style_Check",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Build_Step_Task" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#JS_Compile_Dependencies",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Build_Step_Task" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#JS_Lint_Code_Loose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Build_Step_Task" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#JS_Test_Application",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Build_Step_Task" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Java",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Programming_Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Javascript",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Programming_Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Javascript_Code_Style",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Code_Style" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Job",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Karma_Dependency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Dependency" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Keychain_File",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#File" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Killer_Instinct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Fighting_Game" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Language_Component",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Lead_Instructor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Job" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Lead_Web_Developer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Job" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Moo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Company" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Mood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#NPM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Software" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#NPM_Configuration_object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Configuration_Object" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Nine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Number_Name" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Node",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Program" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#NodeJS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Software" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Number_Name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#One",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Number_Name" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Ozzy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Developer" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#PHP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Programming_Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Pipeline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Plane",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Platform_Engineer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Job" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Polish",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Program",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Program_Execution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Programming_Language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Protege",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Program" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Protractor_Dependency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Dependency" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Pulaar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Range",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#React_Dependency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Dependency" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Reporter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Rose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Codename" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Rspec_Dependency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Dependency" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Ruby",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Programming_Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Ryu",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Codename" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#SVG_LOGO",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#File" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Scala",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Programming_Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Scared_Mood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Mood" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Scary_Mood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Mood" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Screen_Plane",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Plane" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Setup_Tutorial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Seven",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Number_Name" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Six",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Number_Name" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Smartlogic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Company" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Software",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Software_Engineer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Job" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Street_Fighter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Fighting_Game" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Teacher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Ten",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Number_Name" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Terminal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Program" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Test",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Three",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Number_Name" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Thunder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Codename" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Tracker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Trello",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Tracker" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Trigger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Two",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Number_Name" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#URI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Underscore_Dependency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Dependency" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Unit_JS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Interface" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Unit_Test",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Unit_js_Core_github_page",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Github_Page" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Value_Object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Variable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language_Component" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Webpage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#Wolof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Language" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#anyGlaciusRelatedCommit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Commit" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#glaciusApplicationBuild",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Build", "http://aria.abdoulsy.eu/ontology#Trigger" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#glaciusApplicationCodeStyleTest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Code_Style_Test" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#glaciusBuildStepTasksOrder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Build_Step_Task_Order" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#glaciusJsBuildStep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology#Build_Step" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology#hasNumberName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://git-ainf.aau.at/debug_ontology#1236015933697734",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+} ]

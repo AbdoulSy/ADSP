@@ -19,6 +19,9 @@
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ADSP",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_file_tree" : [ {
+    "@value" : "{ parent: '',\n  path: '',\n  name: '.',\n  type: 'directory',\n  children: \n   [ { parent: '',\n       path: 'lib',\n       name: 'lib',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: 'env',\n       name: 'env',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: 'bin',\n       name: 'bin',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: 'config',\n       name: 'config',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: 'deps',\n       name: 'deps',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: '.git',\n       name: '.git',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: '_build',\n       name: '_build',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: 'node_modules',\n       name: 'node_modules',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: 'priv',\n       name: 'priv',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: 'projects',\n       name: 'projects',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: 'test',\n       name: 'test',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: 'todo-list',\n       name: 'todo-list',\n       type: 'directory',\n       children: [Object] },\n     { parent: '',\n       path: 'web',\n       name: 'web',\n       type: 'directory',\n       children: [Object] },\n     { parent: '', path: 'LICENSE', name: 'LICENSE', type: 'file' },\n     { parent: '', path: 'README.md', name: 'README.md', type: 'file' },\n     { parent: '', path: 'mix.exs', name: 'mix.exs', type: 'file' },\n     { parent: '', path: 'mix.lock', name: 'mix.lock', type: 'file' },\n     { parent: '', path: '.DS_Store', name: '.DS_Store', type: 'file' },\n     { parent: '',\n       path: 'package.json',\n       name: 'package.json',\n       type: 'file' },\n     { parent: '',\n       path: 'phoenix_static_buildpack.config',\n       name: 'phoenix_static_buildpack.config',\n       type: 'file' },\n     { parent: '',\n       path: '.gitignore',\n       name: '.gitignore',\n       type: 'file' },\n     { parent: '', path: 'compile', name: 'compile', type: 'file' },\n     { parent: '',\n       path: 'protege.png',\n       name: 'protege.png',\n       type: 'file' },\n     { parent: '',\n       path: 'ADSP.ontology.jsonld.owl',\n       name: 'ADSP.ontology.jsonld.owl',\n       type: 'file' },\n     { parent: '',\n       path: 'ADSP.ontology.ttl',\n       name: 'ADSP.ontology.ttl',\n       type: 'file' },\n     { parent: '',\n       path: 'elixir_buildpack.config',\n       name: 'elixir_buildpack.config',\n       type: 'file' },\n     { parent: '',\n       path: 'webpack.config.js',\n       name: 'webpack.config.js',\n       type: 'file' } ] }"
+  } ],
   "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_owner" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Abdoul_Sy"
   } ],
@@ -588,6 +591,10 @@
   "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_rule" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_generate_documentation"
   }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_node_installed"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_npm_installed"
+  }, {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_package_json"
   }, {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_valid_testing"
@@ -973,6 +980,9 @@
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Web_scraping_event",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Event" ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Webpack_convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention" ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Work",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -1239,6 +1249,8 @@
   "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_rule" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_current_branch"
   }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_readme_file"
+  }, {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_author_comments"
   } ]
 }, {
@@ -1305,6 +1317,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#File_Extension"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_file_tree",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_versionning"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_filename",
@@ -1679,6 +1700,9 @@
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_current_branch",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_readme_file",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_test_reporter",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
 }, {
@@ -1686,6 +1710,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_function_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_node_installed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_npm_installed",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_package_json",
