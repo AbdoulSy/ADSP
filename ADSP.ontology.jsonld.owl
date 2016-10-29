@@ -1,6 +1,9 @@
 [ {
   "@id" : "http://aria.abdoulsy.eu/ontology#Ozzy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_username" : [ {
+    "@value" : "Ozzy"
+  } ],
   "http://www.w3.org/2002/07/owl#sameAs" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Ousmane_Ndiaye"
   } ]
@@ -19,6 +22,31 @@
   "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_owner" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Abdoul_Sy"
   } ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_project_convention" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#AirBnb_js_syntax_convention"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#DRY_convention"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ES6_Convention"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#NPM_conventions"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#git_project_convention"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#non_empty_files_convention"
+  } ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_project_type" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Javascript_web_project"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#React_Projet"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#npm_project"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#phoenix_project"
+  } ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_project_versionning" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#github_project_versionning"
+  } ],
   "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_team" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Senforsce_team"
   } ],
@@ -34,6 +62,8 @@
     "@value" : "Abdoul"
   } ],
   "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#friend_of" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Arthanan_Tharmaratnam"
+  }, {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Geraud_Mathe"
   }, {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Ousmane_Ndiaye"
@@ -59,9 +89,13 @@
     "@value" : "Myself - The author of this Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Asmart"
+  }, {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Asy"
   }, {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Doul"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#dreescan"
   } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Action",
@@ -69,6 +103,12 @@
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Active_Email_Status",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Email_Status" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#AirBnb_js_syntax_convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_rule" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_valid_jshint_files"
+  } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Apple_Watch",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Smartwatch" ]
@@ -91,13 +131,37 @@
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Arthy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User" ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Asmart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_username" : [ {
+    "@value" : "asmart"
+  } ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#in_context" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#mac_pro_context"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Asy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_username" : [ {
+    "@value" : "asy"
+  } ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#in_context" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#mac_personal_context"
+  } ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#user_alias" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Asmart"
+  } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Author",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Back_End_Web_Project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_type"
   } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Batt",
@@ -129,6 +193,12 @@
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_Versioning_System",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#College",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#School"
+  } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Commit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -190,6 +260,12 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_File"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Contact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Cross_Functional_Team",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -197,6 +273,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Team"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#DRY_convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Developer_Skill_Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Level" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Diploma",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Education"
   } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Directory",
@@ -224,7 +312,15 @@
   } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Doul",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_username" : [ {
+    "@value" : "'Dou'"
+  }, {
+    "@value" : "'Doul"
+  } ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#in_context" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#street_context"
+  } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Dysfunctional_team",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -233,6 +329,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Team"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ES5_Convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_rule" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_valid_jshint_files"
   } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ES5_JS_File",
@@ -244,6 +346,12 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Javascript_File"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ES6_Convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_rule" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_valid_jshint_files"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ES6_JS_File",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -253,11 +361,20 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Javascript_File"
   } ]
 }, {
-  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Email",
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Education",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Contact"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Email_Status",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Email"
+  } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Empty_Directory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -270,6 +387,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#File"
   } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Engineer_Skill_Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Level" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Erlang_File",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -322,6 +442,12 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Person"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Front_end_Web_Project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_type"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Full_Stack_Developers",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Group" ]
 }, {
@@ -336,15 +462,6 @@
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Gerry",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Friend", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User" ]
-}, {
-  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Git",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_Versioning_System" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The Git Versioning system allows to create different retro-compatible versions of the code associated with a project"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_Versioning_System"
-  } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Go_File",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -376,6 +493,15 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_File"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Hacker_Skill_Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Level" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#High_School",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#School"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Javascript_Developers",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Group" ]
 }, {
@@ -394,11 +520,41 @@
     "@value" : "js"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Javascript_web_project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Web_Project" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Job",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Work"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Job_Position",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Job"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Job_Title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Job"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Knowledge_Base",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Education"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Laptop",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Computer"
   } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Lead_Developer_Skill_Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Level" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Macbook_air",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Laptop" ]
@@ -412,6 +568,9 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Documentation_File"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Master_Skill_Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Level" ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Member",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -424,11 +583,24 @@
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Moto_360",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Smartwatch" ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#NPM_conventions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_rule" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_generate_documentation"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_package_json"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_valid_testing"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Name",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Node",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Program" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Novice_Skill_Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Level" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Npm",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Program" ]
@@ -509,7 +681,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Phone",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Contact"
+  } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Practice",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -524,6 +699,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "a Program or Application, is a set of operations in an Operating System set to DO something"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Programmer_Skill_Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Level" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Programming_Knowledge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Education"
   } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project",
@@ -544,6 +728,12 @@
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_Milestone",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_type"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project"
   } ]
 }, {
@@ -556,11 +746,20 @@
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_list_directory",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Directory" ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Protégé",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Application" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#README_files",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Markdown_File" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#React_Projet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Front_end_Web_Project" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Reame_file",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Name" ]
@@ -595,6 +794,12 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_File"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#School",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Education"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Seems_Busy_Email_Status",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Email_Status" ]
 }, {
@@ -609,10 +814,37 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Djo"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Senior_Developer_Skill_Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Level" ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Sibling",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Person"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Education"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Experience_Duration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Proof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill"
   } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Smart_Car",
@@ -687,6 +919,12 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_File"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#University",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#School"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Urien_Salamander",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project" ],
   "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_owner" : [ {
@@ -729,11 +967,20 @@
     "@value" : "A project destined to be on a Web Server for internet use"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project"
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_type"
   } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Web_scraping_event",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Event" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Work",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Work_Experience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Work"
+  } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#abdouls_english_phone",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Phone" ]
@@ -819,6 +1066,12 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#components_convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_rule" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_be_documented"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#computer_name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -843,6 +1096,15 @@
     "@value" : "css"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#dreescan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#in_context" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#gmail_context"
+  } ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#user_alias" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Asy"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#email_value",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -860,6 +1122,9 @@
   "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#file_extension_value" : [ {
     "@value" : "erl"
   } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#erlang_web_project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Web_Project" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#error_message",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
@@ -915,6 +1180,9 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#facebook_context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Context" ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#file_extension_value",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -960,6 +1228,26 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#git_program",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_Versioning_System" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#uses_cvs" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#git_program"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#git_project_convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention" ],
+  "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_rule" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_current_branch"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_author_comments"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#github_project_versionning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_versionning" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#gmail_context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Context" ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#google_pixel",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Smartphone" ]
 }, {
@@ -998,6 +1286,9 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Commit_Hash"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_education",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_email_status",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1023,6 +1314,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#File_Name"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_job",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_job_period",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_job"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_job_title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_job"
   } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_name",
@@ -1089,6 +1395,50 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Problem"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_project_convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_project_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_type"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_project_versionning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_rule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_skill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Person"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Team"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#skill_can_be_done_by"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_team",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1110,6 +1460,15 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_in_team"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_username",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_valid_syntax",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1128,6 +1487,15 @@
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#iMac",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Personal_Computer" ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#in_context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Context"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_dir",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1136,6 +1504,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#OS_Path"
   } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_email_of_user",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_empty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -1226,6 +1597,23 @@
     "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Team"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_known_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Programming_Knowledge"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Person"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Team"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#knows"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_learning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#json_extension",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#File_Extension" ],
   "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#file_extension_value" : [ {
@@ -1238,6 +1626,17 @@
     "@value" : "jsonld"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#knows",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Person"
+  }, {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Team"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Programming_Knowledge"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#last_name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1246,6 +1645,12 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#mac_personal_context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Context" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#mac_pro_context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Context" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#middle_name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
@@ -1265,11 +1670,47 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_be_documented",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_generate_documentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_current_branch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_test_reporter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_author_comments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_function_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_package_json",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_valid_jshint_files",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_valid_package_json",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_valid_testing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule" ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#nexus_5",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Smartphone" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#nexus_6x",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Smartphone" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#non_empty_files_convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#npm_project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Back_End_Web_Project" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#os_name_valie",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
@@ -1309,6 +1750,9 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#phoenix_project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Back_End_Web_Project" ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#phone_number_value",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1318,6 +1762,12 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention"
+  } ]
+}, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_name_value",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1325,6 +1775,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_versionning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project"
   } ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#runs_in_os",
@@ -1341,6 +1797,12 @@
   "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#file_extension_value" : [ {
     "@value" : "scss"
   } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#skill_can_be_done_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#street_context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Context" ]
 }, {
   "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#task_attachment_file_name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
@@ -1424,5 +1886,26 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#File_Extension" ],
   "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#file_extension_value" : [ {
     "@value" : "ttl"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#twitter_context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Context" ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#user_alias",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User"
+  } ]
+}, {
+  "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#uses_cvs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_versionning"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_Versioning_System"
   } ]
 } ]

@@ -70,6 +70,12 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_education
+
+:has_education rdf:type owl:ObjectProperty .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_email_status
 
 :has_email_status rdf:type owl:ObjectProperty ;
@@ -97,6 +103,28 @@
               rdfs:domain :File ;
               
               rdfs:range :File_Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_job
+
+:has_job rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_job_period
+
+:has_job_period rdf:type owl:ObjectProperty ;
+                
+                rdfs:subPropertyOf :has_job .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_job_title
+
+:has_job_title rdf:type owl:ObjectProperty ;
+               
+               rdfs:subPropertyOf :has_job .
 
 
 
@@ -165,6 +193,55 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_project_convention
+
+:has_project_convention rdf:type owl:ObjectProperty ;
+                        
+                        rdfs:domain :Project ;
+                        
+                        rdfs:range :Project_convention .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_project_type
+
+:has_project_type rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:domain :Project ;
+                  
+                  rdfs:range :Project_type .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_project_versionning
+
+:has_project_versionning rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_rule
+
+:has_rule rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :Project_convention ;
+          
+          rdfs:range :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_skill
+
+:has_skill rdf:type owl:ObjectProperty ;
+           
+           owl:inverseOf :skill_can_be_done_by ;
+           
+           rdfs:domain :Person ,
+                       :Team ;
+           
+           rdfs:range :Skill .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_team
 
 :has_team rdf:type owl:ObjectProperty ;
@@ -197,6 +274,16 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#in_context
+
+:in_context rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :User ;
+            
+            rdfs:range :Context .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_dir
 
 :is_dir rdf:type owl:ObjectProperty ;
@@ -204,6 +291,12 @@
         rdfs:domain :Directory ;
         
         rdfs:range :OS_Path .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_email_of_user
+
+:is_email_of_user rdf:type owl:ObjectProperty .
 
 
 
@@ -284,6 +377,36 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_known_by
+
+:is_known_by rdf:type owl:ObjectProperty ;
+             
+             owl:inverseOf :knows ;
+             
+             rdfs:domain :Programming_Knowledge ;
+             
+             rdfs:range :Person ,
+                        :Team .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#is_learning
+
+:is_learning rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#knows
+
+:knows rdf:type owl:ObjectProperty ;
+       
+       rdfs:domain :Person ,
+                   :Team ;
+       
+       rdfs:range :Programming_Knowledge .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#runs_in_os
 
 :runs_in_os rdf:type owl:ObjectProperty ;
@@ -291,6 +414,33 @@
             rdfs:domain :Program ;
             
             rdfs:range :OS .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#skill_can_be_done_by
+
+:skill_can_be_done_by rdf:type owl:ObjectProperty .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#user_alias
+
+:user_alias rdf:type owl:ObjectProperty ,
+                     owl:SymmetricProperty ;
+            
+            rdfs:domain :User ;
+            
+            rdfs:range :User .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#uses_cvs
+
+:uses_cvs rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :project_versionning ;
+          
+          rdfs:range :Code_Versioning_System .
 
 
 
@@ -483,6 +633,16 @@
                   rdfs:domain :Group ;
                   
                   rdfs:range xsd:token .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#has_username
+
+:has_username rdf:type owl:DatatypeProperty ;
+              
+              rdfs:domain :User ;
+              
+              rdfs:range xsd:string .
 
 
 
@@ -687,6 +847,14 @@
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Back_End_Web_Project
+
+:Back_End_Web_Project rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Project_type .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#CSS_File
 
 :CSS_File rdf:type owl:Class ;
@@ -716,6 +884,14 @@
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Code_Versioning_System
 
 :Code_Versioning_System rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#College
+
+:College rdf:type owl:Class ;
+         
+         rdfs:subClassOf :School .
 
 
 
@@ -786,6 +962,18 @@ The work should go fine, however is a member fails, it COULD be dysfunctional"""
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Contact
+
+:Contact rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Context
+
+:Context rdf:type owl:Class .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Cross_Functional_Team
 
 :Cross_Functional_Team rdf:type owl:Class ;
@@ -794,6 +982,14 @@ The work should go fine, however is a member fails, it COULD be dysfunctional"""
                        
                        rdfs:comment """The Class of Team of People where Each Member Could do the Work of the Other.
 And the process is working soundly (rational)"""^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Diploma
+
+:Diploma rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Education .
 
 
 
@@ -845,15 +1041,25 @@ And the process is working soundly (rational)"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Education
+
+:Education rdf:type owl:Class .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Email
 
-:Email rdf:type owl:Class .
+:Email rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Contact .
 
 
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Email_Status
 
-:Email_Status rdf:type owl:Class .
+:Email_Status rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Email .
 
 
 
@@ -935,11 +1141,11 @@ And the process is working soundly (rational)"""^^xsd:string .
 
 
 
-###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Git
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Front_end_Web_Project
 
-:Git rdf:type owl:Class ;
-     
-     rdfs:subClassOf :Code_Versioning_System .
+:Front_end_Web_Project rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Project_type .
 
 
 
@@ -977,6 +1183,14 @@ And the process is working soundly (rational)"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#High_School
+
+:High_School rdf:type owl:Class ;
+             
+             rdfs:subClassOf :School .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Javascript_File
 
 :Javascript_File rdf:type owl:Class ;
@@ -984,6 +1198,38 @@ And the process is working soundly (rational)"""^^xsd:string .
                  rdfs:subClassOf :Code_File ;
                  
                  rdfs:comment "The Class of all Javascript Files"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Job
+
+:Job rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Work .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Job_Position
+
+:Job_Position rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Job .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Job_Title
+
+:Job_Title rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Job .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Knowledge_Base
+
+:Knowledge_Base rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Education .
 
 
 
@@ -1104,7 +1350,9 @@ and that would somewhat work"""^^xsd:string .
 
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Phone
 
-:Phone rdf:type owl:Class .
+:Phone rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Contact .
 
 
 
@@ -1128,6 +1376,14 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Programming_Knowledge
+
+:Programming_Knowledge rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Education .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project
 
 :Project rdf:type owl:Class ;
@@ -1148,7 +1404,23 @@ and that would somewhat work"""^^xsd:string .
 
 :Project_Milestone rdf:type owl:Class ;
                    
-                   rdfs:subClassOf :Project .
+                   rdfs:subClassOf :Project_type .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_convention
+
+:Project_convention rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Project .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_type
+
+:Project_type rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Project .
 
 
 
@@ -1182,11 +1454,51 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#School
+
+:School rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Education .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Sibling
 
 :Sibling rdf:type owl:Class ;
          
          rdfs:subClassOf :Person .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill
+
+:Skill rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Education .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Experience_Duration
+
+:Skill_Experience_Duration rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Skill .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Level
+
+:Skill_Level rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Skill .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Skill_Proof
+
+:Skill_Proof rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Skill .
 
 
 
@@ -1252,6 +1564,14 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#University
+
+:University rdf:type owl:Class ;
+            
+            rdfs:subClassOf :School .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#User
 
 :User rdf:type owl:Class ;
@@ -1288,9 +1608,39 @@ and that would somewhat work"""^^xsd:string .
 
 :Web_Project rdf:type owl:Class ;
              
-             rdfs:subClassOf :Project ;
+             rdfs:subClassOf :Project_type ;
              
              rdfs:comment "A project destined to be on a Web Server for internet use"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Work
+
+:Work rdf:type owl:Class .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Work_Experience
+
+:Work_Experience rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Work .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_convention_rule
+
+:project_convention_rule rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Project_convention .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#project_versionning
+
+:project_versionning rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Project .
 
 
 
@@ -1307,7 +1657,9 @@ and that would somewhat work"""^^xsd:string .
 
 <http://aria.abdoulsy.eu/ontology#Ozzy> rdf:type owl:NamedIndividual ;
                                         
-                                        owl:sameAs :Ousmane_Ndiaye .
+                                        owl:sameAs :Ousmane_Ndiaye ;
+                                        
+                                        :has_username "Ozzy"^^xsd:string .
 
 
 
@@ -1317,6 +1669,20 @@ and that would somewhat work"""^^xsd:string .
                :Project ;
       
       :has_owner :Abdoul_Sy ;
+      
+      :has_project_convention :AirBnb_js_syntax_convention ,
+                              :DRY_convention ,
+                              :ES6_Convention ,
+                              :NPM_conventions ,
+                              :git_project_convention ,
+                              :non_empty_files_convention ;
+      
+      :has_project_type :Javascript_web_project ,
+                        :React_Projet ,
+                        :npm_project ,
+                        :phoenix_project ;
+      
+      :has_project_versionning :github_project_versionning ;
       
       :has_team :Senforsce_team ;
       
@@ -1332,10 +1698,13 @@ and that would somewhat work"""^^xsd:string .
                     :Friend ,
                     :Member ;
            
-           owl:sameAs :Asy ,
-                      :Doul ;
+           owl:sameAs :Asmart ,
+                      :Asy ,
+                      :Doul ,
+                      :dreescan ;
            
-           :friend_of :Geraud_Mathe ,
+           :friend_of :Arthanan_Tharmaratnam ,
+                      :Geraud_Mathe ,
                       :Ousmane_Ndiaye ;
            
            :has_active_email :abdouls_gmail ,
@@ -1362,6 +1731,15 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#AirBnb_js_syntax_convention
+
+:AirBnb_js_syntax_convention rdf:type owl:NamedIndividual ,
+                                      :Project_convention ;
+                             
+                             :has_rule :must_have_valid_jshint_files .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Apple_Watch
 
 :Apple_Watch rdf:type owl:NamedIndividual ,
@@ -1385,10 +1763,27 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Asmart
+
+:Asmart rdf:type owl:NamedIndividual ,
+                 :User ;
+        
+        :in_context :mac_pro_context ;
+        
+        :has_username "asmart"^^xsd:string .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Asy
 
 :Asy rdf:type owl:NamedIndividual ,
-              :User .
+              :User ;
+     
+     :in_context :mac_personal_context ;
+     
+     :user_alias :Asmart ;
+     
+     :has_username "asy"^^xsd:string .
 
 
 
@@ -1410,6 +1805,20 @@ and that would somewhat work"""^^xsd:string .
 
 :Commit_Action rdf:type owl:NamedIndividual ,
                         :Action .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#DRY_convention
+
+:DRY_convention rdf:type owl:NamedIndividual ,
+                         :Project_convention .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Developer_Skill_Level
+
+:Developer_Skill_Level rdf:type owl:NamedIndividual ,
+                                :Skill_Level .
 
 
 
@@ -1439,7 +1848,37 @@ and that would somewhat work"""^^xsd:string .
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Doul
 
 :Doul rdf:type owl:NamedIndividual ,
-               :User .
+               :User ;
+      
+      :in_context :street_context ;
+      
+      :has_username "'Dou'"^^xsd:string ,
+                    "'Doul"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ES5_Convention
+
+:ES5_Convention rdf:type owl:NamedIndividual ,
+                         :Project_convention ;
+                
+                :has_rule :must_have_valid_jshint_files .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#ES6_Convention
+
+:ES6_Convention rdf:type owl:NamedIndividual ,
+                         :Project_convention ;
+                
+                :has_rule :must_have_valid_jshint_files .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Engineer_Skill_Level
+
+:Engineer_Skill_Level rdf:type owl:NamedIndividual ,
+                               :Skill_Level .
 
 
 
@@ -1488,17 +1927,17 @@ and that would somewhat work"""^^xsd:string .
 
 
 
-###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Git
-
-:Git rdf:type owl:NamedIndividual ,
-              :Code_Versioning_System .
-
-
-
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Grunt_file
 
 :Grunt_file rdf:type owl:NamedIndividual ,
                      :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Hacker_Skill_Level
+
+:Hacker_Skill_Level rdf:type owl:NamedIndividual ,
+                             :Skill_Level .
 
 
 
@@ -1518,10 +1957,31 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Javascript_web_project
+
+:Javascript_web_project rdf:type owl:NamedIndividual ,
+                                 :Web_Project .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Lead_Developer_Skill_Level
+
+:Lead_Developer_Skill_Level rdf:type owl:NamedIndividual ,
+                                     :Skill_Level .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Macbook_air
 
 :Macbook_air rdf:type owl:NamedIndividual ,
                       :Laptop .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Master_Skill_Level
+
+:Master_Skill_Level rdf:type owl:NamedIndividual ,
+                             :Skill_Level .
 
 
 
@@ -1539,10 +1999,28 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#NPM_conventions
+
+:NPM_conventions rdf:type owl:NamedIndividual ,
+                          :Project_convention ;
+                 
+                 :has_rule :must_generate_documentation ,
+                           :must_have_package_json ,
+                           :must_have_valid_testing .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Node
 
 :Node rdf:type owl:NamedIndividual ,
                :Program .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Novice_Skill_Level
+
+:Novice_Skill_Level rdf:type owl:NamedIndividual ,
+                             :Skill_Level .
 
 
 
@@ -1590,6 +2068,13 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Programmer_Skill_Level
+
+:Programmer_Skill_Level rdf:type owl:NamedIndividual ,
+                                 :Skill_Level .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Project_Configuration_Directory
 
 :Project_Configuration_Directory rdf:type owl:NamedIndividual ,
@@ -1632,6 +2117,13 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#React_Projet
+
+:React_Projet rdf:type owl:NamedIndividual ,
+                       :Front_end_Web_Project .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Reame_file
 
 :Reame_file rdf:type owl:NamedIndividual ,
@@ -1667,6 +2159,13 @@ and that would somewhat work"""^^xsd:string .
                 
                 :has_team_member <http://aria.abdoulsy.eu/ontology#Ozzy> ,
                                  :Djo .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#Senior_Developer_Skill_Level
+
+:Senior_Developer_Skill_Level rdf:type owl:NamedIndividual ,
+                                       :Skill_Level .
 
 
 
@@ -1805,12 +2304,32 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#components_convention
+
+:components_convention rdf:type owl:NamedIndividual ,
+                                :Project_convention ;
+                       
+                       :has_rule :must_be_documented .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#css_extension
 
 :css_extension rdf:type owl:NamedIndividual ,
                         :File_Extension ;
                
                :file_extension_value "css"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#dreescan
+
+:dreescan rdf:type owl:NamedIndividual ,
+                   :User ;
+          
+          :in_context :gmail_context ;
+          
+          :user_alias :Asy .
 
 
 
@@ -1827,6 +2346,53 @@ and that would somewhat work"""^^xsd:string .
                            :File_Extension ;
                   
                   :file_extension_value "erl"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#erlang_web_project
+
+:erlang_web_project rdf:type owl:NamedIndividual ,
+                             :Web_Project .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#facebook_context
+
+:facebook_context rdf:type owl:NamedIndividual ,
+                           :Context .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#git_program
+
+:git_program rdf:type owl:NamedIndividual ,
+                      :Code_Versioning_System ;
+             
+             :uses_cvs :git_program .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#git_project_convention
+
+:git_project_convention rdf:type owl:NamedIndividual ,
+                                 :Project_convention ;
+                        
+                        :has_rule :must_have_a_current_branch ,
+                                  :must_have_author_comments .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#github_project_versionning
+
+:github_project_versionning rdf:type owl:NamedIndividual ,
+                                     :project_versionning .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#gmail_context
+
+:gmail_context rdf:type owl:NamedIndividual ,
+                        :Context .
 
 
 
@@ -1871,6 +2437,90 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#mac_personal_context
+
+:mac_personal_context rdf:type owl:NamedIndividual ,
+                               :Context .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#mac_pro_context
+
+:mac_pro_context rdf:type owl:NamedIndividual ,
+                          :Context .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_be_documented
+
+:must_be_documented rdf:type owl:NamedIndividual ,
+                             :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_generate_documentation
+
+:must_generate_documentation rdf:type owl:NamedIndividual ,
+                                      :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_current_branch
+
+:must_have_a_current_branch rdf:type owl:NamedIndividual ,
+                                     :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_a_test_reporter
+
+:must_have_a_test_reporter rdf:type owl:NamedIndividual ,
+                                    :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_author_comments
+
+:must_have_author_comments rdf:type owl:NamedIndividual ,
+                                    :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_function_description
+
+:must_have_function_description rdf:type owl:NamedIndividual ,
+                                         :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_package_json
+
+:must_have_package_json rdf:type owl:NamedIndividual ,
+                                 :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_valid_jshint_files
+
+:must_have_valid_jshint_files rdf:type owl:NamedIndividual ,
+                                       :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_valid_package_json
+
+:must_have_valid_package_json rdf:type owl:NamedIndividual ,
+                                       :project_convention_rule .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#must_have_valid_testing
+
+:must_have_valid_testing rdf:type owl:NamedIndividual ,
+                                  :project_convention_rule .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#nexus_5
 
 :nexus_5 rdf:type owl:NamedIndividual ,
@@ -1885,10 +2535,31 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#non_empty_files_convention
+
+:non_empty_files_convention rdf:type owl:NamedIndividual ,
+                                     :Project_convention .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#npm_project
+
+:npm_project rdf:type owl:NamedIndividual ,
+                      :Back_End_Web_Project .
+
+
+
 ###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#package_json
 
 :package_json rdf:type owl:NamedIndividual ,
                        :Name .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#phoenix_project
+
+:phoenix_project rdf:type owl:NamedIndividual ,
+                          :Back_End_Web_Project .
 
 
 
@@ -1898,6 +2569,13 @@ and that would somewhat work"""^^xsd:string .
                          :File_Extension ;
                 
                 :file_extension_value "scss"^^xsd:string .
+
+
+
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#street_context
+
+:street_context rdf:type owl:NamedIndividual ,
+                         :Context .
 
 
 
@@ -1924,16 +2602,10 @@ and that would somewhat work"""^^xsd:string .
 
 
 
+###  http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#twitter_context
 
-
-#################################################################
-#
-#    Annotations
-#
-#################################################################
-
-
-:Git rdfs:comment "The Git Versioning system allows to create different retro-compatible versions of the code associated with a project"^^xsd:string .
+:twitter_context rdf:type owl:NamedIndividual ,
+                          :Context .
 
 
 
