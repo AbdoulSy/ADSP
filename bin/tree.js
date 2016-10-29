@@ -4,6 +4,6 @@ dirToJson( "./", function( err, dirTree ){
     if( err ){
         throw err;
     }else{
-        console.log( dirTree );
+        console.log( JSON.stringify(dirTree) );
     }
 });
