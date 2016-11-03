@@ -2,18 +2,44 @@
 ###############
 
 
-### The Idea:
+### The Idea :
  Technologies that can make machines understand the data and it's meaning have emerged
  and the complexity of developping these higly abstract concepts can be daunting, especially when working on
  everything at the same time.
  Let's leverage this new suite of technologies to help teams create project from the Abstract way downwards to help
  teams focus on the business logic, without having to worry about details that can slip up.
+ 
+### Why ? :
+ It is very hard for developers, the more skills and hats you wear, the harder it is to fully concentrate on anything really.
+People thing about ideas, are not confident about their code as it might get thrown away later in the future, or everything might change.
+Problems galore with delivering a good quality code, and it sometimes breaks an entire chain of code production.
+To reduce strain in producing code, we need to take examples on big companies (like toyota) that created factories, where every piece of car that needed to be worked on, arrived at the correct time to the correct person, making the person think solely on doing a single thing on a single piece at the time, maximizing the production.
+I'm trying to do the same thing but with computer programs, provide the piece of code that needs to be worked on at the right time and the right place to produce a good quality code.
 
-### How:
- Using a little bit of Web Semantics (and later on AI) technologies.
- Such as RDF Reasoning in turtle and Marklogic as a triple store, a web assets analyser in node and Perl, 
- and a Modified Trello clone in Phoenix as a Front End, the App should be Able to suggest at any time, what to do next,
- Who should do it if available, and resolves itself when the code is conform to the task's rules.
+### How :
+ This Repository has several applications pathed together, that would be split in a docker container.
+ The first application is a *node.js* script that runs through a project directory and produce a dataset of all the files that are inside or should be inside.
+ The second application is a *node.js* script that issues *SPARQL Queries* to Marklogic to extract metadata from the first node script.
+ The third application is a Machine Learning application with a classifier in Python with skilearn and Tensorflow, classifying data (generated with the node scripts) with a decision tree.
+ The current rules are as follows and can be combined.
+ 
+ - empty project/file/directory
+ - Test Driven Project/file
+ - Behaviour Driven Project/file
+ - Development Phase Project/file
+ - Production Phase Project/file
+ - Cleaning Phase Project/file
+ - Commented File
+ - Documented File
+ - Owned File
+ - Business Logic File
+ - Pure Code File
+ - Broken File
+ - Broken Application
+ - What's Next
+ - Previous Task Completed
+ 
+The Machine learning Application will keep watching files when a commit/file change is done, and will send the results both to it's own model to make its next predictions better, and to (Marklogic + Phoenix Trello) which will have lists and columns generated depending on the classification rules generated.
 
 ## The Front-End Interface
 
