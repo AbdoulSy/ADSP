@@ -1,4 +1,4 @@
-# ADSP: Application Development Surveillance Platform.
+# ADSP: Application Development Surveillance Platform. (Spike, work in progress)
 ###############
 
 
@@ -36,6 +36,48 @@
 ### Requirements
 You need to have **Elixir v1.3** and **PostgreSQL** installed.
 You also need marklogic installed.
+
+### The Ontology
+Using the : as main ADSP Prefix in a basic triple.
+
+:ADSP rdfs:type :Project means (in RDF Triple):
+
+<http://aria.abdoulsy.eu/Ontology/ADSP/Web_Project/0.0.1/#ADSP> http://www.w3.org/2000/01/rdf-schema#type <http://aria.abdoulsy.eu/Ontology/ADSP/Web_Project/0.0.1/#Project> .
+
+Which means that *My definition* of *ADSP* has a *standard rdfs type* of *My definition* of Project.
+
+I've created a Ontology (A Collection of triples such as this) That shall be populated with everything I know about web development and Team management, so that a program, through consulting a Triple Store with SPARQL Queries can ask the correct questions about the metadata generated from the code being watched.
+
+#### Rules and Conventions
+
+a :Project if :Versionned through :Git :has_conventions .
+For Example,
+
+    :ADSP :has_convention :Git_conventions;
+          :has_convention :ES6_conventions;
+          :has_convention :DRY_conventions;
+          :has_convention :NPM_conventions .
+          
+    :ADSP :has_owner :Abdoul_Sy .
+    :Abdoul_Sy rdfs:type :Team_Member .
+    :Team_Member owl:SubclassOf :Contact .
+    :Contact :has_phone_number :Abdoul_Phone_Numbers .
+    
+    :Error owl:SubClassOf :Problem .
+    :Problem :must_be_sent_to :Team_Members .
+    
+
+as a related Example:
+
+    :NPM_conventions :has_rule :must_have_package_json.
+    :NPM_conventions :has_rule :must_have_test_script.
+
+### How the system Works:
+
+By Using the Ontology as unstructured Data base for intelligence gathering, I also have small script to generate metadata from actual Code files and Project directories, with a simple watcher for when a file changes.
+The script will browse through a :Git_Convention Project and will fetch as much data as possible, from jshint and so forth, and will try and predict tasks that need to be done given the current state of the project.
+I've modified the phoenix trello to be able to generate trello cards and lists given the results of the SPARQL queries I'm making with Madrklogic.
+
 
 ### Installation instructions
 To start your Phoenix Trello app:
