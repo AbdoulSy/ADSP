@@ -1,0 +1,7 @@
+<head>
+ <meta charset="utf-8">
+ {{.Metas.Language}}
+ {{.Metas.BasicMeta}}
+ {{.Styles.Generated}}
+ {{.Scripts.Generated}}
+</head>

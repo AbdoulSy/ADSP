@@ -1,31 +1,92 @@
 package main
 
 import (
-	"fmt"
+	"html/template"
+	"log"
 	"net/http"
 )
+
+type pageContent struct {
+	Contents string
+}
+
+type pageHead struct {
+	Metas    []meta
+	Contents string
+}
+
+type meta struct {
+	name    string
+	content string
+}
+
+type pageBody struct {
+	Contents string
+}
+
+type pageLayout struct {
+	Contents string
+}
+
+type htmlHead struct {
+	Rendered string
+}
+
+type htmlBody struct {
+	Rendered string
+}
+
+type htmlPage struct {
+	Head htmlHead
+	Body htmlBody
+}
 
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", index)
 	mux.HandleFunc("/projects", projects)
-	mux.HandleFunc("/projects/:project_id/boards", projectBoards)
+	mux.HandleFunc("/projects/*/boards", projectBoards)
 	mux.HandleFunc("/visualisation", visualisation)
 	http.ListenAndServe(":8080", mux)
 }
 
+var tpl *template.Template
+
+func init() {
+	tpl = template.Must(template.ParseGlob("components/*"))
+}
+
 func index(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprint(w, "Hello Index")
+
+	c := pageLayout{
+		Contents: "I am Dog",
+	}
+	err := tpl.ExecuteTemplate(w, "page_layout.goh", c)
+	if err != nil {
+		log.Println(err)
+	}
 }
 
 func projects(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprint(w, "Hello Projects")
+
+	err := tpl.ExecuteTemplate(w, "page_layout.goh", 44)
+	if err != nil {
+		log.Println(err)
+	}
 }
 
 func projectBoards(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprint(w, "Hello Project Boards")
+
+	err := tpl.ExecuteTemplate(w, "page_layout.goh", 44)
+	if err != nil {
+		log.Println(err)
+	}
 }
 
 func visualisation(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprint(w, "Hello Visualisation")
+
+	err := tpl.ExecuteTemplate(w, "page_layout.goh", 45)
+	if err != nil {
+		log.Println(err)
+	}
 }
