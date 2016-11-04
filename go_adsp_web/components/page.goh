@@ -1,0 +1,7 @@
+{{define "page"}}
+  <div class="page">
+    {{template "header" .}}
+    {{template "page_contents" .}}
+    {{template "footer" .}}
+  </div>
+{{end}}
