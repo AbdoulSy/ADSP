@@ -1,0 +1,5 @@
+{{define "scripts"}}
+  {{range .}}
+    <script type="text/javascript" src="{{.Filename}}"></script>
+  {{end}}
+{{end}}
