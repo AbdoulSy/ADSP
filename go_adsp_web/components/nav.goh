@@ -1,0 +1,11 @@
+{{define "nav"}}
+  <nav id="main-nav" class="navigation state-neutral">
+    <ul>
+      {{range .}}
+        <li>
+          <a href="{{.Name}}" title="navigate to {{.name}}">{{.Link}}</a>
+        <li>
+      {{end}}
+    </ul>
+  </nav>
+{{end}}
