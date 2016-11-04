@@ -1,7 +1,7 @@
+{{define "head"}}
 <head>
  <meta charset="utf-8">
- {{.Metas.Language}}
- {{.Metas.BasicMeta}}
- {{.Styles.Generated}}
- {{.Scripts.Generated}}
+ {{template "styles" .}}
+ {{template "scripts" .}}
 </head>
+{{end}}
