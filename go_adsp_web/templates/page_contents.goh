@@ -1,8 +1,8 @@
 {{define "page_content"}}
-<div class="page state-neutral" id="{{.Id}}">
-  <h2>{{.Title}}</h2>  
+<div class="page state-neutral" id="{{.Page.ID}}">
+  <h2>{{.Page.Title}}</h2>  
   <p class="page-content-description">
-     {{.Description}}
+     {{.Page.Description}}
   </p>
   <div class="flash-errors state-neutral">
     {{template "errors" .}}

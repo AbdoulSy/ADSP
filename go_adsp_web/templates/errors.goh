@@ -1,5 +1,5 @@
 {{define "errors"}}
-  {{range .}}
+  {{range .Errors}}
   <div class="flash-error-message state-error">
     <p class="dev-err-code dev">{{.ErrCode}}</p>
     <p class="error-interjection">{{.ErrTitle}}</p>

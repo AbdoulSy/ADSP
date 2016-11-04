@@ -1,5 +1,7 @@
 {{define "styles"}}
-  {{range .}}
-    <link rel="stylesheet" href="{{.Filename}}" />
+
+  {{range .Styles.Links}}
+    <link rel="stylesheet" href="{{.}}" />
   {{end}}
-{{end}}
+
+{{ end }}
