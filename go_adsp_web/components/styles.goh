@@ -1,0 +1,5 @@
+{{define "styles"}}
+  {{range .}}
+    <link rel="stylesheet" href="{{.Filename}}" />
+  {{end}}
+{{end}}
