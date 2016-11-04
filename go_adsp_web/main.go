@@ -59,6 +59,7 @@ func main() {
 	mux.HandleFunc("/projects", projects)
 	mux.HandleFunc("/projects/*/boards", projectBoards)
 	mux.HandleFunc("/visualisation", visualisation)
+	mux.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("./public"))))
 	http.ListenAndServe(":8080", mux)
 }
 
