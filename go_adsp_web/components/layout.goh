@@ -1,5 +1,7 @@
+{{define "layout"}}
 <!DOCTYPE html>
 <html>
- {{.Head.rendered}}
- {{.Body.rendered}}
+ {{template "head" .}}
+ {{template "page_layout" .}}
 </html>
+{{end}}
