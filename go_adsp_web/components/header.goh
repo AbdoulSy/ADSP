@@ -1,0 +1,10 @@
+{{define "header"}}
+<header>
+  <h1>
+    <a href="/" title="ADSP">
+      <img src="{{.Logo.Filepath}}" alt="ADSP Logo" />
+    </a>
+    {{template "nav" .}}
+  </h1>
+</header>
+{{end}}
