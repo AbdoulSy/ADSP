@@ -53,7 +53,7 @@ func main() {
 var tpl *template.Template
 
 func init() {
-	tpl = template.Must(template.ParseGlob("components/*"))
+	tpl = template.Must(template.ParseGlob("templates/*"))
 }
 
 func index(w http.ResponseWriter, req *http.Request) {
@@ -61,7 +61,7 @@ func index(w http.ResponseWriter, req *http.Request) {
 	c := pageLayout{
 		Contents: "I am Dog",
 	}
-	err := tpl.ExecuteTemplate(w, "page_layout.goh", c)
+	err := tpl.ExecuteTemplate(w, "layout.goh", c)
 	if err != nil {
 		log.Println(err)
 	}
@@ -69,7 +69,7 @@ func index(w http.ResponseWriter, req *http.Request) {
 
 func projects(w http.ResponseWriter, req *http.Request) {
 
-	err := tpl.ExecuteTemplate(w, "page_layout.goh", 44)
+	err := tpl.ExecuteTemplate(w, "layout.goh", 44)
 	if err != nil {
 		log.Println(err)
 	}
@@ -77,7 +77,7 @@ func projects(w http.ResponseWriter, req *http.Request) {
 
 func projectBoards(w http.ResponseWriter, req *http.Request) {
 
-	err := tpl.ExecuteTemplate(w, "page_layout.goh", 44)
+	err := tpl.ExecuteTemplate(w, "layout.goh", 44)
 	if err != nil {
 		log.Println(err)
 	}
@@ -85,7 +85,7 @@ func projectBoards(w http.ResponseWriter, req *http.Request) {
 
 func visualisation(w http.ResponseWriter, req *http.Request) {
 
-	err := tpl.ExecuteTemplate(w, "page_layout.goh", 45)
+	err := tpl.ExecuteTemplate(w, "layout.goh", 45)
 	if err != nil {
 		log.Println(err)
 	}
