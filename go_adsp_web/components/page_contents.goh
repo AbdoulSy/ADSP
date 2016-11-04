@@ -1,0 +1,15 @@
+{{define "page_content"}}
+<div class="page state-neutral" id="{{.Id}}">
+  <h2>{{.Title}}</h2>  
+  <p class="page-content-description">
+     {{.Description}}
+  </p>
+  <div class="flash-errors state-neutral">
+    {{template "errors" .}}
+  </div>
+<!-- TODO: Create a Components loader -->
+  <div class="compomemts-loader">
+    <p>Loading</p>
+  </div>
+</div>
+{{end}}
