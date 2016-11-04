@@ -72,13 +72,19 @@ func init() {
 func index(w http.ResponseWriter, req *http.Request) {
 
 	theLinks := cssLinks{
-		Links: []string{"/public/styles/main.css", "/public/styles/layout.css"},
-		Page:  "Index",
+		Links: []string{
+			"/public/styles/main.css",
+			"/public/styles/layout.css",
+			"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css",
+		},
+		Page: "Index",
 	}
 
 	theScripts := jsScripts{
 		Files: []string{
 			"/public/js/hello.js",
+			"https://code.jquery.com/jquery-2.1.1.min.js",
+			"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js",
 		},
 		Page: "Index",
 	}
