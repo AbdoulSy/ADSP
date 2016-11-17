@@ -2,7 +2,7 @@
 <header>
   <h1>
     <a href="/" title="ADSP">
-      <img src="{{.Logo.Filepath}}" alt="ADSP Logo" />
+      <img src="{{.Logo.FilePath}}" alt="ADSP Logo" />
     </a>
   </h1>
     {{template "nav" .}}

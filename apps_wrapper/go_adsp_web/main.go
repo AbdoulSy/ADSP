@@ -1,57 +1,11 @@
 package main
 
 import (
+	"github.com/AbdoulSy/adspgo"
 	"html/template"
 	"log"
 	"net/http"
 )
-
-type cssLinks struct {
-	Links []string
-	Page  string
-}
-
-type logoType struct {
-	Filepath string
-	Title    string
-}
-
-type errorType struct {
-	ErrCode    string
-	ErrTitle   string
-	Message    string
-	StackTrace []string
-}
-
-type jsScripts struct {
-	Files []string
-	Page  string
-}
-
-type navElementType struct {
-	Name string
-	Link string
-}
-
-type pageType struct {
-	Title       string
-	ID          string
-	Description string
-}
-
-type navType struct {
-	Elements []navElementType
-}
-
-type pageLayout struct {
-	Contents string
-	Styles   cssLinks
-	Scripts  jsScripts
-	Logo     logoType
-	Nav      navType
-	Page     pageType
-	Errors   []errorType
-}
 
 func main() {
 	mux := http.NewServeMux()
@@ -71,7 +25,7 @@ func init() {
 
 func index(w http.ResponseWriter, req *http.Request) {
 
-	theLinks := cssLinks{
+	theLinks := adspgo.CSSLinks{
 		Links: []string{
 			"/public/styles/main.css",
 			"/public/styles/layout.css",
@@ -80,7 +34,7 @@ func index(w http.ResponseWriter, req *http.Request) {
 		Page: "Index",
 	}
 
-	theScripts := jsScripts{
+	theScripts := adspgo.JsScripts{
 		Files: []string{
 			"/public/js/hello.js",
 			"https://code.jquery.com/jquery-2.1.1.min.js",
@@ -89,37 +43,37 @@ func index(w http.ResponseWriter, req *http.Request) {
 		Page: "Index",
 	}
 
-	myLogo := logoType{
-		Filepath: "/public/images/logo.png",
+	myLogo := adspgo.LogoType{
+		FilePath: "/public/images/logo.png",
 		Title:    "ADSP LOGO",
 	}
 
-	homeNav := navElementType{
+	homeNav := adspgo.NavElementType{
 		Name: "Home",
 		Link: "/",
 	}
 
-	projectsNav := navElementType{
+	projectsNav := adspgo.NavElementType{
 		Name: "Projects",
 		Link: "/projects",
 	}
 
-	visualisationNav := navElementType{
+	visualisationNav := adspgo.NavElementType{
 		Name: "Visualisation",
 		Link: "/visualisation",
 	}
 
-	myNav := navType{
-		Elements: []navElementType{homeNav, projectsNav, visualisationNav},
+	myNav := adspgo.NavType{
+		Elements: []adspgo.NavElementType{homeNav, projectsNav, visualisationNav},
 	}
 
-	myPage := pageType{
+	myPage := adspgo.PageType{
 		ID:          "aria-abdoulsy-eu/adsp/home",
 		Title:       "The Home Page",
 		Description: "This Page describe the current State of the Team",
 	}
 
-	c := pageLayout{
+	c := adspgo.PageLayout{
 		Contents: "I am Dog",
 		Styles:   theLinks,
 		Scripts:  theScripts,
