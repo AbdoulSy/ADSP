@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/AbdoulSy/adspgo"
 	"html/template"
+	"io/ioutil"
 	"log"
 	"net/http"
 )
@@ -25,16 +26,27 @@ func init() {
 
 func index(w http.ResponseWriter, req *http.Request) {
 
+	res, err := http.Get("http://localhost:3465/")
+	if err != nil {
+		log.Fatal(err)
+	}
+	txt, err := ioutil.ReadAll(res.Body)
+	res.Body.Close()
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Printf("%s", txt)
+
 	myPage := adspgo.PageType{
 		ID:          "aria-abdoulsy-eu/adsp/home",
-		Title:       "The Home Page",
+		Title:       string(txt),
 		Description: "This Page describe the current state of the Team",
 	}
 	c, er := adspgo.BuildBasicLayoutWithPage(myPage)
 
-	err := tpl.ExecuteTemplate(w, "layout", c)
-	if err != nil || er != nil {
-		log.Println(err)
+	errtmpl := tpl.ExecuteTemplate(w, "layout", c)
+	if errtmpl != nil || er != nil {
+		log.Println(errtmpl)
 	}
 }
 
