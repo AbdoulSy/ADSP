@@ -8,7 +8,7 @@
     {{template "errors" .}}
   </div>
 <!-- TODO: Create a Components loader -->
-  <div class="compomemts-loader">
+  <div class="compoments-loader">
     <p>Loading</p>
   </div>
 </div>
