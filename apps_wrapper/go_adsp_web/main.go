@@ -50,6 +50,7 @@ func projects(w http.ResponseWriter, req *http.Request) {
 	if err != nil || er != nil {
 		log.Println(err)
 	}
+
 }
 
 func projectBoards(w http.ResponseWriter, req *http.Request) {

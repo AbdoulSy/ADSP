@@ -64,6 +64,7 @@ func BuildBasicLayoutWithPage(pa PageType) (pl PageLayout, err error) {
 		Nav:      myNav,
 		Page:     pa,
 	}
+
 	return
 
 }
