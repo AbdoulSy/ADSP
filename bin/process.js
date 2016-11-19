@@ -5,37 +5,21 @@ const walk    = require('walk');
 const fs      = require('fs');
 const path    = require('path');
 const _       = require('lodash');
-const my      = require('../apps_wrapper/env/env.js');
-
-module.exports = function () {
-
+const getEventsFn = require('./includes/get-events');
+const my      = require('../apps_wrapper/env/env');
 const walker  = walk.walk("../apps_wrapper/projects", { followLinks: true});
 const MarklogicClient = require('marklogic');
 //connecting to Marklogic
-
 var db = MarklogicClient.createDatabaseClient(my.connection);
 var qb = MarklogicClient.queryBuilder;
-//
-
-console.log("\n CONNEXION ESTABLISHED");
+let connection = {db, qb};
+console.log("\n CONNEXION TO MARKLOGIC ESTABLISHED");
 var previousProcess;
 var els;
-db.documents.query(
-   qb.where(qb.collection("events"))
-).result()
-.then(function (documents) {
-	let a = [];
-	if(documents.length > 0) {
-           documents.forEach(function (document) {
-	     _.extend(a, document.contents);
-	   });
-           els = a;	   
-	}
 
-    
-    }, function (error) {
-    	console.log(JSON.stringify(error));
-    });
+//Gets the events from Marklogic's db
+//see includes>get-events
+getEventsFn(connection, els);
 
 db.documents.read('/ps/process.json')
    .result( function(documents) {
@@ -250,4 +234,4 @@ function initiateCommentReader(opts, code) {
         resultsOfParsing.files.push(a);
     });
 
-	  }};
+	  }
