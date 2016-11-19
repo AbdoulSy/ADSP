@@ -8,7 +8,7 @@ const _       = require('lodash');
 const getEventsFn = require('./includes/get-events');
 const getProcessDocumentsFn = require('./includes/get-processes');
 const my      = require('../apps_wrapper/env/env');
-const walker  = walk.walk("../apps_wrapper/projects", { followLinks: true});
+const walker  = walk.walk("./apps_wrapper/projects/", { followLinks: true});
 const MarklogicClient = require('marklogic');
 //connecting to Marklogic
 var db = MarklogicClient.createDatabaseClient(my.connection);
@@ -22,7 +22,7 @@ var els;
 //see includes>get-events
 getEventsFn(connection, els);
 //gets the processed Documents from Marklogic's documents database
-getProcessDocumentsFn(connection);
+getProcessDocumentsFn(connection, previousProcess);
 
 var resultsOfParsing = {};
 
@@ -54,9 +54,14 @@ function dirHandler(root, dirStatsArray, next) {
 }
 
 function fileHandler(root, fileStat, next) {
+  if(fileStat.name === ".DS_Store") {
+     next();
+     return;
+  }
   fs.readFile(path.resolve(root, fileStat.name), "utf-8", function (err, buffer) {
     var ext = /.+?\.(.*)$/;
     var extension = fileStat.name.match(ext);
+    console.log(extension);
     switch(extension[1]){
       case 'html':
 	initiateCommentReader({
@@ -86,6 +91,7 @@ function fileHandler(root, fileStat, next) {
 }
 
 function errorsHandler(root, nodeStatsArray, next) {
+  console.log("error >>>>", root, nodeStatsArray, next);
   nodeStatsArray.forEach(function (n) {
     console.error("[ERROR] " + n.name);
     console.error(n.error.message || (n.error.code + ": " + n.error.path));
@@ -117,9 +123,8 @@ function endHandler() {
     console.log(JSON.stringify(error,null,2));
   });
 
-
-  console.log(`begining watching the root directory for all projects to feed the board realtime on ${resultsOfParsing.directories[0].root}`);
-  fs.watch(resultsOfParsing.directories[0].root, true,  function(eventType, filename)  {
+  console.log(resultsOfParsing.directories);
+  fs.watch(resultsOfParsing.directories[0].root, {},  function(eventType, filename)  {
       console.log(`event type is: ${eventType}`);
       let a = {
         ctime: Date.now(),

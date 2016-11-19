@@ -6,6 +6,7 @@ function handleReadSuccessResult (previousProcess) {
   return function successFn(documents) {
        console.log("successFn curried function called")	;  
        previousProcess = documents;
+       console.log(documents);
        documents.forEach(function(document) {
          console.log(JSON.stringify(document));
        });
@@ -24,6 +25,6 @@ module.exports = function getProcesses(connection, previousProcess) {
 
   //The Read operation on the /ps/process.json file created when scraping the js files
    db.documents.read('/ps/process.json')
-     .result(handleReadSuccessResult(previousProcess), 
+     .result().then(handleReadSuccessResult(previousProcess), 
        handleReadErrorResult); 
 };
