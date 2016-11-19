@@ -6,6 +6,7 @@ const fs      = require('fs');
 const path    = require('path');
 const _       = require('lodash');
 const getEventsFn = require('./includes/get-events');
+const getProcessDocumentsFn = require('./includes/get-processes');
 const my      = require('../apps_wrapper/env/env');
 const walker  = walk.walk("../apps_wrapper/projects", { followLinks: true});
 const MarklogicClient = require('marklogic');
@@ -17,19 +18,11 @@ console.log("\n CONNEXION TO MARKLOGIC ESTABLISHED");
 var previousProcess;
 var els;
 
-//Gets the events from Marklogic's db
+//Gets the events from Marklogic's database
 //see includes>get-events
 getEventsFn(connection, els);
-
-db.documents.read('/ps/process.json')
-   .result( function(documents) {
-      previousProcess = documents;
-      documents.forEach(function(document) {
-       // console.log(JSON.stringify(document));
-      });
-    }, function(error) {
-      console.log(JSON.stringify(error, null, 2));
-    });
+//gets the processed Documents from Marklogic's documents database
+getProcessDocumentsFn(connection);
 
 var resultsOfParsing = {};
 
