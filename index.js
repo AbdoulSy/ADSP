@@ -1,8 +1,10 @@
 var express = require('express');
 var app = express();
+var process = require('./bin/process');
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+        process();
+      	res.send('Hello World!');
 });
 
 app.listen(3465, function () {

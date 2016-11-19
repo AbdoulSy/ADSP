@@ -5,9 +5,11 @@ const walk    = require('walk');
 const fs      = require('fs');
 const path    = require('path');
 const _       = require('lodash');
-const my      = require('./apps_wrapper/env/env.js');
+const my      = require('../apps_wrapper/env/env.js');
 
-const walker  = walk.walk("./apps_wrapper/projects", { followLinks: true});
+module.exports = function () {
+
+const walker  = walk.walk("../apps_wrapper/projects", { followLinks: true});
 const MarklogicClient = require('marklogic');
 //connecting to Marklogic
 
@@ -248,4 +250,4 @@ function initiateCommentReader(opts, code) {
         resultsOfParsing.files.push(a);
     });
 
-}
+	  }};
