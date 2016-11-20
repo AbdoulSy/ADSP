@@ -1,69 +1,16 @@
 /* jshint esversion:6 */
 
-const CDocParser = require('cdocparser');
 const _       = require('lodash');
 var globals = require('./globals.js');
+var getCommentExtractorFn = require('./comment-extractor.js');
+var getCommentParserFn = require('./comment-parser.js');
 var resultsOfParsing = globals.resultsOfParsing;
 var previousProcess = globals.previousProcess;
 
 module.exports = function initiateCommentReader(opts, code) {
 
-    var extractor = new CDocParser.CommentExtractor(function (line, arg2) {
-      return {
-        type: opts.type, 
-        file: opts.file,
-        line: arg2(0)
-
-     };
-    }, opts.extractorOptions );
-
-    var parser = new CDocParser.CommentParser({
-        _: {
-  	  alias: {
-	   todo: 'TODO'
-         }
-       },
-       TODO: {
-         parse: function(annotationLine, info, id) {
- 	   return _.trimStart(annotationLine, ':');      
-         },
-         default: function() {
-           return "Not Implemented";
-         }      
-       },
-       milestone: {
-         parse: function(line) {
-	   return _.trimStart(line, ':');
-	 },
-	 default: function () {
-	   return '--';
-	 }
-       },
-       collabs: {
-	  parse: function (line) {
-	    return _.trimStart(line, ':').split(',');
-	  },
-	 default: function () {
-	   return '--';
-	 }
-	},
-	project: {
-         parse: function (line) {
-	    return _.trimStart(line, ':').split('/');
-	  },	
-	 default: function () {
-	   return '--';
-	 }
-	},
-	author: {
-	 parse: function (annotationLine) {
-	    return _.trimStart(annotationLine, ':');
-	  },
-	 default: function () {
-	   return '--';
-	 }
-	}
-    });
+    var extractor = getCommentExtractorFn(opts);
+    var parser = getCommentParserFn(opts);
 
     var comments = extractor.extract(code);
     var parsedComments = parser.parse(comments);
