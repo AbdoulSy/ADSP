@@ -25,6 +25,7 @@ getProcessDocumentsFn(connection, previousProcess);
 //trying to implement an idempotent method to preserve resources
 //we store when the walk Has started to monitor the speed of the crawling
 resultsOfParsing.walkStart = Date.now(); 
+//we reset the directories and files variables from global
 resultsOfParsing.directories = [];
 resultsOfParsing.files = [];
 
