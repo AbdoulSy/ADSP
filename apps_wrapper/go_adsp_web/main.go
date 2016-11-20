@@ -1,12 +1,46 @@
 package main
 
 import (
+	"encoding/json"
 	"github.com/AbdoulSy/adspgo"
 	"html/template"
 	"io/ioutil"
 	"log"
 	"net/http"
 )
+
+//Directory is the struct representation of a directory concept
+type Directory struct {
+	root string
+	dirs []DirsType
+}
+
+//AuthorType is the struct representation of an author concept
+type AuthorType struct {
+	fullname string
+}
+
+//File is the struct representation of a File concept
+type File struct {
+	description string
+	author      []string
+	project     []string
+	milestone   []string
+	TODO        []string
+	file        string
+}
+
+//DirsType is the struct representation of the Array of directory Concepts
+type DirsType struct {
+	name, mtime string
+}
+
+//Content is the struct representation of the Content Concept
+type Content struct {
+	walkStart   int
+	directories []Directory
+	files       []File
+}
 
 func main() {
 	mux := http.NewServeMux()
@@ -19,6 +53,7 @@ func main() {
 }
 
 var tpl *template.Template
+var docss []Content
 
 func init() {
 	tpl = template.Must(template.ParseGlob("templates/*"))
@@ -35,7 +70,14 @@ func index(w http.ResponseWriter, req *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	log.Printf("%s", txt)
+
+	erri := json.Unmarshal(txt, &docss)
+
+	if erri != nil {
+		log.Fatal(erri)
+	}
+
+	log.Printf("%+v", docss)
 
 	myPage := adspgo.PageType{
 		ID:          "aria-abdoulsy-eu/adsp/home",
