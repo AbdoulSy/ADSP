@@ -3,6 +3,7 @@ const CDocParser = require('cdocparser');
 
 const walk    = require('walk');
 const fs      = require('fs');
+const watch   = require('node-watch');
 const path    = require('path');
 const _       = require('lodash');
 const getEventsFn = require('./includes/get-events');
@@ -124,8 +125,7 @@ function endHandler() {
   });
 
   console.log(resultsOfParsing.directories);
-  fs.watch(resultsOfParsing.directories[0].root, {},  function(eventType, filename)  {
-      console.log(`event type is: ${eventType}`);
+  watch(resultsOfParsing.directories[0].root, function(eventType, filename)  {
       let a = {
         ctime: Date.now(),
         eventType: eventType,
