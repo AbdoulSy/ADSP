@@ -1,7 +1,7 @@
 /* jshint esversion: 6 */
 
 //of course TODO: make the code a bit more ES6-sexy
-function handleReadSuccessResult (previousProcess) {
+function handleReadSuccessResult (previousProcess, callback) {
   console.log("handleReadSuccessResult called");	
   return function successFn(documents) {
        console.log("successFn curried function called")	;  
@@ -10,6 +10,10 @@ function handleReadSuccessResult (previousProcess) {
        documents.forEach(function(document) {
          console.log(JSON.stringify(document));
        });
+       if(callback && typeof callback === 'function') {
+       	 callback(documents);
+       }
+
   };
 
 }
@@ -20,11 +24,11 @@ function handleReadErrorResult (error) {
 }
 
 
-module.exports = function getProcesses(connection, previousProcess) {
+module.exports = function getProcesses(connection, previousProcess, callback) {
   const db = connection.db;
 
   //The Read operation on the /ps/process.json file created when scraping the js files
    db.documents.read('/ps/process.json')
-     .result().then(handleReadSuccessResult(previousProcess), 
+     .result().then(handleReadSuccessResult(previousProcess, callback), 
        handleReadErrorResult); 
 };

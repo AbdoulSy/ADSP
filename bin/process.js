@@ -15,20 +15,25 @@ var previousProcess = globals.previousProcess;
 var resultsOfParsing = globals.resultsOfParsing;
 var els;
 
-//Gets the events from Marklogic's database
-//see includes>get-events
-getEventsFn(connection, els);
-//gets the processed Documents from Marklogic's documents database
-getProcessDocumentsFn(connection, previousProcess);
+module.exports = function ( docsCb ) {
+  //Gets the events from Marklogic's database
+  //see includes>get-events
+  getEventsFn(connection, els);
+  //gets the processed Documents from Marklogic's documents database
+  getProcessDocumentsFn(connection, previousProcess, docsCb);
 
 
-//trying to implement an idempotent method to preserve resources
-//we store when the walk Has started to monitor the speed of the crawling
-resultsOfParsing.walkStart = Date.now(); 
-//we reset the directories and files variables from global
-resultsOfParsing.directories = [];
-resultsOfParsing.files = [];
+  //trying to implement an idempotent method to preserve resources
+  //we store when the walk Has started to monitor the speed of the crawling
+  resultsOfParsing.walkStart = Date.now(); 
+  //we reset the directories and files variables from global
+  resultsOfParsing.directories = [];
+  resultsOfParsing.files = [];
 
-handlers.init(db);
+  handlers.init(db);
+
+
+
+};
 
 
