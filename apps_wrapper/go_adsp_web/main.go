@@ -11,35 +11,32 @@ import (
 
 //Directory is the struct representation of a directory concept
 type Directory struct {
-	root string
-	dirs []DirsType
-}
-
-//AuthorType is the struct representation of an author concept
-type AuthorType struct {
-	fullname string
+	Root string
+	Dirs []DirsType
 }
 
 //File is the struct representation of a File concept
 type File struct {
-	description string
-	author      []string
-	project     []string
-	milestone   []string
-	TODO        []string
-	file        string
+	Description string
+	Author      interface{}
+	Project     interface{}
+	Milestone   interface{}
+	TODO        interface{}
+	File        string
 }
 
 //DirsType is the struct representation of the Array of directory Concepts
 type DirsType struct {
-	name, mtime string
+	Name, Mtime string
 }
 
 //Content is the struct representation of the Content Concept
 type Content struct {
-	walkStart   int
-	directories []Directory
-	files       []File
+	WalkStart   int
+	WalkEnd     int
+	WalkTime    string
+	Directories []Directory
+	Files       []File
 }
 
 func main() {
@@ -53,7 +50,9 @@ func main() {
 }
 
 var tpl *template.Template
-var docss []Content
+
+//Docss Holds the Content of the JSON String
+var Docss Content
 
 func init() {
 	tpl = template.Must(template.ParseGlob("templates/*"))
@@ -71,13 +70,13 @@ func index(w http.ResponseWriter, req *http.Request) {
 		log.Fatal(err)
 	}
 
-	erri := json.Unmarshal(txt, &docss)
+	erri := json.Unmarshal(txt, &Docss)
 
 	if erri != nil {
 		log.Fatal(erri)
 	}
 
-	log.Printf("%+v", docss)
+	log.Printf("%+v", Docss)
 
 	myPage := adspgo.PageType{
 		ID:          "aria-abdoulsy-eu/adsp/home",

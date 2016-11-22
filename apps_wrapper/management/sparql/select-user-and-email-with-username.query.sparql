@@ -1,0 +1,10 @@
+## query
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX adsp: <http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#>
+
+SELECT *
+WHERE  {
+        ?s adsp:firstname "Abdoul".
+        ?s rdf:type adsp:Member .
+        ?s adsp:has_active_email ?email .
+       }

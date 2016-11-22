@@ -6,9 +6,8 @@ function handleReadSuccessResult (previousProcess, callback) {
   return function successFn(documents) {
        console.log("successFn curried function called")	;  
        previousProcess = documents;
-       console.log(documents);
        documents.forEach(function(document) {
-         console.log(JSON.stringify(document));
+       //  console.log(JSON.stringify(document));
        });
        if(callback && typeof callback === 'function') {
        	 callback(documents);

@@ -15,7 +15,7 @@ module.exports = function getCommentParser (opts) {
  	   return _.trimStart(annotationLine, ':');      
          },
          default: function() {
-           return "Not Implemented";
+           return ["Not Implemented"];
          }      
        },
        milestone: {

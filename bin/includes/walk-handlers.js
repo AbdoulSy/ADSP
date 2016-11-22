@@ -41,7 +41,6 @@ function fileHandler(root, fileStat, next) {
   fs.readFile(path.resolve(root, fileStat.name), "utf-8", function (err, buffer) {
     var ext = /.+?\.(.*)$/;
     var extension = fileStat.name.match(ext);
-    console.log(extension);
     switch(extension[1]){
       case 'html':
 	initiateCommentReader({
@@ -92,7 +91,6 @@ function endHandler() {
     console.log(JSON.stringify(error,null,2));
   });
 
-  console.log(resultsOfParsing.directories);
   watch(resultsOfParsing.directories[0].root, function(eventType, filename)  {
       let a = {
         ctime: Date.now(),
@@ -122,7 +120,6 @@ module.exports = {
        db = databaseClient;
        resultsOfParsing = globals.resultsOfParsing;
        d = resultsOfParsing.directories;
-       console.log(globals, d);
        walker.on("directories", dirHandler);
        walker.on("file", fileHandler);
        walker.on("errors", errorsHandler); // plural
