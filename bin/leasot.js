@@ -1,4 +1,5 @@
 var fs = require('fs');
+var path = require('path');
 var leasot = require('leasot');
 
 module.exports = function (filePath) {

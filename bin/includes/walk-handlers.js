@@ -121,7 +121,7 @@ module.exports = {
        db = databaseClient;
        resultsOfParsing = globals.resultsOfParsing;
        d = resultsOfParsing.directories;
-       let walker  = walk.walk("./apps_wrapper/projects", { followLinks: true});
+       let walker  = walk.walk("./test-project", { followLinks: true});
        console.log("fiok>>", dirHandler);
        walker.on("directories", dirHandler);
        walker.on("file", fileHandler);
