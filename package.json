@@ -28,6 +28,7 @@
     "express": "^4.14.0",
     "jscs": "^3.0.7",
     "jsdoc": "^3.4.3",
+    "jsdoc-api": "^2.0.6",
     "leasot": "^4.2.0",
     "marklogic": "^1.0.6",
     "node-watch": "^0.4.1",
