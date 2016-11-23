@@ -1,0 +1,16 @@
+{
+  "project_name": "test_project",
+  "author_tag": "asy",
+  "conventions": [
+    "ES6_conventions"
+  ],
+  "jshint_conventions": "AirBnb_convention",
+  "rules": [
+    "must_have_jshint_valid",
+    "must_have_test_counterpart_for_js"
+  ],
+  "todo_management": {
+    "todo_resolve_task": ["test_counterpart_valid", "deleted_todo_comment"]
+  }
+
+}
