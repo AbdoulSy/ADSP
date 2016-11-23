@@ -26,6 +26,8 @@
     "cdocparser": "^0.13.0",
     "dir-to-json": "0.0.3",
     "express": "^4.14.0",
+    "jscs": "^3.0.7",
+    "leasot": "^4.2.0",
     "marklogic": "^1.0.6",
     "node-watch": "^0.4.1",
     "walk": "^2.3.9"

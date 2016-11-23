@@ -19,8 +19,6 @@ module.exports = function ( docsCb ) {
   //Gets the events from Marklogic's database
   //see includes>get-events
   getEventsFn(connection, els);
-  //gets the processed Documents from Marklogic's documents database
-  getProcessDocumentsFn(connection, previousProcess, docsCb);
 
 
   //trying to implement an idempotent method to preserve resources
@@ -32,6 +30,8 @@ module.exports = function ( docsCb ) {
 
   handlers.init(db);
 
+  //gets the processed Documents from Marklogic's documents database
+  getProcessDocumentsFn(connection, previousProcess, docsCb);
 
 
 };

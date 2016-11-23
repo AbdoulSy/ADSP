@@ -1,7 +1,6 @@
 /* jshint esversion: 6 */
 
 const walk    = require('walk');
-const walker  = walk.walk("./apps_wrapper/projects/", { followLinks: true});
 const fs      = require('fs');
 const _       = require('lodash');
 const path    = require('path');
@@ -11,6 +10,7 @@ let globals   = require('./globals.js');
 
 
 function dirHandler(root, dirStatsArray, next) {
+	console.log("<<dir>>>");
 	let theDir = {};
 	theDir.root = root;
 	theDir.dirs = _.map(dirStatsArray, function (dir) {
@@ -65,8 +65,8 @@ function fileHandler(root, fileStat, next) {
 	  file: path.resolve(root, fileStat.name)
 	}, buffer);
     }
-    next();
   });
+  next();
 }
 
 function endHandler() {
@@ -117,9 +117,12 @@ var d;
 var db;
 module.exports = {
     init: function (databaseClient) {
+    
        db = databaseClient;
        resultsOfParsing = globals.resultsOfParsing;
        d = resultsOfParsing.directories;
+       let walker  = walk.walk("./apps_wrapper/projects", { followLinks: true});
+       console.log("fiok>>", dirHandler);
        walker.on("directories", dirHandler);
        walker.on("file", fileHandler);
        walker.on("errors", errorsHandler); // plural

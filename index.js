@@ -6,9 +6,6 @@ var process = require('./bin/process');
 app.get('/', function (req, res) {
         process(function callback(docs) {
 	  let docsContents = docs[0].content;	
-	  console.log(docsContents);
-	  console.log('>>>>>');
-	  console.log(docsContents.files);
 	  let stringDocs = JSON.stringify(docsContents);	
 	  res.send(stringDocs);
 	});
