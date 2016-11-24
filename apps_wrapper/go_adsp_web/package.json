@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/abdoulsy/go-adsp-web/issues"
   },
-  "homepage": "https://github.com/abdoulsy/go-adsp-web#readme"
+  "homepage": "https://github.com/abdoulsy/go-adsp-web#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
 }
