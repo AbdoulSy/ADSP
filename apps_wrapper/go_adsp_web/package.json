@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/abdoulsy/go-adsp-web#readme",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-golang": "git+https://github.com/cescoferraro/gulp-golang.git"
   }
 }
