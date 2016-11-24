@@ -24,6 +24,7 @@
   "homepage": "https://github.com/AbdoulSy/ADSP#readme",
   "dependencies": {
     "cdocparser": "^0.13.0",
+    "chai": "^3.5.0",
     "dir-to-json": "0.0.3",
     "express": "^4.14.0",
     "jscs": "^3.0.7",
@@ -31,7 +32,9 @@
     "jsdoc-api": "^2.0.6",
     "leasot": "^4.2.0",
     "marklogic": "^1.0.6",
+    "mocha": "^3.1.2",
     "node-watch": "^0.4.1",
+    "sinon": "^1.17.6",
     "walk": "^2.3.9"
   }
 }
