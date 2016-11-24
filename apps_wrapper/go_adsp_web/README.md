@@ -1,1 +1,0 @@
-The ADSP Golang application
