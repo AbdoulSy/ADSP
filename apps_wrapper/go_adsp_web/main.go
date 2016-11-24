@@ -25,7 +25,7 @@ var tpl *template.Template
 var Docss adspgo.Content
 
 func init() {
-	tpl = template.Must(template.ParseGlob("templates/*"))
+	tpl = template.Must(template.ParseGlob("views/templates/*"))
 }
 
 func index(w http.ResponseWriter, req *http.Request) {
