@@ -115,6 +115,7 @@ gulp.task('assets:javascripts', function() {
   return gulp.src([
     /* Your JS dependencies via bower_components */
     /* Your JS libraries */
+    "assets/javascripts/*.js"		  
   ]).pipe(gulpif(args.sourcemaps, sourcemaps.init()))
     .pipe(concat('application.js'))
     .pipe(gulpif(args.sourcemaps, sourcemaps.write()))
