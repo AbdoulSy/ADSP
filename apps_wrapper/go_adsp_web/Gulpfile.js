@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2015 Martin Donath
+ * Modified For the Go-ADSP-Web Project by Abdoul Sy - 2016
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -32,7 +33,7 @@ var clean      = require('del');
 var collect    = require('gulp-rev-collector');
 var concat     = require('gulp-concat');
 var ignore     = require('gulp-ignore');
-var mincss     = require('gulp-minify-css');
+var mincss     = require('gulp-clean-css');
 var minhtml    = require('gulp-htmlmin');
 var modernizr  = require('gulp-modernizr');
 var mqpacker   = require('css-mqpacker');
