@@ -16,8 +16,8 @@ func BuildBasicLayoutWithPage(pa PageType) (pl PageLayout, err error) {
 
 	theLinks := CSSLinks{
 		Links: []string{
-			"/public/styles/main.css",
-			"/public/styles/layout.css",
+			"/public/stylesheets/main.css",
+			"/public/stylesheets/layout.css",
 			"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css",
 		},
 		Page: "Index",
@@ -25,7 +25,7 @@ func BuildBasicLayoutWithPage(pa PageType) (pl PageLayout, err error) {
 
 	theScripts := JsScripts{
 		Files: []string{
-			"/public/js/hello.js",
+			"/public/javascripts/application.js",
 			"https://code.jquery.com/jquery-2.1.1.min.js",
 			"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js",
 		},
