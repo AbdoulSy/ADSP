@@ -1,0 +1,25 @@
+{
+  "name": "go_adsp_web",
+  "version": "1.0.0",
+  "description": "The Go ADSP Web Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdoulsy/go-adsp-web.git"
+  },
+  "keywords": [
+    "Go",
+    "Lang",
+    "Project",
+    "Tracker"
+  ],
+  "author": "Abdoul Sy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdoulsy/go-adsp-web/issues"
+  },
+  "homepage": "https://github.com/abdoulsy/go-adsp-web#readme"
+}
