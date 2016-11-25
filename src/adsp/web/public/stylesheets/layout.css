@@ -1,4 +1,4 @@
-.header {
+.page {
   width: 100%; }
 
 .logo-small {
@@ -7,6 +7,3 @@
 
 .footer {
   margin-top: 10px; }
-
-.state-neutral {
-  background-color: #aab1ec; }

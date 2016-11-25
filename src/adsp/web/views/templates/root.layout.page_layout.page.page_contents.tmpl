@@ -1,6 +1,5 @@
 {{define "page_content"}}
 <div class="page state-neutral" id="{{.Page.ID}}">
-  <h2>{{.Page.Title}}</h2>  
   <p class="page-content-description">
      {{.Page.Description}}
   </p>
@@ -9,7 +8,6 @@
   </div>
 <!-- TODO: Create a Components loader -->
   <div class="compoments-loader">
-    <p>Loading</p>
    <div>
     {{range .Page.WalkContent.Directories}}
       <p>{{.Root}}</p>
@@ -26,7 +24,6 @@
       </p>
     {{end}}
    </div>
-   
   </div>
 </div>
 {{end}}
