@@ -40,16 +40,19 @@ func BuildBasicLayoutWithPage(pa PageType) (pl PageLayout, err error) {
 	homeNav := NavElementType{
 		Name: "Home",
 		Link: "/",
+		Ligature: "home",
 	}
 
 	projectsNav := NavElementType{
 		Name: "Projects",
 		Link: "/projects",
+		Ligature: "toc",
 	}
 
 	visualisationNav := NavElementType{
 		Name: "Visualisation",
 		Link: "/visualisation",
+		Ligature: "bubble_chart",
 	}
 
 	myNav := NavType{
