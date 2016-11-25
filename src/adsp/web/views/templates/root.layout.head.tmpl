@@ -1,0 +1,13 @@
+{{define "head"}}
+  <head>
+    {{template "metas" .}}
+
+    <link rel="shortcut icon" href="/public/images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+     {{template "styles" .}}
+  </head>
+{{end}}

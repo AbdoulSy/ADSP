@@ -1,6 +1,10 @@
 .header {
   width: 100%; }
 
+.logo-small {
+  display: inline-block;
+  height: 40px; }
+
 .footer {
   margin-top: 10px; }
 
