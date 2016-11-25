@@ -13,12 +13,10 @@ type PageLayout struct {
 
 //Builds a basic Layout with a page embedded
 func BuildBasicLayoutWithPage(pa PageType) (pl PageLayout, err error) {
-
 	theLinks := CSSLinks{
 		Links: []string{
 			"/public/stylesheets/main.css",
 			"/public/stylesheets/layout.css",
-			"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css",
 		},
 		Page: "Index",
 	}
@@ -27,7 +25,9 @@ func BuildBasicLayoutWithPage(pa PageType) (pl PageLayout, err error) {
 		Files: []string{
 			"/public/javascripts/application.js",
 			"https://code.jquery.com/jquery-2.1.1.min.js",
-			"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js",
+            "https://code.getmdl.io/1.2.1/material.min.js",
+
 		},
 		Page: "Index",
 	}
