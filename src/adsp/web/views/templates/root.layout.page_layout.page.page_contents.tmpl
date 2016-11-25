@@ -8,22 +8,26 @@
   </div>
 <!-- TODO: Create a Components loader -->
   <div class="compoments-loader">
-   <div>
-    {{range .Page.WalkContent.Directories}}
-      <p>{{.Root}}</p>
-    {{end}}
-   </div>
-   <div>
-    {{range .Page.WalkContent.Files}}
-      <p> description: {{.Description}}
-      </p>
-      <p> todo : {{.TODO}}
-      </p>
-      <p> file: {{.File}} </p>
-      <p> author {{.Author}}
-      </p>
-    {{end}}
-   </div>
+   <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">Author</th>
+          <th class="mdl-data-table__cell--non-numeric">todo</th>
+          <th class="mdl-data-table__cell--non-numeric">file</th>
+          <th class="mdl-data-table__cell--non-numeric">description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{range .Page.WalkContent.Files}}
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">{{.Author}}</td>
+            <td>{{.TODO}}</td>
+            <td>{{.File}}</td>
+            <td>{{.Description}}</td>
+          </tr>
+        {{end}}
+      </tbody>
+    </table>
   </div>
 </div>
 {{end}}
