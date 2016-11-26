@@ -16,7 +16,7 @@ func main() {
 	mux.HandleFunc("/projects/*/boards", projectBoards)
 	mux.HandleFunc("/visualisation", visualisation)
 	mux.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("./public"))))
-	log.Println("server listening on the port 8080")
+	log.Println("ADSP Web server listening on the port 8080")
 	http.ListenAndServe(":8080", mux)
 }
 
