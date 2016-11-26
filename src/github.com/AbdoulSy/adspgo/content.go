@@ -6,6 +6,12 @@ type Directory struct {
 	Dirs []DirsType
 }
 
+//FileHolder is the structure holding both the document and the File'
+type FileHolder struct {
+	Doc   interface{}
+	Todos []File
+}
+
 //File is the struct representation of a File concept
 type File struct {
 	Description string
@@ -27,5 +33,5 @@ type Content struct {
 	WalkEnd     int
 	WalkTime    string
 	Directories []Directory
-	Files       []File
+	Files       []FileHolder
 }
