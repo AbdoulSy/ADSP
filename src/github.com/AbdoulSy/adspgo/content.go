@@ -10,6 +10,7 @@ type Directory struct {
 type FileHolder struct {
 	Doc   interface{}
 	Todos []File
+	Hints interface{}
 }
 
 //File is the struct representation of a File concept
