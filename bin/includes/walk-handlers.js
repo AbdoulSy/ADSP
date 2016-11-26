@@ -6,6 +6,7 @@ const path    = require('path');
 const watch   = require('node-watch');
 const leasotFn  = require('../leasot.js');
 const initiateCommentReader = require('./comment-reader');
+const JSHINT  = requiref('jshint');
 var jsdoc = require('jsdoc-api');
 let globals   = require('./globals');
 
@@ -82,7 +83,7 @@ function fileHandler(root, fileStat, next) {
      return;
   }
   var filePath = path.resolve(root, fileStat.name);
-  leasotFn(filePath, jsdoc);
+  leasotFn(filePath, jsdoc, JSHINT);
   next();
 }
 

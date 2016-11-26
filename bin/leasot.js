@@ -22,7 +22,7 @@ var previousProcess = globals.previousProcess;
  *@param {JsDoc} FileExplainer a variable holding the jsdoc required
  *@return {object} the report as a plain object
  */
-module.exports = function doLeasot (filePath, FileExplainer) {
+module.exports = function doLeasot (filePath, FileExplainer, JSHINT) {
 
   //toReturn is the object to be returned by the process
   //@TODO(asy): create a pipeline using Monadic functions.	
@@ -46,6 +46,8 @@ module.exports = function doLeasot (filePath, FileExplainer) {
   if(filetype === ".json") {
   	return {};
   }
+
+
   //the todos returned by the leasot parse reporter
   toReturn.todos = leasot.parse({ext: filetype, content: contents, fileName: file});
  
@@ -55,6 +57,10 @@ module.exports = function doLeasot (filePath, FileExplainer) {
       reporter: 'json',
       spacing: 2
   });
+
+  JSHINT(content/* , options, predef */);
+
+  toReturn.hints = JSHINT.data();
  
   var savedOutput = JSON.parse(output);
   savedOutput.docs = fileExplained;
