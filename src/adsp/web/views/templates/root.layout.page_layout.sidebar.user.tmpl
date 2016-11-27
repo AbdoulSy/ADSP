@@ -1,16 +1,16 @@
 {{define "current_user"}}
-<header class="demo-drawer-header">
-  <img src="/public/images/fiokdelkof.jpg" class="demo-avatar">
+<header class="demo-drawer-header" itemscope itemtype="http://web.abdoulsy.eu/o#User">
+  <img src="/public/images/fiokdelkof.jpg" class="demo-avatar" itemprop="http://web.abdoulsy.eu/o#has_picture">
   <div class="demo-avatar-dropdown">
-    <span>@abdoulsy</span>
+    <span itemprop="handle_username">@abdoulsy</span>
     <div class="mdl-layout-spacer"></div>
     <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
       <i class="material-icons" role="presentation">arrow_drop_down</i>
       <span class="visuallyhidden">Accounts</span>
     </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-      <li class="mdl-menu__item">@abdoulsy</li>
-      <li class="mdl-menu__item">@ondiaye</li>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn" itemscope itemtype="http://web.abdoulsy.eu/o#User_List">
+      <li class="mdl-menu__item" itemprop="http://web.abdoulsy.eu/o#has_current_user">@abdoulsy</li>
+      <li class="mdl-menu__item" itemprop="http://web.abdoulsy.eu/o#has_other_connected_account_username">@ondiaye</li>
       <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
     </ul>
   </div>
