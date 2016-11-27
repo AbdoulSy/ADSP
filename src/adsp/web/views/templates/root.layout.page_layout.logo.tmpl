@@ -1,5 +1,8 @@
 {{define "logo"}}
-<a href="/" title="ADSP">
+<a itemscope="http://aria.abdoulsy.eu/ontologies/ADSP/Web_Project#Web_Application_Logo" 
+   href="/" title="ADSP">
   <img class="logo-small" src="{{.Logo.FilePath}}" alt="ADSP Logo" />
+  <meta itemprop="http://aria.abdoulsy.eu/ADSP/Web_Project#has_logo_image_text"
+         content="ADSP (Application Development Surveillance Platform" /> 
 </a>
 {{end}}
