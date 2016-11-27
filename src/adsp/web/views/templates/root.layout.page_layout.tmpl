@@ -1,13 +1,21 @@
 {{define "page_layout"}}
-<body>
-  <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+<body itemscope="http://aria.abdoulsy.eu/ontologies/ADSP/Web_Project#Generated_Web_Page">
+  <div itemprop="http://aria.abdoulsy.eu/ontologies/ADSP/Web_Project#has_header"
+       class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     {{template "top" .}}
     {{template "sidebar" .}}
     {{template "main" .}}
   </div>
     {{template "svg_piechart_defs" .}}
     {{template "svg_graph_defs" .}}
-    <a href="https://github.com/AbdoulSy/ADSP" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">View Source</a>
+    <a itemscope="http://aria.abdoulsy.eu/ontologies/ADSP/Web_Project#Github_Source_Page"
+       itemprop="has_URL" 
+       href="https://github.com/AbdoulSy/ADSP"
+       target="_blank"
+       id="view-source"
+       class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">
+	    View Source
+    </a>
    {{template "scripts" .}}
 </body>
 {{end}}
