@@ -1,6 +1,6 @@
-package adspgo
+package navelement
 
-type NavElementType struct {
+type T struct {
 	Name string
 	Link string
     Ligature string

@@ -1,6 +1,6 @@
-package adspgo
+package error
 
-type ErrorType struct {
+type T struct {
 	ErrCode    string
 	ErrTitle   string
 	Message    string

@@ -1,7 +1,10 @@
-package adspgo
+package csslinks
 
 //the structure holding CSS Links as a concept
-type CSSLinks struct {
+type T struct {
 	Links []string
 	Page  string
+    Component string
 }
+
+

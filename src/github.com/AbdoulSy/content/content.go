@@ -1,4 +1,4 @@
-package adspgo
+package content
 
 //Directory is the struct representation of a directory concept
 type Directory struct {

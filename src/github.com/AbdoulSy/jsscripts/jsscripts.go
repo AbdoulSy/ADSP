@@ -1,7 +1,7 @@
-package adspgo
+package jsscripts
 
 //JSScripts holds jsscripts as a concept
-type JsScripts struct {
+type T struct {
 	Files []string
 	Page  string
 }

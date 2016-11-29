@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/json"
 	"github.com/AbdoulSy/adspgo"
+	"github.com/AbdoulSy/pageBuilder"
+    "github.com/AbdoulSy/codeDescriptor"
 	"html/template"
 	"io/ioutil"
 	"log"
@@ -13,7 +15,6 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", index)
 	mux.HandleFunc("/projects", projects)
-	mux.HandleFunc("/projects/*/boards", projectBoards)
 	mux.HandleFunc("/visualisation", visualisation)
 	mux.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("./public"))))
 	log.Println("ADSP Web server listening on the port 8080")
@@ -31,30 +32,23 @@ func init() {
 
 func index(w http.ResponseWriter, req *http.Request) {
 
-	res, err := http.Get("http://localhost:3465/")
-	if err != nil {
-		log.Fatal(err)
-	}
-	txt, err := ioutil.ReadAll(res.Body)
-	res.Body.Close()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	erri := json.Unmarshal(txt, &Docss)
-
-	if erri != nil {
-		log.Fatal(erri)
-	}
+	//indev var assignments
+    docName := "FileWalkAndDescription"
+    host := "http://localhost:3465"
+    fileReader = &codeDescriptor {
+    	Name: docName,
+    	Host: host
+    }
+    //fileReader injects content into Docss structure
+    fileReader.GetBodyAsTextSync(Docss)
 
 	log.Printf("%+v", Docss)
 
-	myPage := adspgo.PageType{
-		ID:          "aria-abdoulsy-eu/adsp/home",
-		Title:       "Home Page",
-		WalkContent: Docss,
-		Description: "This Page describe the current state of the Team",
+	pageBuilder := &pageBuilder{
+		Config: adspgo.Configuration("HOME")
 	}
+
+	myPage, err := pageBuilder.Build(Docss)
 	c, er := adspgo.BuildBasicLayoutWithPage(myPage)
 
 	errtmpl := tpl.ExecuteTemplate(w, "layout", c)
@@ -65,11 +59,10 @@ func index(w http.ResponseWriter, req *http.Request) {
 
 func projects(w http.ResponseWriter, req *http.Request) {
 
-	projectPage := adspgo.PageType{
-		ID:          "aria-abdoulsy-eu/adsp/projects",
-		Title:       "The Project Page",
-		Description: "This Page shows the Current Projects of the Team",
+	pageBuilder := &pageBuilder{
+		Config: adspgo.Configuration("PROJECTS")
 	}
+	projectPage, err := pageBuilder.Build()
 	c, er := adspgo.BuildBasicLayoutWithPage(projectPage)
 	err := tpl.ExecuteTemplate(w, "layout", c)
 	if err != nil || er != nil {
@@ -78,28 +71,13 @@ func projects(w http.ResponseWriter, req *http.Request) {
 
 }
 
-func projectBoards(w http.ResponseWriter, req *http.Request) {
-
-	myPage := adspgo.PageType{
-		ID:          "aria-abdoulsy-eu/adsp/projects-boards",
-		Title:       "The Project Boards Page",
-		Description: "This Page shows the Boards a-la-trello of the Team",
-	}
-	c, er := adspgo.BuildBasicLayoutWithPage(myPage)
-	err := tpl.ExecuteTemplate(w, "layout", c)
-	if err != nil || er != nil {
-		log.Println(err)
-	}
-}
-
 func visualisation(w http.ResponseWriter, req *http.Request) {
 
-	myPage := adspgo.PageType{
-		ID:          "aria-abdoulsy-eu/adsp/visualisation",
-		Title:       "The Visualisation Page",
-		Description: "This Page shows various visualisations for the Team",
+	pageBuilder := &pageBuilder{
+		Config: adspgo.Configuration("VISUALISATION")
 	}
-	c, er := adspgo.BuildBasicLayoutWithPage(myPage)
+	visualisationPage, err := pageBuilder.Build()
+	c, er := adspgo.BuildBasicLayoutWithPage(visualisationPage)
 	err := tpl.ExecuteTemplate(w, "layout", c)
 	if err != nil || er != nil {
 		log.Println(err)
