@@ -20,7 +20,6 @@ module.exports = function ( docsCb ) {
   //see includes>get-events
   getEventsFn(connection, els);
 
-
   //trying to implement an idempotent method to preserve resources
   //we store when the walk Has started to monitor the speed of the crawling
   resultsOfParsing.walkStart = Date.now(); 

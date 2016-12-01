@@ -27,44 +27,53 @@ module.exports = function doLeasot (filePath, FileExplainer, JSHINT) {
   //toReturn is the object to be returned by the process
   //@TODO(asy): create a pipeline using Monadic functions.	
   let toReturn = {};
+
+  //default values to demonstrate the test
+  //TODO create the variable from a db request to get the current project 
+  //being evaluated
+
+  toReturn.project_path = _.replace(filePath, "/Users/asmart/Codenames/Github/ADSP/test-project/", "");
+
+  toReturn.adsp_type = "http://web.abdoulsy.eu/o#ProjectFile";
+  toReturn.adsp_shortType = "ProjectFile";
+  toReturn.adsp_operations = ["extract_todos", "jshint", "jsdoc"];
+  toReturn.adsp_in_project = "test-project";
+  toReturn.adsp_parent_project = "ADSP";
+
   //contents holds the contents of the file as a string
   //at the moment I read the contents of the file asynchronously
   //if the walkTime exceeds 1000ms, check for the performances again.
   var contents = fs.readFileSync(filePath, 'utf8');
-  //fileExplained is the variable holding the parsing of
-  //the contents for the jsdocs.
-  toReturn.doc = FileExplainer.explainSync({source: contents});
+  toReturn.contents = contents;
   // get the filetype of the file, or force a special parser 
   var filetype = path.extname(filePath);
   // add file for better reporting 
   var file = path.basename(filePath);
 
   //Simple logo
-  //@TODO(asy): remove the console log for #production.
-  console.log(filePath, contents, fileExplained);
 
   if(filetype === ".json") {
   	return {};
   }
 
+  if(filetype === ".js") {
+  
+    //toReturn.doc is the variable holding the parsing of
+    //the contents for the jsdocs.
+    toReturn.doc = FileExplainer.explainSync({source: contents});
+    JSHINT(contents/* , options, predef */);
+    toReturn.hints = JSHINT.data();
+  }
+
+  //@TODO(asy): remove the console log for #production.
+  console.log(filePath, contents, toReturn.doc);
 
   //the todos returned by the leasot parse reporter
   toReturn.todos = leasot.parse({ext: filetype, content: contents, fileName: file});
  
    // -> todos now contains the array of todos/fixme parsed 
  
-  var output = leasot.reporter(todos, {
-      reporter: 'json',
-      spacing: 2
-  });
+  resultsOfParsing.files.push(toReturn);
 
-  JSHINT(content/* , options, predef */);
-
-  toReturn.hints = JSHINT.data();
- 
-  var savedOutput = JSON.parse(output);
-  savedOutput.docs = fileExplained;
-  resultsOfParsing.files.push(savedOutput);
-
-  return savedOutput;
+  return toReturn;
 }; 

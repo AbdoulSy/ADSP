@@ -6,7 +6,7 @@ const path    = require('path');
 const watch   = require('node-watch');
 const leasotFn  = require('../leasot.js');
 const initiateCommentReader = require('./comment-reader');
-const JSHINT  = requiref('jshint');
+const hinter = require('jshint');
 var jsdoc = require('jsdoc-api');
 let globals   = require('./globals');
 
@@ -73,7 +73,7 @@ function isFileInvalid (fileStat) {
  * skips files when they are invalid
  * calls leasotFn otherwise
  *
- * @param {string} root the directory's full path
+* @param {string} root the directory's full path
  * @param {object} dirStatsArray
  * @param {Function} next, the function to call to let the walker{walk} continue
  */
@@ -83,7 +83,7 @@ function fileHandler(root, fileStat, next) {
      return;
   }
   var filePath = path.resolve(root, fileStat.name);
-  leasotFn(filePath, jsdoc, JSHINT);
+  leasotFn(filePath, jsdoc, hinter.JSHINT);
   next();
 }
 
@@ -123,6 +123,12 @@ function endHandler() {
   }, function (error) {
     console.log(JSON.stringify(error,null,2));
   });
+  
+
+  db.writeCollection("/projects/files", resultsOfParsing.files).result()
+    .then(function (uris){
+      console.log("inserted "+ uris.length + " documents");
+    });
 
   watch(resultsOfParsing.directories[0].root, function(eventType, filename)  {
       let a = {
@@ -165,7 +171,6 @@ module.exports = {
        resultsOfParsing = globals.resultsOfParsing;
        d = resultsOfParsing.directories;
        let walker  = walk.walk("./test-project", { followLinks: true});
-       console.log("fiok>>", dirHandler);
        walker.on("directories", dirHandler);
        walker.on("file", fileHandler);
        walker.on("errors", errorsHandler); // plural
