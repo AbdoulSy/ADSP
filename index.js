@@ -5,6 +5,7 @@ var processFn = require('./bin/process');
 var getProjectsFn = require('./bin/get-projects');
 var getUserFn = require('./bin/get-users');
 var getCommitHistoryFn = require('./bin/git-log');
+var getFnNbFn = require('./bin/get-fn-nb');
 
 app.get('/', function (req, res) {
     try {
@@ -29,6 +30,30 @@ app.get('/projects', function (req, res) {
         console.log({
 	       exception: e
 	      });
+    }
+
+});
+
+app.get('/function-number', function (req, res) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', false);
+    try {
+        getFnNbFn(function (data) {
+    res.send(data);
+  });
+    } catch (e) {
+        console.log({
+         exception: e
+        });
     }
 
 });

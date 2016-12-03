@@ -154,6 +154,7 @@ function endHandler() {
 var resultsOfParsing;
 var d;
 var db;
+var els;
 module.exports = {
     /**
      *init: the Exported initialisation function
@@ -168,6 +169,7 @@ module.exports = {
     init: function (databaseClient) {
 
        db = databaseClient;
+       els = [];
        resultsOfParsing = globals.resultsOfParsing;
        d = resultsOfParsing.directories;
        let walker  = walk.walk("./bin/", { followLinks: true});
