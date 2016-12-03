@@ -8,6 +8,8 @@ import (
   "github.com/AbdoulSy/userDescriptor"
   "github.com/AbdoulSy/page"
   "github.com/AbdoulSy/navelement"
+  "github.com/AbdoulSy/commitHistoryReader"
+
 )
 
 //PageLayout structure holding the pageLayout Elements
@@ -20,10 +22,11 @@ type T struct {
 	Page     page.T
 	Errors   []error
 	User     userDescriptor.User
+	History  commitHistoryReader.History
 }
 
 //BuildBasicLayoutWithPage Builds a basic Layout with a page embedded
-func BuildBasicLayoutWithPage(pa page.T, u userDescriptor.User) (pl T, err error) {
+func BuildBasicLayoutWithPage(pa page.T, u userDescriptor.User, c commitHistoryReader.History) (pl T, err error) {
 	theLinks := csslinks.T{
 		Links: []string{
 			"/public/stylesheets/main.css",
@@ -77,6 +80,7 @@ func BuildBasicLayoutWithPage(pa page.T, u userDescriptor.User) (pl T, err error
 		Nav:      myNav,
 		Page:     pa,
 		User:     u,
+		History: c,
 	}
 
 	return

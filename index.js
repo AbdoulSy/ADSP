@@ -4,12 +4,13 @@ var app = express();
 var processFn = require('./bin/process');
 var getProjectsFn = require('./bin/get-projects');
 var getUserFn = require('./bin/get-users');
+var getCommitHistoryFn = require('./bin/git-log');
 
 app.get('/', function (req, res) {
     try {
       processFn(function callback(docs) {
-          let docsContents = docs[0].content;	
-	  let stringDocs = JSON.stringify(docsContents);	
+          let docsContents = docs[0].content;
+	  let stringDocs = JSON.stringify(docsContents);
 	  res.send(stringDocs);
       });
     } catch (e) {
@@ -26,9 +27,8 @@ app.get('/projects', function (req, res) {
 	});
     } catch (e) {
         console.log({
-	   exception: e
-	});
-    
+	       exception: e
+	      });
     }
 
 });
@@ -38,6 +38,12 @@ app.get('/current-user', function (req, res){
        res.send(user);
     });
 
+});
+
+app.get('/commit-history', function (req, res) {
+   getCommitHistoryFn(function(commits) {
+      res.send(commits);
+   });
 });
 
 

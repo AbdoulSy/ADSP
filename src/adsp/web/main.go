@@ -7,6 +7,7 @@ import (
     "github.com/AbdoulSy/pageBuilder"
 	"github.com/AbdoulSy/adspgo"
 	"github.com/AbdoulSy/layout"
+  	"github.com/AbdoulSy/commitHistoryReader"
 	"html/template"
 	"log"
 	"net/http"
@@ -29,6 +30,8 @@ var Docss content.T
 
 var User userDescriptor.User
 
+var Commits commitHistoryReader.History
+
 func init() {
 	tpl = template.Must(template.ParseGlob("views/templates/*"))
 }
@@ -48,10 +51,17 @@ func index(w http.ResponseWriter, req *http.Request) {
     	Host: "http://localhost:3465/current-user",
     }
 
+    commitsReader := &commitHistoryReader.T {
+    	Name: "Last 9 Commits",
+    	Host: "http://localhost:3465/commit-history",
+    }
+
     //fileReader injects content into Docss structure
     fileReader.GetBodyAsTextSync(&Docss)
 
     userReader.GetBodyAsTextSync(&User)
+
+    commitsReader.GetBodyAsTextSync(&Commits)
 
 	log.Printf("%+v", User)
 
@@ -65,7 +75,7 @@ func index(w http.ResponseWriter, req *http.Request) {
 		log.Println(err);
 	}
 
-	c, er := layout.BuildBasicLayoutWithPage(myPage, User)
+	c, er := layout.BuildBasicLayoutWithPage(myPage, User, Commits)
 
 	errtmpl := tpl.ExecuteTemplate(w, "layout", c)
 	if errtmpl != nil || er != nil {
@@ -87,7 +97,7 @@ func projects(w http.ResponseWriter, req *http.Request) {
 		Config: adspgo.Configuration("PROJECTS"),
 	}
 	projectPage, err := pageBuilder.Build(Docss)
-	c, er := layout.BuildBasicLayoutWithPage(projectPage, User)
+	c, er := layout.BuildBasicLayoutWithPage(projectPage, User, Commits)
 	err = tpl.ExecuteTemplate(w, "layout", c)
 	if err != nil || er != nil {
 		log.Println(err)
@@ -108,7 +118,7 @@ func visualisation(w http.ResponseWriter, req *http.Request) {
 	userReader.GetBodyAsTextSync(&User)
 
 	visualisationPage, err := pageBuilder.Build(Docss)
-	c, er := layout.BuildBasicLayoutWithPage(visualisationPage, User)
+	c, er := layout.BuildBasicLayoutWithPage(visualisationPage, User, Commits)
 	err = tpl.ExecuteTemplate(w, "layout", c)
 	if err != nil || er != nil {
 		log.Println(err)
