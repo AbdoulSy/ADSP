@@ -54,8 +54,8 @@ function errorsHandler(root, nodeStatsArray, next) {
  * checks from the fileStat {object} if some attributes
  * fits some test, if the test is true the the file is invalid
  * returns the result of the test
- * 
- * @param {object} fileStat the file statistics object 
+ *
+ * @param {object} fileStat the file statistics object
  * @return {boolean} the result of is the file is invalid
  */
 function isFileInvalid (fileStat) {
@@ -106,11 +106,11 @@ function endHandler() {
   resultsOfParsing.walkEnd = Date.now();
   resultsOfParsing.walkTime = resultsOfParsing.walkEnd - resultsOfParsing.walkStart + "ms";
   console.log("all done");
-  
+
 
   var documents = [
     { uri: '/ps/process.json',
-      content: resultsOfParsing 
+      content: resultsOfParsing
     }
   ];
   db.documents.write(documents)
@@ -123,7 +123,7 @@ function endHandler() {
   }, function (error) {
     console.log(JSON.stringify(error,null,2));
   });
-  
+
 
   db.writeCollection("/projects/files", resultsOfParsing.files).result()
     .then(function (uris){
@@ -137,11 +137,11 @@ function endHandler() {
         filename: filename
        };
       if(!els) {
-        
+
         els  = [];
 	els.push(a);
 	db.createCollection('events', els).result();
-	
+
       } else {
         els.push(a);
 	db.writeCollection('events', els).result();
@@ -166,11 +166,11 @@ module.exports = {
      * @TODO(asy): handle the variables in a better way (Dependency Injection)
      */
     init: function (databaseClient) {
-    
+
        db = databaseClient;
        resultsOfParsing = globals.resultsOfParsing;
        d = resultsOfParsing.directories;
-       let walker  = walk.walk("./test-project", { followLinks: true});
+       let walker  = walk.walk("./bin/", { followLinks: true});
        walker.on("directories", dirHandler);
        walker.on("file", fileHandler);
        walker.on("errors", errorsHandler); // plural

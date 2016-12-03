@@ -10,7 +10,7 @@ var previousProcess = globals.previousProcess;
 
 /**
  * doLeasot, exported function, analyses a file for Todo/Fixme comments
- * then analyses the file for jsDoc type comment 
+ * then analyses the file for jsDoc type comment
  * will perforn a jshint on the file and a test/code coverage on the file
  * returns a report to be sent to Marklogic
  *
@@ -25,11 +25,11 @@ var previousProcess = globals.previousProcess;
 module.exports = function doLeasot (filePath, FileExplainer, JSHINT) {
 
   //toReturn is the object to be returned by the process
-  //@TODO(asy): create a pipeline using Monadic functions.	
+  //@TODO(asy): create a pipeline using Monadic functions.
   let toReturn = {};
 
   //default values to demonstrate the test
-  //TODO create the variable from a db request to get the current project 
+  //TODO create the variable from a db request to get the current project
   //being evaluated
 
   toReturn.project_path = _.replace(filePath, "/Users/asmart/Codenames/Github/ADSP/test-project/", "");
@@ -45,19 +45,18 @@ module.exports = function doLeasot (filePath, FileExplainer, JSHINT) {
   //if the walkTime exceeds 1000ms, check for the performances again.
   var contents = fs.readFileSync(filePath, 'utf8');
   toReturn.contents = contents;
-  // get the filetype of the file, or force a special parser 
+  // get the filetype of the file, or force a special parser
   var filetype = path.extname(filePath);
-  // add file for better reporting 
+  // add file for better reporting
   var file = path.basename(filePath);
 
   //Simple logo
 
-  if(filetype === ".json") {
+  if(filetype === ".json" || file === "web") {
   	return {};
   }
 
   if(filetype === ".js") {
-  
     //toReturn.doc is the variable holding the parsing of
     //the contents for the jsdocs.
     toReturn.doc = FileExplainer.explainSync({source: contents});
@@ -65,15 +64,18 @@ module.exports = function doLeasot (filePath, FileExplainer, JSHINT) {
     toReturn.hints = JSHINT.data();
   }
 
+  var unsupportedTypes = [".sparql"];
+  if(filetype !== "" && unsupportedTypes.indexOf(filetype) === -1) {
+    //the todos returned by the leasot parse reporter
+    toReturn.todos = leasot.parse({ext: filetype, content: contents, fileName: file});
+  }
 
-  //the todos returned by the leasot parse reporter
-  toReturn.todos = leasot.parse({ext: filetype, content: contents, fileName: file});
   //@TODO(asy): remove the console log for #production.
   console.log(toReturn);
- 
-   // -> todos now contains the array of todos/fixme parsed 
- 
+
+   // -> todos now contains the array of todos/fixme parsed
+
   resultsOfParsing.files.push(toReturn);
 
   return toReturn;
-}; 
+};
