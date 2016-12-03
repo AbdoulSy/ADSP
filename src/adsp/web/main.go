@@ -2,6 +2,7 @@ package main
 
 import (
     "github.com/AbdoulSy/content"
+    "github.com/AbdoulSy/userDescriptor"
     "github.com/AbdoulSy/codeDescriptor"
     "github.com/AbdoulSy/pageBuilder"
 	"github.com/AbdoulSy/adspgo"
@@ -26,6 +27,8 @@ var tpl *template.Template
 //Docss Holds the Content of the JSON String
 var Docss content.T
 
+var User userDescriptor.User
+
 func init() {
 	tpl = template.Must(template.ParseGlob("views/templates/*"))
 }
@@ -39,10 +42,18 @@ func index(w http.ResponseWriter, req *http.Request) {
     	Name: docName,
     	Host: host,
     }
+
+    userReader := &userDescriptor.T {
+    	Name: "CurrentUser",
+    	Host: "http://localhost:3465/current-user",
+    }
+
     //fileReader injects content into Docss structure
     fileReader.GetBodyAsTextSync(&Docss)
 
-	log.Printf("%+v", Docss)
+    userReader.GetBodyAsTextSync(&User)
+
+	log.Printf("%+v", User)
 
 	pageBuilder := &pageBuilder.T{
 		Config: adspgo.Configuration("HOME"),
@@ -54,7 +65,7 @@ func index(w http.ResponseWriter, req *http.Request) {
 		log.Println(err);
 	}
 
-	c, er := layout.BuildBasicLayoutWithPage(myPage)
+	c, er := layout.BuildBasicLayoutWithPage(myPage, User)
 
 	errtmpl := tpl.ExecuteTemplate(w, "layout", c)
 	if errtmpl != nil || er != nil {
@@ -64,11 +75,19 @@ func index(w http.ResponseWriter, req *http.Request) {
 
 func projects(w http.ResponseWriter, req *http.Request) {
 
+
+    userReader := &userDescriptor.T {
+    	Name: "CurrentUser",
+    	Host: "http://localhost:3465/current-user",
+    }
+    userReader.GetBodyAsTextSync(&User)
+
+
 	pageBuilder := &pageBuilder.T{
 		Config: adspgo.Configuration("PROJECTS"),
 	}
 	projectPage, err := pageBuilder.Build(Docss)
-	c, er := layout.BuildBasicLayoutWithPage(projectPage)
+	c, er := layout.BuildBasicLayoutWithPage(projectPage, User)
 	err = tpl.ExecuteTemplate(w, "layout", c)
 	if err != nil || er != nil {
 		log.Println(err)
@@ -81,8 +100,15 @@ func visualisation(w http.ResponseWriter, req *http.Request) {
 	pageBuilder := &pageBuilder.T{
 		Config: adspgo.Configuration("VISUALISATION"),
 	}
+	userReader := &userDescriptor.T {
+    	Name: "CurrentUser",
+    	Host: "http://localhost:3465/current-user",
+    }
+
+	userReader.GetBodyAsTextSync(&User)
+
 	visualisationPage, err := pageBuilder.Build(Docss)
-	c, er := layout.BuildBasicLayoutWithPage(visualisationPage)
+	c, er := layout.BuildBasicLayoutWithPage(visualisationPage, User)
 	err = tpl.ExecuteTemplate(w, "layout", c)
 	if err != nil || er != nil {
 		log.Println(err)

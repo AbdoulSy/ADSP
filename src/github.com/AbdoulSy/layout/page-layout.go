@@ -5,6 +5,7 @@ import (
   "github.com/AbdoulSy/jsscripts"
   "github.com/AbdoulSy/logo"
   "github.com/AbdoulSy/nav"
+  "github.com/AbdoulSy/userDescriptor"
   "github.com/AbdoulSy/page"
   "github.com/AbdoulSy/navelement"
 )
@@ -18,10 +19,11 @@ type T struct {
 	Nav      nav.T
 	Page     page.T
 	Errors   []error
+	User     userDescriptor.User
 }
 
 //BuildBasicLayoutWithPage Builds a basic Layout with a page embedded
-func BuildBasicLayoutWithPage(pa page.T) (pl T, err error) {
+func BuildBasicLayoutWithPage(pa page.T, u userDescriptor.User) (pl T, err error) {
 	theLinks := csslinks.T{
 		Links: []string{
 			"/public/stylesheets/main.css",
@@ -74,6 +76,7 @@ func BuildBasicLayoutWithPage(pa page.T) (pl T, err error) {
 		Logo:     myLogo,
 		Nav:      myNav,
 		Page:     pa,
+		User:     u,
 	}
 
 	return
