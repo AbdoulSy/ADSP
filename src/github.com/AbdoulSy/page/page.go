@@ -1,9 +1,13 @@
-package adspgo
+package page
+
+import (
+  "github.com/AbdoulSy/content"
+)
 
 //PageType is the structure defining the ADSP Page Concept
-type PageType struct {
+type T struct {
 	Title       string
 	ID          string
 	Description string
-	WalkContent Content
+	WalkContent content.T
 }

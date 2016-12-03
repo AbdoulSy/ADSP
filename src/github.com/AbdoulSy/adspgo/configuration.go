@@ -9,23 +9,26 @@ type Config struct {
 func Configuration (value string) (currentConf Config) {
     switch value {
     case "HOME":
-        return &Config {
+        currentConf = Config {
             ID: "aria-abdoulsy-eu/adsp/home",
             Title: "The Home Page",
             Description: "The Dashboard",
         }
     case "PROJECTS":
-        return &Config {
+        currentConf = Config {
             ID: "aria-abdoulsy-eu/adsp/projects",
             Title: "The Projects Page",
             Description: "The page to manage projects",
         }
     case "VISUALISATION":
-        return &Config {
+        currentConf = Config {
             ID: "aria-abdoulsy-eu/adsp/visualisation",
             Title: "The Visualisation Page",
             Description: "Navigate files like a Graph",
         }
     }
+
+    return
+
 
 }

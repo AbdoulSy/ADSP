@@ -2,12 +2,10 @@ package layout
 
 import (
   "github.com/AbdoulSy/csslinks"
-  "github.com/AbdoulSy/content"
-  "github.com/AbdoulSy/error"
   "github.com/AbdoulSy/jsscripts"
-  "github.com/AbdoulSy/layout"
   "github.com/AbdoulSy/logo"
   "github.com/AbdoulSy/nav"
+  "github.com/AbdoulSy/page"
   "github.com/AbdoulSy/navelement"
 )
 
@@ -19,11 +17,11 @@ type T struct {
 	Logo     logo.T
 	Nav      nav.T
 	Page     page.T
-	Errors   []error.T
+	Errors   []error
 }
 
 //BuildBasicLayoutWithPage Builds a basic Layout with a page embedded
-func BuildBasicLayoutWithPage(pa page.T) (pl pagelayout.T, err Error) {
+func BuildBasicLayoutWithPage(pa page.T) (pl T, err error) {
 	theLinks := csslinks.T{
 		Links: []string{
 			"/public/stylesheets/main.css",
@@ -69,7 +67,7 @@ func BuildBasicLayoutWithPage(pa page.T) (pl pagelayout.T, err Error) {
 		Elements: []navelement.T{homeNav, projectsNav, visualisationNav},
 	}
 
-	pl = pagelayout.T{
+	pl = T{
 		Contents: "I am Dog",
 		Styles:   theLinks,
 		Scripts:  theScripts,

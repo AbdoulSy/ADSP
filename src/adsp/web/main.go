@@ -1,12 +1,12 @@
 package main
 
 import (
-	"encoding/json"
-	"github.com/AbdoulSy/adspgo"
-	"github.com/AbdoulSy/pageBuilder"
+    "github.com/AbdoulSy/content"
     "github.com/AbdoulSy/codeDescriptor"
+    "github.com/AbdoulSy/pageBuilder"
+	"github.com/AbdoulSy/adspgo"
+	"github.com/AbdoulSy/layout"
 	"html/template"
-	"io/ioutil"
 	"log"
 	"net/http"
 )
@@ -24,7 +24,7 @@ func main() {
 var tpl *template.Template
 
 //Docss Holds the Content of the JSON String
-var Docss adspgo.Content
+var Docss content.T
 
 func init() {
 	tpl = template.Must(template.ParseGlob("views/templates/*"))
@@ -35,21 +35,26 @@ func index(w http.ResponseWriter, req *http.Request) {
 	//indev var assignments
     docName := "FileWalkAndDescription"
     host := "http://localhost:3465"
-    fileReader = &codeDescriptor {
+    fileReader := &codeDescriptor.T {
     	Name: docName,
-    	Host: host
+    	Host: host,
     }
     //fileReader injects content into Docss structure
-    fileReader.GetBodyAsTextSync(Docss)
+    fileReader.GetBodyAsTextSync(&Docss)
 
 	log.Printf("%+v", Docss)
 
-	pageBuilder := &pageBuilder{
-		Config: adspgo.Configuration("HOME")
+	pageBuilder := &pageBuilder.T{
+		Config: adspgo.Configuration("HOME"),
 	}
 
 	myPage, err := pageBuilder.Build(Docss)
-	c, er := adspgo.BuildBasicLayoutWithPage(myPage)
+
+	if err != nil {
+		log.Println(err);
+	}
+
+	c, er := layout.BuildBasicLayoutWithPage(myPage)
 
 	errtmpl := tpl.ExecuteTemplate(w, "layout", c)
 	if errtmpl != nil || er != nil {
@@ -59,12 +64,12 @@ func index(w http.ResponseWriter, req *http.Request) {
 
 func projects(w http.ResponseWriter, req *http.Request) {
 
-	pageBuilder := &pageBuilder{
-		Config: adspgo.Configuration("PROJECTS")
+	pageBuilder := &pageBuilder.T{
+		Config: adspgo.Configuration("PROJECTS"),
 	}
-	projectPage, err := pageBuilder.Build()
-	c, er := adspgo.BuildBasicLayoutWithPage(projectPage)
-	err := tpl.ExecuteTemplate(w, "layout", c)
+	projectPage, err := pageBuilder.Build(Docss)
+	c, er := layout.BuildBasicLayoutWithPage(projectPage)
+	err = tpl.ExecuteTemplate(w, "layout", c)
 	if err != nil || er != nil {
 		log.Println(err)
 	}
@@ -73,12 +78,12 @@ func projects(w http.ResponseWriter, req *http.Request) {
 
 func visualisation(w http.ResponseWriter, req *http.Request) {
 
-	pageBuilder := &pageBuilder{
-		Config: adspgo.Configuration("VISUALISATION")
+	pageBuilder := &pageBuilder.T{
+		Config: adspgo.Configuration("VISUALISATION"),
 	}
-	visualisationPage, err := pageBuilder.Build()
-	c, er := adspgo.BuildBasicLayoutWithPage(visualisationPage)
-	err := tpl.ExecuteTemplate(w, "layout", c)
+	visualisationPage, err := pageBuilder.Build(Docss)
+	c, er := layout.BuildBasicLayoutWithPage(visualisationPage)
+	err = tpl.ExecuteTemplate(w, "layout", c)
 	if err != nil || er != nil {
 		log.Println(err)
 	}

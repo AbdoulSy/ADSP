@@ -65,11 +65,11 @@ module.exports = function doLeasot (filePath, FileExplainer, JSHINT) {
     toReturn.hints = JSHINT.data();
   }
 
-  //@TODO(asy): remove the console log for #production.
-  console.log(filePath, contents, toReturn.doc);
 
   //the todos returned by the leasot parse reporter
   toReturn.todos = leasot.parse({ext: filetype, content: contents, fileName: file});
+  //@TODO(asy): remove the console log for #production.
+  console.log(toReturn);
  
    // -> todos now contains the array of todos/fixme parsed 
  

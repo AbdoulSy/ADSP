@@ -6,20 +6,51 @@ type Directory struct {
 	Dirs []DirsType
 }
 
+type TagType struct {
+	Title string
+	Value string
+}
+
+type MetaOfDocumentedType struct {
+	Lineno int
+	Path string
+	Code interface{}
+	Vars interface{}
+}
+
+type Documentation struct {
+	Longname string
+	Kind string
+	Scope string
+	Params []interface{}
+	Todo []string
+	Author []string
+	Memberof string
+	Meta MetaOfDocumentedType
+	Comment string
+	Name string
+	Type string
+	Undocumented bool
+}
+
 //FileHolder is the structure holding both the document and the File'
 type FileHolder struct {
-	Doc   interface{}
+	Doc   []Documentation
 	Todos []File
+	Project_Path string
+	Adsp_type string
+	Adsp_shortType string
+	Adsp_in_project string
+	Adsp_parent_project string
 	Hints interface{}
 }
 
 //File is the struct representation of a File concept
 type File struct {
-	Description string
-	Author      interface{}
-	Project     interface{}
-	Milestone   interface{}
-	TODO        interface{}
+	Kind        string
+	Ref         string
+	Line   		int
+	Text        string
 	File        string
 }
 
@@ -29,7 +60,7 @@ type DirsType struct {
 }
 
 //Content is the struct representation of the Content Concept
-type Content struct {
+type T struct {
 	WalkStart   int
 	WalkEnd     int
 	WalkTime    string

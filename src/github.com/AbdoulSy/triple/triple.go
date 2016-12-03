@@ -1,4 +1,4 @@
-package adsptriple
+package triple
 
 //UriType is a wrapper structure around a uri
 //TODO: find a uri package to expand the uri definition
@@ -25,7 +25,7 @@ type PredicateType struct {
 }
 
 
-//Triple structure holding triples 
+//Triple structure holding triples
 type Triple struct {
 	Subject SubjectType
 	Predicate PredicateType

@@ -1,6 +1,6 @@
 package error
 
-type T struct {
+type T  struct {
 	ErrCode    string
 	ErrTitle   string
 	Message    string

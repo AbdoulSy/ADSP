@@ -1,4 +1,4 @@
-//package subject
-//A RDF subject
-//import github.com/AbdoulSy/subject
-package subject
+//package page
+//A RDF page
+//import github.com/AbdoulSy/page
+package page
