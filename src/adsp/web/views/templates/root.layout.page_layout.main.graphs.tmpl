@@ -7,34 +7,26 @@
   <svg id="graph"></svg>
 
   <style type="text/css">
-
-
-
     .axis2 path,
     .axis2 line {
       fill: none;
       stroke: #000;
       shape-rendering: crispEdges;
     }
-
     .bar2, .functions {
       fill: orange;
       color: orange;
     }
-
     .bar3, .tests {
       fill: blue;
       color: blue;
     }
-
     .bar2:hover {
       fill: orangered ;
     }
-
     .x.axis2 path {
       display: none;
     }
-
 </style>
 <script>
 
@@ -88,7 +80,7 @@ d3.request("http://localhost:3465/function-number")
         return x(i); })
       .attr("width", x.bandwidth())
       .attr("y", function(d) { return y(d); })
-      .attr("height", function(d) { return height - y(d); })
+      .attr("height", function(d) { return height - y(d); });
 
   svg.selectAll(".bar3")
       .data(data.tests40)
@@ -98,7 +90,7 @@ d3.request("http://localhost:3465/function-number")
         return x(i); })
       .attr("width", x.bandwidth())
       .attr("y", function(d) { return y(d); })
-      .attr("height", function(d) { return height - y(d); })
+      .attr("height", function(d) { return height - y(d); });
 
 });
 })();
