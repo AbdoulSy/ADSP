@@ -1,10 +1,10 @@
 {
-  "@context": "http://aria.abdoulsy.eu/cards/v/0.0.1/project-card",
+  "@context": "http://web.abdoulsy.eu/cards/v/0.0.1/project-card",
   "username": "asy",
   "token": "ae2dc6bcaaae00456ebdca93",
   "parent": "BOSS",
   "subscribers": {
-    "@context": "http://aria.abdoulsy.eu/ontologies/Marklogic/Employees",
+    "@context": "http://web.abdoulsy.eu/o/#Marklogic_Employees",
     "list": [{
        "username": "gshercliff",
        "alerts": "on",
