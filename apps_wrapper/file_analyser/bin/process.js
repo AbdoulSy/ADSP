@@ -4,7 +4,7 @@ let globals   = require('./includes/globals.js');
 const handlers = require('./includes/walk-handlers');
 const getEventsFn = require('./includes/get-events');
 const getProcessDocumentsFn = require('./includes/get-processes');
-const my      = require('../apps_wrapper/env/env');
+const my      = require(__dirname + '/../env/env');
 const MarklogicClient = require('marklogic');
 //connecting to Marklogic
 var db = MarklogicClient.createDatabaseClient(my.connection);

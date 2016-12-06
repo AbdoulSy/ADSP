@@ -20,16 +20,16 @@ type MetaOfDocumentedType struct {
 
 type Documentation struct {
 	Longname string
-	Kind string
-	Scope string
+	Kind interface{}
+	Scope interface{}
 	Params []interface{}
 	Todo []string
 	Author []string
-	Memberof string
+	Memberof interface{}
 	Meta MetaOfDocumentedType
 	Comment string
-	Name string
-	Type string
+	Name interface{}
+	Type interface{}
 	Undocumented bool
 }
 

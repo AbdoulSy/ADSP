@@ -4,7 +4,7 @@ module.exports = function (callback) {
   var res = [];
 
     // Open the repository directory.
-  Git.Repository.open("./.git")
+  Git.Repository.open("../../.git")
   // Open the master branch.
   .then(function(repo) {
     return repo.getMasterCommit();

@@ -1,6 +1,6 @@
 /* jshint esversion: 6 */
 var _ = require('lodash');
-const my      = require('../apps_wrapper/env/env');
+const my      = require(__dirname + '/../env/env');
 const MarklogicClient = require('marklogic');
 //connecting to Marklogic
 var db = MarklogicClient.createDatabaseClient(my.connection);
