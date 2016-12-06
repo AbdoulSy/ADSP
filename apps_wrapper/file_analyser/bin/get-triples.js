@@ -22,11 +22,12 @@ db.graphs.list('text/uri-list')
 db.graphs.sparql({
   contentType: 'application/sparql-results+json',
   query: 'PREFIX adsp: <http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#>'+
-  'SELECT ?s ?p WHERE '+
+  'SELECT ?s ?email ?value WHERE '+
   '{'+
   '?s adsp:firstname "Abdoul".'+
   '?s a adsp:Member .'+
   '?s adsp:has_active_email ?email .'+
+  '?email adsp:email_value ?value .'+
   '}',
   rulesets: 'subPropertyOf.rules',
   defaultRuleSets: 'exclude'
