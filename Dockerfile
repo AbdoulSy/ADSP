@@ -64,7 +64,7 @@ EXPOSE 7997 7999 8000 8001 8002
 FROM golang
 
 # Copy the local package files to the container's workspace.
-ADD ./go_adsp_web /go/src/github.com/AbdoulSy/ADSP_Web
+ADD ./go_adsp_web /go/src/github.com/AbdoulSy/ADSP
 
 # Build the outyet command inside the container.
 # (You may fetch or manage dependencies here,
@@ -72,7 +72,7 @@ ADD ./go_adsp_web /go/src/github.com/AbdoulSy/ADSP_Web
 RUN go install github.com/AbdoulSy/ADSP_Web
 
 # Run the outyet command by default when the container starts.
-ENTRYPOINT /go/bin/ADSP_Web
+ENTRYPOINT /go/bin/web
 
 # Document that the service listens on port 8080.
 EXPOSE 8080
