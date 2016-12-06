@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server xsi:schemaLocation="http://marklogic.com/xdmp/group group.xsd" xml:lang="zxx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://marklogic.com/xdmp/group">
+  <host-id>17065466919614371876</host-id>
+  <licensee/>
+  <license-key/>
+  <ssl-private-key>-----BEGIN PRIVATE KEY-----
+MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDbDHTiDMM7PKdg
+J6PMfFZ2tEzKQstX31/6Nj/I+X3TiDNfiAh5BOIdvn4VHYUa4Sav+BPpxGz9vfMU
+b/7uMlFh9uAK8ouYiMmENEsGvy/QvV9ep3qNTvUtk8hJaYiFvaO8k5itSx9Xy0hT
+VaiBedZ37/YJID3kw17vuN5ddlhs+FpkGg0pNGZ5RQxgQ3ANNw8hNKOeRTSh6EX9
+P3FtQYQubcoGmdOjtxFWDP9qibXV2tJDb7Rh6tdZhBou5eweBQP42OPJ8OZ7LyrM
+KVAXecL2drhPwHo8Iicveh57O3F+imdPGi2EiP6q/JNPgvXdcuy3+C5tTWA42AU1
+m4PTaQ3fAgMBAAECggEAHD6icaVopSJAiMcDuXHM6lh8UFZFhwqgAxDsr5rwDQ8S
+ZL6TLRuilmhCNLHOQHWIugb4dlukHCHajqeUTR2C3elp4S9+LYhxx5DAndmYLkfE
+3N0mkcL9HUfhewnXFzupOb8kYDAAFh95r3krlapiq6tu46VbJbzFaI7DaXTBmSc9
+yFOZXhl9LlGXptdhYBwx4noNZOO+48j1+zN+OOf2ocZQXyDxN0xObPx0HLhRNX9E
+P+dI0O51gBcdGi2WPorWNK9yfvE8BjeINChKsI4hEBV/A52Jy99M+o8g+uH2zYC3
+1jwCNk8H6tr3sujv2eLyqnZB4+xSfj8fKV94yOQ+6QKBgQDhkNzg701g6MSetUng
+mHu8SlSTdi7lkhnetOx2GzlQqOOSOsQQVMi3ilWqtgtbZsMivzJ3nmNscdVpGAdC
+TPhVY2fYFAAZCFvgiODmu6I8aMOTFT4nt8tyQZbiWbOZhHWbYnOQzE02yQbvpYH7
+lbTBhQhQ5mHlHjEFGVJFN3qPdwKBgQD4mnyShfHjiO9dvDYQ8sC/EymPeBrMjdGm
+6QjyAhCylTf+1Hl2LB9cGroKCkIZu0Cmnr7YB4vEUQLrJ3r3yiPZcv4axSvsI009
+wsKq+veK+FFmDfHl5nkvmBtSuuGCK4FgGBjiDZwnjgSl/DuiW2jnjhgZr4HomZS8
+Y2W7Olae2QKBgQCNdHZADXI+ItsjGFeDJLz8ILUXYNcaGtxkYJulmX8BCVjlnDrW
+bwUMrRD6JH3MzQ30nWi9wTNij6Sg6nOq7XASxGscA7bn++j6T3yS1fpw3dZAR+MZ
+r1ZDicRgoJZT4NCMKFqG5MhLYhgac3WnW4PmlFHZwhCEScG+C9ofFCKlEwKBgQCy
+h37eWoKTPEtprTfGhA4XKdO2zDGypEXi74cVBJapKK/FuSBg1N7QbgEcJLHDeM28
+2lODICgnG2ZVKU0NlYSZLBN/dglM0y0tJShXUVNj4V/TQkBtMU3l9/3nM32u1T9b
+mvKDo/J4FW0RJkpNFggIAescxwUr3N8LSvZLtmFuQQKBgQCSEf8YO7/IiefsYHIq
+ojHXCGIdKufNRpivB9Hc+mqAEWtHxrfgMa9BLNlqJA1H5ImsaGRw4aoJHQU+dDW4
+FV4QmIywr3PNZbynWhyMznegNu8qVHrwoQHbbqE+wdSu+BeQA7zzHWWW4RW/GJBG
+mD+zoV+yAtRpv4970fCfx0AVZA==
+-----END PRIVATE KEY-----
+</ssl-private-key>
+</server>

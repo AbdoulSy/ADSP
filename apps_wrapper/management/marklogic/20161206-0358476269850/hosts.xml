@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hosts xsi:schemaLocation="http://marklogic.com/xdmp/hosts hosts.xsd" xml:lang="zxx" timestamp="14774259148345440" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://marklogic.com/xdmp/hosts">
+  <host>
+    <host-id>17065466919614371876</host-id>
+    <host-name>ab-air.numericable.fr</host-name>
+    <host-mode>normal</host-mode>
+    <host-mode-description/>
+    <group>2247260042058559078</group>
+    <bind-port>7999</bind-port>
+    <connect-port>7999</connect-port>
+    <foreign-bind-port>7998</foreign-bind-port>
+    <foreign-connect-port>7998</foreign-connect-port>
+    <ssl-certificate>-----BEGIN CERTIFICATE-----
+MIICzTCCAbWgAwIBAgIIEjL9qrpu9aUwDQYJKoZIhvcNAQELBQAwHzEdMBsGA1UE
+AwwUMTcwNjU0NjY5MTk2MTQzNzE4NzYwHhcNMTYxMDI1MjAwNTExWhcNMjYxMDIz
+MjAwNTExWjAfMR0wGwYDVQQDDBQxNzA2NTQ2NjkxOTYxNDM3MTg3NjCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBANsMdOIMwzs8p2Ano8x8Vna0TMpCy1ff
+X/o2P8j5fdOIM1+ICHkE4h2+fhUdhRrhJq/4E+nEbP298xRv/u4yUWH24Aryi5iI
+yYQ0Swa/L9C9X16neo1O9S2TyElpiIW9o7yTmK1LH1fLSFNVqIF51nfv9gkgPeTD
+Xu+43l12WGz4WmQaDSk0ZnlFDGBDcA03DyE0o55FNKHoRf0/cW1BhC5tygaZ06O3
+EVYM/2qJtdXa0kNvtGHq11mEGi7l7B4FA/jY48nw5nsvKswpUBd5wvZ2uE/Aejwi
+Jy96Hns7cX6KZ08aLYSI/qr8k0+C9d1y7Lf4Lm1NYDjYBTWbg9NpDd8CAwEAAaMN
+MAswCQYDVR0TBAIwADANBgkqhkiG9w0BAQsFAAOCAQEACircnZo3VAnYUeuwtFNO
+kyX4AmArbllhsIodIUHI1bztSWjwxJYBiJIi7Q1S9Y/Pzh8bSER0Hp0MO5MRycpy
+9So0XEjGyARKjUJwOr4pSNbphm33nFZ4lN7Lw06/1UB6uKM84sLpDX0szsl+fkgB
+COMZeTV86qFQ0eMIhf80dcIDAOWb+AF9lngYftetZRYmQWlLgkG1Ce1CGLymRIQ7
+ArRQUFjCLz+DJu/ckzXPNKc7mSqnAbexgd4vtwrPTs+4AcIj7ATOJ1LbH3VD469x
+ijviE1eBhD5VchARc6vAP6BMldScayKR308J8FbmkGTilz7SM0Pq/GlsLCRFNL9a
+6A==
+-----END CERTIFICATE-----
+</ssl-certificate>
+    <zone/>
+  </host>
+</hosts>
