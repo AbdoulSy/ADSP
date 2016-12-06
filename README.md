@@ -3,26 +3,26 @@
 
 
 ### The Idea :
- Technologies that can make machines understand the data and it's meaning have emerged
+ Technologies that can make machines understand the data and its meaning have emerged
  and the complexity of developping these higly abstract concepts can be daunting, especially when working on
  everything at the same time.
  Let's leverage this new suite of technologies to help teams create project from the Abstract way downwards to help
  teams focus on the business logic, without having to worry about details that can slip up.
- 
+
 ### Why ? :
  It is very hard for developers, the more skills and hats you wear, the harder it is to fully concentrate on anything really.
 People thing about ideas, are not confident about their code as it might get thrown away later in the future, or everything might change.
-Problems galore with delivering a good quality code, and it sometimes breaks an entire chain of code production.
+Problems galore with delivering a good quality code, where time is wasted on testing for example, and it sometimes breaks an entire chain of code production.
 To reduce strain in producing code, we need to take examples on big companies (like toyota) that created factories, where every piece of car that needed to be worked on, arrived at the correct time to the correct person, making the person think solely on doing a single thing on a single piece at the time, maximizing the production.
 I'm trying to do the same thing but with computer programs, provide the piece of code that needs to be worked on at the right time and the right place to produce a good quality code.
 
 ### How :
- This Repository has several applications pathed together, that would be split in a docker container.
+ This Repository has several applications patched together, that would be split in a docker container.
  The first application is a *node.js* script that runs through a project directory and produce a dataset of all the files that are inside or should be inside.
  The second application is a *node.js* script that issues *SPARQL Queries* to Marklogic to extract metadata from the first node script.
- The third application is a Machine Learning application with a classifier in Python with skilearn and Tensorflow, classifying data (generated with the node scripts) with a decision tree.
+ The third application is a Machine Learning application (Not yet implemented unfortunately) with a classifier in Python with skilearn and Tensorflow, classifying data (generated with the node scripts) with a decision tree.
  The current rules are as follows and can be combined.
- 
+
  - empty project/file/directory
  - Test Driven Project/file
  - Behaviour Driven Project/file
@@ -38,30 +38,39 @@ I'm trying to do the same thing but with computer programs, provide the piece of
  - Broken Application
  - What's Next
  - Previous Task Completed
- 
+
 The Machine learning Application will keep watching files when a commit/file change is done, and will send the results both to it's own model to make its next predictions better, and to (Marklogic + Phoenix Trello) which will have lists and columns generated depending on the classification rules generated.
+
+Lastly (Not yet implemented) a Game engine will read from the application heartbeat, git commit, or file save to make the user "see" the progress in a project.
 
 ## The Front-End Interface
 
-
-### Phoenix Trello by [@bigardone](https://github.com/bigardone/phoenix-trello) 
+### Go ADSP Web by [@abdoulsy](https://github.com/AbdoulSy/ADSP)
 [![Build Status](https://travis-ci.org/bigardone/phoenix-trello.svg?branch=master)](https://travis-ci.org/bigardone/phoenix-trello)
 
-
-[Trello](http://trello.com) tribute done with [Elixir](https://github.com/elixir-lang/elixir), [Phoenix Framework](https://github.com/phoenixframework/phoenix), [Webpack](https://github.com/webpack/webpack), [React](https://github.com/facebook/react) and [Redux](https://github.com/rackt/redux).
-
-![`board`](http://codeloveandboards.com/images/blog/trello_tribute_pt_1/sign-in-a8fa19da.jpg)
+![`board`](http://web.abdoulsy.eu/images/alpha.png)
 
 
 ## The Ontology
  I've written the ontology using Protégé, the ontology is a set of RDF Triples written both in jsonld and in turtle, through protege's interface :
 
-[Imgur Generated Protege img](http://i.imgur.com/PGzv4Jn.png)
+![Imgur Generated Protege img](http://web.abdoulsy.eu/images/delta.png)
 
 
 ### Requirements
-You need to have **Elixir v1.3** and **PostgreSQL** installed.
-You also need marklogic installed.
+
+#### Native Install
+You will need [Go](http://golang.org) Installed on your machine
+With the GoPath updated to include this project
+You will also need [Node.JS](http://nodejs.org) 6+ installed
+You also need [Marklogic](http://marklogic.com) 8+ installed.
+
+#### Using containers
+You will need [Docker](http://docker.com) Installed along with Docker compose.
+Just browse to the source code and run
+
+    docker-compose up
+
 
 ### The Ontology
 Using the : as main ADSP Prefix in a basic triple.
@@ -83,15 +92,15 @@ For Example,
           :has_convention :ES6_conventions;
           :has_convention :DRY_conventions;
           :has_convention :NPM_conventions .
-          
+
     :ADSP :has_owner :Abdoul_Sy .
     :Abdoul_Sy rdfs:type :Team_Member .
     :Team_Member owl:SubclassOf :Contact .
-    :Contact :has_phone_number :Abdoul_Phone_Numbers .
-    
+    :Abdoul_Sys :has_phone_number :Abdoul_Phone_Numbers .
+
     :Error owl:SubClassOf :Problem .
     :Problem :must_be_sent_to :Team_Members .
-    
+
 
 as a related Example:
 
@@ -106,27 +115,25 @@ I've modified the phoenix trello to be able to generate trello cards and lists g
 
 
 ### Installation instructions
-To start your Phoenix Trello app:
+To start your ADSP app From your machine:
+  0. clone the repository somewhere.
+  1. Ensure your marklogic installation is working, the app is running
+  2. go to the admin console and import the contents of ./apps_wrapper/management/marklogic (2 databases)
+  3. Ensure the ADSP path is added to the go path
+  4. Ensure node js is installed (try node -v)
+  5. Browse to the ./apps_wrapper/file_analyser and run `npm install` in install the packages
+  6. From ./apps_wrapper/file_analyser run node start
+  7. Browse to ./apps_wrapper/go_apps/github.com/AbdoulSy/web folder and run `gulp serve` or `gulp watch` on development
 
-  1. Install dependencies with `mix deps.get`
-  2. Ensure webpack is installed. ie: `npm install -g webpack`
-  3. Install npm packages with `npm install`
-  4. Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  5. Run seeds to create demo user with `mix run priv/repo/seeds.exs`
-  6. Start Phoenix endpoint with `mix phoenix.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can visit [`localhost:8080`](http://localhost:8080) from your browser.
 
 Enjoy!
 
 ### Testing
-Integration tests with [Hound](https://github.com/HashNuke/hound) and [Selenium ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver). Instructions:
-
-  1. Install **ChromeDriver** with `npm install -g chromedriver`
-  2. Run **ChromeDriver** in a new terminal window with `chromedriver &`
-  3. Run tests with `mix test`
-
-If you don't want to run integration tests just run `mix test --exclude integration`.
+Not yet implemented;
+will use Go Testing library for the go application
+And mocha/chai/selenium to test the js application
 
 ### License
 
