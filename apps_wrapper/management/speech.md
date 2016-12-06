@@ -1,5 +1,5 @@
 Imagine the programming of the future.
-Think that now, a developer can do the work of 1000s of people with much less efforts.
+Think that now, a developer can do the work of 1000s of people with much less efforts than 20 years ago.
 And that always was the trend, a company goes ahead of the curve once they can achieve as much as other companies with
 less resources and less efforts.
 Just Recently, developers started having the name DevOps, because they developped applications that could manage the operations with simple programming.
@@ -14,7 +14,7 @@ ADSP is a step towards devMagement.
 
 Imagine a director/ projet manager/ developer writing on a special notepad.
 
-For my Project: at this milestone, 
+For my Project: at this milestone,
 I want an application in es6, with css3, and graphs
 that will CRUD articles to be shown in a blog with a api in golang manageable by an admin
 using the latest standards
@@ -25,7 +25,7 @@ I hope the project will will be done on the 23rd.
 And just before your eyes, a board will be generated, handling the commits and file changes
 where reports of the progress could be easily shown, how far are you from the best es6, css3, and graph standards.
 with security and time management for all three people, where these people will just have to create code on directories,
-not even worry about the commits, and just by following the automatically generated cards -> just like a game.
+not even worry about the commits messages, and just by following the automatically generated cards -> just like a game.
 the application will become more and more complex in some parts, but the developer will have free choice in creating its code.
 and ultimately when the dashboard shows green everywhere the application is complete.
 
@@ -33,8 +33,8 @@ and ultimately when the dashboard shows green everywhere the application is comp
 How to do it
 =============
 
-Using a fact extraction classifier like Smartlogic 
-the sentences inputted will be analysed along with our ADSP Ontology, 
+Using a fact extraction classifier like Smartlogic
+the sentences inputted will be analysed along with our ADSP Ontology,
 with these facts
 the results of the classification stored in marklogic could be analysed by ADSP with SPARQL queries to create new Environment variables and will generate :
 - A Web dashboard
@@ -42,7 +42,7 @@ the results of the classification stored in marklogic could be analysed by ADSP 
 - Several Marklogic Databases with forests included
 - A jsonld card to be stored locally for credentials
 
-(at the moment I'm doing this locally)
+(at the moment I'm doing this locally, as I don't have fact extraction)
 
 Every input to the system will be either a commit, or a file change (the process is continuous and local)
 For each commit:

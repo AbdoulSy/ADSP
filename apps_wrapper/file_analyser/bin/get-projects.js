@@ -12,11 +12,8 @@ module.exports = function (callback) {
     db.documents.read('/projects/list.json')
     .result(function(documents) {
 
-        //TODO(asy): handle the case where more than
-        //one document is a project list
-        _.each(documents, function (document) {
-            projects.push(document.content);
-        });
+        //TODO(asy): handle the case where more than one document is a project list
+        _.each(documents,  (document) => {projects.push(document.content);});
 
        callback(_.flatten(projects));
     });
