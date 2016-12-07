@@ -1,3 +1,6 @@
 [submodule "apps_wrapper/Glacius"]
 	path = apps_wrapper/Glacius
 	url = http://github.com/AbdoulSy/Glacius
+[submodule "apps_wrapper/Eyedol"]
+	path = apps_wrapper/Eyedol
+	url = https://github.com/AbdoulSy/Eyedol
