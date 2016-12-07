@@ -1,0 +1,3 @@
+[submodule "apps_wrapper/Glacius"]
+	path = apps_wrapper/Glacius
+	url = http://github.com/AbdoulSy/Glacius
