@@ -2,7 +2,7 @@ var dev =  {
   database: process.env.DOCUMENTS_DB_NAME, // Each connection can specify its own database
   host: process.env.DOCUMENTS_DB_HOST, // The host against which queries will be run
   port: process.env.DOCUMENTS_DB_PORT, // By default port 8000 accepts Client API requests
-  user: process.env.DOCUMENT_DB_USER, // Our newly-created user with at least the rest-writer role
+  user: process.env.DOCUMENTS_DB_USER, // Our newly-created user with at least the rest-writer role
   password: process.env.DOCUMENTS_DB_PASSWORD, // writer's password
   authType: process.env.DOCUMENTS_DB_AUTHTYPE // The default auth
 };
