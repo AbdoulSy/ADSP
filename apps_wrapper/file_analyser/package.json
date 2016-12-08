@@ -28,6 +28,7 @@
     "chai": "^3.5.0",
     "dir-to-json": "0.0.3",
     "express": "^4.14.0",
+    "foreman": "2.0.0",
     "jscs": "^3.0.7",
     "jsdoc": "^3.4.3",
     "jsdoc-api": "^2.0.6",
