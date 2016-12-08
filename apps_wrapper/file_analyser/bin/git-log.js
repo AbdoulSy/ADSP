@@ -1,10 +1,10 @@
 /* jshint esversion: 6 */
-var Git = require("nodegit");
-module.exports = function (callback) {
+var Git = require('nodegit');
+module.exports = function(callback) {
   var res = [];
 
-    // Open the repository directory.
-  Git.Repository.open("../../.git")
+  // Open the repository directory.
+  Git.Repository.open('../../.git')
   // Open the master branch.
   .then(function(repo) {
     return repo.getMasterCommit();
@@ -18,7 +18,7 @@ module.exports = function (callback) {
     var count = 0;
 
     // Listen for commit events from the history.
-    history.on("commit", function(commit) {
+    history.on('commit', function(commit) {
       // Disregard commits past 9.
       if (++count >= 9) {
         callback(res);
@@ -26,24 +26,24 @@ module.exports = function (callback) {
       }
 
       // Show the commit sha.
-      console.log("commit " + commit.sha());
+      console.log('commit ' + commit.sha());
 
       // Store the author object.
       var author = commit.author();
 
       // Display author information.
-      console.log("Author:\t" + author.name() + " <" + author.email() + ">");
+      console.log('Author:\t' + author.name() + ' <' + author.email() + '>');
 
       // Show the commit date.
-      console.log("Date:\t" + commit.date());
+      console.log('Date:\t' + commit.date());
 
       // Give some space and show the message.
-      console.log("\n    " + commit.message());
+      console.log('\n    ' + commit.message());
       let cm = {
         sha: commit.sha(),
-        author: author.name() + " <" + author.email() + ">",
+        author: author.name() + ' <' + author.email() + '>',
         date: commit.date(),
-        message: commit.message()
+        message: commit.message(),
       };
 
 

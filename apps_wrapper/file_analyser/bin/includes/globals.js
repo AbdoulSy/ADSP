@@ -14,5 +14,5 @@
  */
 module.exports = {
   previousProcess: null,
-  resultsOfParsing: {}
+  resultsOfParsing: {},
 };

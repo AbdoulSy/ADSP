@@ -11,17 +11,17 @@
  */
 const CDocParser = require('cdocparser');
 /**
- * exports the function to extract comments
+ * Exports the function to extract comments
  * @param  {object} opts map[string:string] simple options
  * @return {object}      {type, file, line}
  */
-module.exports = function getCommentsExtractor (opts) {
-return new CDocParser.CommentExtractor(function (line, arg2) {
-    return {
-      type: opts.type,
-      file: opts.file,
-      line: arg2(0)
+module.exports = function getCommentsExtractor(opts) {
+  return new CDocParser.CommentExtractor(function(line, arg2) {
+      return {
+        type: opts.type,
+        file: opts.file,
+        line: arg2(0),
 
-   };
-  }, opts.extractorOptions );
+      };
+    }, opts.extractorOptions);
 };

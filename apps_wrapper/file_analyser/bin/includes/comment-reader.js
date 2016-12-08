@@ -28,20 +28,20 @@ module.exports = function initiateCommentReader(opts, code) {
 
 
     parsedComments.forEach(function(comment) {
-	if(comment.milestone !== '--') {
-	  ext.milestone = comment.milestone;
-	}
-	if(comment.author !== '--') {
-	  ext.author= comment.author;
-	}
-	if(comment.project !== '--') {
-	  ext.project= comment.project;
-	}
-	if(comment.collabs !== '--') {
-	  ext.collabs= comment.collabs;
-	}
-	var a = _.extend(comment, ext);
-        resultsOfParsing.files.push(a);
+      if (comment.milestone !== '--') {
+        ext.milestone = comment.milestone;
+      }
+      if (comment.author !== '--') {
+        ext.author = comment.author;
+      }
+      if (comment.project !== '--') {
+        ext.project = comment.project;
+      }
+      if (comment.collabs !== '--') {
+        ext.collabs = comment.collabs;
+      }
+      var a = _.extend(comment, ext);
+      resultsOfParsing.files.push(a);
     });
 
-};
+  };

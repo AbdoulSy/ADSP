@@ -1,4 +1,4 @@
-function main () {
+function main() {
   ///the main function
   /**
    *@TODO: actually create the code
@@ -7,5 +7,5 @@ function main () {
    *@milestone: M1
    *@collabs: Ousmane Ndiaye, Geraud Mathe
    */
-	
+
 }
