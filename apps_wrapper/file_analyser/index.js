@@ -6,6 +6,13 @@ var getProjectsFn = require('./bin/get-projects');
 var getUserFn = require('./bin/get-users');
 var getCommitHistoryFn = require('./bin/git-log');
 var getFnNbFn = require('./bin/get-fn-nb');
+const my      = require(__dirname + '/env/env');
+const MarklogicClient = require('marklogic');
+//Connecting to Marklogic
+var Conn = {};
+Conn.docsDb = MarklogicClient.createDatabaseClient(my.connection);
+Conn.tripleDb = MarklogicClient.createDatabaseClient(my.triple);
+Conn.qb = MarklogicClient.queryBuilder;
 
 app.get('/', function (req, res) {
     try {
