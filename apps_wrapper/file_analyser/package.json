@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node bin/test.js",
     "nfstart": "nf start",
-    "start": "nodeindex.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
