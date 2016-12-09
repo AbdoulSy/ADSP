@@ -7,9 +7,10 @@ module.exports = function getTriplesRelatedToAdsp (Connection, callback) {
     contentType: 'application/sparql-results+json',
     query: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>' +
            'PREFIX adsp: <http://web.abdoulsy.eu/o#>' +
-           'SELECT ?owner ?team ?project_type ?conventions WHERE {' +
+           'SELECT ?owner ?app ?team ?project_type ?conventions WHERE {' +
            'adsp:ADSP adsp:has_owner ?owner .'+
            'adsp:ADSP adsp:has_team ?team .'+
+           'adsp:ADSP adsp:has_application ?app .'+
            'adsp:ADSP adsp:has_project_type ?project_type .'+
            'adsp:ADSP adsp:has_project_convention ?conventions .'+
            '}',

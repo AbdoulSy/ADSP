@@ -4,6 +4,7 @@ var app = express();
 var processFn = require('./bin/process');
 var getProjectsFn = require('./bin/get-projects');
 var getTriplesRelatedToADSPFn = require('./bin/get-triples');
+var initTriplesForLeasot = require('./bin/initialize-file-triples');
 var getUserFn = require('./bin/get-users');
 var getCommitHistoryFn = require('./bin/git-log');
 var getFnNbFn = require('./bin/get-fn-nb');
@@ -22,6 +23,16 @@ app.get('/', function (req, res) {
           let stringDocs = JSON.stringify(docsContents);
           res.send(stringDocs);
       });
+    } catch (e) {
+        console.log({
+          exception: e
+        });
+    }
+});
+
+app.get('/init', function (req, res) {
+    try {
+      initTriplesForLeasot(Conn);
     } catch (e) {
         console.log({
           exception: e
