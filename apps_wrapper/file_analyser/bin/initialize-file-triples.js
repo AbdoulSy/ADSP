@@ -20,9 +20,6 @@ module.exports = function getTriplesRelatedToAdsp (Connection, callback) {
     'adsp:ADSP adsp:has_application adsp:file_analyser_app .',
     'adsp:ADSP adsp:has_application adsp:Glacius .',
     'adsp:ADSP adsp:has_application adsp:ADSP_Dashboard .',
-
-
-
   ];
   db.graphs.merge({
       uri: 'http://aria.abdoulsy.eu/collections/adsp',
