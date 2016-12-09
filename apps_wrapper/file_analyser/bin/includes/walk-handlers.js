@@ -179,8 +179,8 @@ module.exports = {
      */
     init: function(databaseClient) {
 
-      db = databaseClient.connection;
-      tripleStore = databaseClient.triples;
+      db = databaseClient.docsDb;
+      tripleStore = databaseClient.tripleDb;
       els = [];
       resultsOfParsing = globals.resultsOfParsing;
       d = resultsOfParsing.directories;
