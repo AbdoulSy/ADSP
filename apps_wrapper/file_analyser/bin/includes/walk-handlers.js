@@ -12,7 +12,6 @@ const _       = require('lodash');
 const path    = require('path');
 const watch   = require('node-watch');
 const leasotFn  = require('../leasot.js');
-const initiateCommentReader = require('./comment-reader');
 const hinter = require('jshint');
 var jsdoc = require('jsdoc-api');
 let globals   = require('./globals');

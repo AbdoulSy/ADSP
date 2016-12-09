@@ -43,9 +43,9 @@ function getEventsQuery(queryBuilder) {
  * @TODO <need to create tests to validate this behaviour>
  * @project adsp:ADSP
  */
-module.exports = function getEventsFromDb(connection, els) {
+module.exports = function getEventsFromDb(Connection, els) {
   //Getting events from the events collection
-  connection.db.documents.query(getEventsQuery(connection.qb))
+  Connection.docsDb.documents.query(getEventsQuery(Connection.qb))
    .result()
    .then(processReturnedDocuments(els),
      function(error) {

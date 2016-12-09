@@ -50,9 +50,6 @@ dirToJson('../test-project', function(err, dirTree) {
         }
 
       }
-
-
-
     }
     let a = db.writeCollection('projects', projects).result();
     console.log(a);

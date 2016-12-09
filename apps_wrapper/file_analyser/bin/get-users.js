@@ -1,13 +1,7 @@
 /* jshint esversion: 6 */
 var _ = require('lodash');
-const my      = require(__dirname + '/../env/env');
-const MarklogicClient = require('marklogic');
-//Connecting to Marklogic
-var db = MarklogicClient.createDatabaseClient(my.connection);
-var qb = MarklogicClient.queryBuilder;
-console.log('\n users marklogic connection established');
-
-module.exports = function(callback) {
+module.exports = function(Connection, callback) {
+    let db = Connection.docsDb;
     db.documents.read('/user.json')
     .result(function(documents) {
       callback(documents[0].content);

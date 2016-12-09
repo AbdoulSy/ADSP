@@ -16,7 +16,7 @@ Conn.qb = MarklogicClient.queryBuilder;
 
 app.get('/', function (req, res) {
     try {
-      processFn(function callback(docs) {
+      processFn(Conn, function callback(docs) {
           let docsContents = docs[0].content;
 	  let stringDocs = JSON.stringify(docsContents);
 	  res.send(stringDocs);
@@ -30,7 +30,7 @@ app.get('/', function (req, res) {
 
 app.get('/projects', function (req, res) {
     try {
-        getProjectsFn(function (projects) {
+        getProjectsFn(Conn, function (projects) {
 		res.send(projects);
 	});
     } catch (e) {
@@ -54,7 +54,7 @@ app.get('/function-number', function (req, res) {
     // to the API (e.g. in case you use sessions)
     res.setHeader('Access-Control-Allow-Credentials', false);
     try {
-        getFnNbFn(function (data) {
+        getFnNbFn(Conn, function (data) {
     res.send(data);
   });
     } catch (e) {
@@ -66,14 +66,14 @@ app.get('/function-number', function (req, res) {
 });
 
 app.get('/current-user', function (req, res){
-    getUserFn(function(user){
+    getUserFn(Conn, function(user){
        res.send(user);
     });
 
 });
 
 app.get('/commit-history', function (req, res) {
-   getCommitHistoryFn(function(commits) {
+   getCommitHistoryFn(Conn, function(commits) {
       res.send(commits);
    });
 });

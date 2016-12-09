@@ -44,8 +44,8 @@ function handleReadErrorResult(error) {
  * @param  {object}   previousProcess The previous process
  * @param  {Function} callback        the callback function
  */
-module.exports = function getProcesses(connection, previousProcess, callback) {
-  const db = connection.db;
+module.exports = function getProcesses(Connection, previousProcess, callback) {
+  const db = Connection.docsDb;
 
   //The Read operation on the /ps/process.json file created when scraping the js files
   db.documents.read('/ps/process.json')
