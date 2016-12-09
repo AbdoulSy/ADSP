@@ -1,5 +1,6 @@
 module.exports = {
-  projects: './apps_wrapper/managements/projects',
-  todolist: './apps_wrapper/management/todo-list'
-
+  file_analyser: './apps_wrapper/file_analyser',
+  Eyedol: './apps_wrapper/Eyedol',
+  Glacius: './apps_wrapper/Glacius',
+  ADSP_Dashboard: './apps_wrapper/go_apps/src/github.com/AbdoulSy/web'
 };
