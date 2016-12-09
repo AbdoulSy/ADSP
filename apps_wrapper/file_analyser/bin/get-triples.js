@@ -1,32 +1,22 @@
 /* jshint esversion: 6 */
 var _ = require('lodash');
 
-module.exports = function getTriples (Connection) {
+module.exports = function getTriplesRelatedToAdsp (Connection, callback) {
   let db = Connection.tripleDb;
-  db.graphs.list('text/uri-list')
-    .result(
-      function(response) {
-        for (var uri of response.split('\n')) {
-          console.log(uri);
-        }
-      },
-      function(error) { console.log(JSON.stringify(error)); }
-  );
   db.graphs.sparql({
     contentType: 'application/sparql-results+json',
-    query: 'PREFIX adsp: <http://aria.abdoulsy.eu/ontology/ADSP/Web_Project#>' +
-    'SELECT ?s ?email ?value WHERE ' +
-    '{' +
-    '?s adsp:firstname "Abdoul".' +
-    '?s a adsp:Member .' +
-    '?s adsp:has_active_email ?email .' +
-    '?email adsp:email_value ?value .' +
-    '}',
-    rulesets: 'subPropertyOf.rules',
-    defaultRuleSets: 'exclude',
+    query: 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>' +
+           'PREFIX adsp: <http://web.abdoulsy.eu/o#>' +
+           'SELECT ?owner ?team ?project_type ?conventions WHERE {' +
+           'adsp:ADSP adsp:has_owner ?owner .'+
+           'adsp:ADSP adsp:has_team ?team .'+
+           'adsp:ADSP adsp:has_project_type ?project_type .'+
+           'adsp:ADSP adsp:has_project_convention ?conventions .'+
+           '}',
   }).result(
       function(response) {
         console.dir(response.results.bindings);
+        callback(response.results.bindings);
       },
       function(error) { console.log(JSON.stringify(error)); }
   );

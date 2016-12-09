@@ -65,7 +65,6 @@ function errorsHandler(root, nodeStatsArray, next) {
  * @return {boolean} the result of is the file is invalid
  */
 function isFileInvalid(fileStat) {
-
   if (fileStat.name === '.DS_Store') {
     return true;
   }
@@ -89,7 +88,8 @@ function fileHandler(root, fileStat, next) {
     return;
   }
   var filePath = path.resolve(root, fileStat.name);
-  leasotFn(filePath, jsdoc, hinter.JSHINT);
+  //TODO(asy): Add destructiuring variables
+  leasotFn(filePath, jsdoc, hinter.JSHINT, db, tripleStore);
   next();
 }
 
@@ -160,6 +160,7 @@ function endHandler() {
 var resultsOfParsing;
 var d;
 var db;
+var tripleStore;
 var els;
 /**
  * @exports init funtion
@@ -178,7 +179,8 @@ module.exports = {
      */
     init: function(databaseClient) {
 
-      db = databaseClient;
+      db = databaseClient.connection;
+      tripleStore = databaseClient.triples;
       els = [];
       resultsOfParsing = globals.resultsOfParsing;
       d = resultsOfParsing.directories;

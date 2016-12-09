@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 var processFn = require('./bin/process');
 var getProjectsFn = require('./bin/get-projects');
+var getTriplesRelatedToADSPFn = require('./bin/get-triples');
 var getUserFn = require('./bin/get-users');
 var getCommitHistoryFn = require('./bin/git-log');
 var getFnNbFn = require('./bin/get-fn-nb');
@@ -20,6 +21,18 @@ app.get('/', function (req, res) {
           let docsContents = docs[0].content;
           let stringDocs = JSON.stringify(docsContents);
           res.send(stringDocs);
+      });
+    } catch (e) {
+        console.log({
+          exception: e
+        });
+    }
+});
+
+app.get('/adsp', function (req, res) {
+    try {
+      getTriplesRelatedToADSPFn(Conn, function cb(results){
+        res.send(results);
       });
     } catch (e) {
         console.log({

@@ -20,9 +20,11 @@ var previousProcess = globals.previousProcess;
  *
  *@param {string} filePath the fullPath of the filename to analyse
  *@param {JsDoc} FileExplainer a variable holding the jsdoc required
+ *@param {object} db MarklogicClient database connection pointing to the Documents database
+ *@param {object} tripleStore MarklogicClient database connection pointing to adsp-db triple store
  *@return {object} the report as a plain object
  */
-module.exports = function doLeasot(filePath, FileExplainer, JSHINT) {
+module.exports = function doLeasot(filePath, FileExplainer, JSHINT, db, tripleStore) {
 
   //ToReturn is the object to be returned by the process
   //@TODO(asy): create a pipeline using Monadic functions.
@@ -71,7 +73,7 @@ module.exports = function doLeasot(filePath, FileExplainer, JSHINT) {
   }
 
   //@TODO(asy): remove the console log for #production.
-  console.log(toReturn);
+  //console.log(toReturn);
 
   // -> todos now contains the array of todos/fixme parsed
 

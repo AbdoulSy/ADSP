@@ -20,7 +20,7 @@ module.exports = function(Connection, docsCb) {
   resultsOfParsing.directories = [];
   resultsOfParsing.files = [];
 
-  handlers.init(Connection.docsDb);
+  handlers.init(Connection);
 
   //Gets the processed Documents from Marklogic's documents database
   getProcessDocumentsFn(Connection, previousProcess, docsCb);
