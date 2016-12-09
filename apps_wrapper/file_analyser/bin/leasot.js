@@ -81,7 +81,10 @@ module.exports = function doLeasot(filePath, FileExplainer, JSHINT, db, tripleSt
     toReturn.doc = FileExplainer.explainSync({source: contents});
     triples.push(docUri + 'a adsp:Documentation .');
     triples.push(subjectUri + 'adsp:has_documentation ' + docUri + ' .');
-    triples.push(docUri + 'adsp:doc_contents ' + toReturn.doc + ' .');
+    //TODO find a way to import json data into triples
+    //TODO(asy): find a way to import the HTML docs into Marklogic
+    //triples.push(docUri + 'adsp:doc_contents ' + toReturn.doc + ' .');
+    //TODO explode the hints into data can can be processed for triples
     JSHINT(contents/* , options, predef */);
     toReturn.hints = JSHINT.data();
   }
@@ -90,6 +93,7 @@ module.exports = function doLeasot(filePath, FileExplainer, JSHINT, db, tripleSt
   if (filetype !== '' && unsupportedTypes.indexOf(filetype) === -1) {
     //The todos returned by the leasot parse reporter
     toReturn.todos = leasot.parse({ext: filetype, content: contents, fileName: file});
+    //TODO(asy): return todo.line, todo.filame, todo.ref as triples
     _.each(toReturn.todos, function (todo, index) {
       let todoUri = 'adsp:' + filename + '_' + index + 'TODO ';
       triples.push(todoUri + 'a adsp:TODO .');
