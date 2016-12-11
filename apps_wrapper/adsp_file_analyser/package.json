@@ -1,0 +1,51 @@
+{
+  "name": "adsp",
+  "version": "1.0.0",
+  "description": "Application Development Surveillance Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "node bin/test.js",
+    "nfstart": "nf start",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdoulSy/ADSP.git"
+  },
+  "keywords": [
+    "Code",
+    "Management",
+    "AI",
+    "Sparql"
+  ],
+  "author": "Abdoul Sy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdoulSy/ADSP/issues"
+  },
+  "homepage": "https://github.com/AbdoulSy/ADSP#readme",
+  "dependencies": {
+    "cdocparser": "^0.13.0",
+    "chai": "^3.5.0",
+    "dir-to-json": "0.0.3",
+    "express": "^4.14.0",
+    "foreman": "2.0.0",
+    "jscs": "3.0.7",
+    "jsdoc": "^3.4.3",
+    "jsdoc-api": "^2.0.6",
+    "jshint": "^2.9.4",
+    "leasot": "^4.2.0",
+    "marklogic": "^1.0.6",
+    "mocha": "^3.1.2",
+    "node-watch": "^0.4.1",
+    "nodegit": "^0.16.0",
+    "sinon": "^1.17.6",
+    "walk": "^2.3.9"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6"
+  }
+}
