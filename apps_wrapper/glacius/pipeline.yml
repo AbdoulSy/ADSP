@@ -1,0 +1,32 @@
+---
+resources:
+- name: resource-glacius
+  type: git
+  source:
+    uri: https://github.com/AbdoulSy/Glacius.git
+
+jobs:
+- name: job-install
+  serial: true
+  plan:
+  - get: resource-glacius
+  - task: run-install
+    config:
+      platform: linux
+      image: docker:///node#argon
+      run:
+        path: resource-glacius/bin/install.sh
+        args: [glacius]
+
+- name: job-test
+  plan:
+  - get: resource-glacius
+    passed: [job-install]
+    trigger: true
+  - task: show-test
+    config:
+      platform: linux
+      image: docker:///node#argon
+      run:
+        path: resource-glacius/bin/test.sh
+        echo: [glacius]
