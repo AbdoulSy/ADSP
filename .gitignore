@@ -1,4 +1,6 @@
 node_modules
+apps_wrapper/go_apps/pkg
+apps_wrapper/go_apps/bin
 .env
 .views
 .DS_Store
