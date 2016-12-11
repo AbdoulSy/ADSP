@@ -92,11 +92,12 @@ app.get('/current-user', function (req, res){
 });
 
 app.get('/commit-history', function (req, res) {
+  res.send([]);
+  return;
    getCommitHistoryFn(Conn, function(commits) {
       res.send(commits);
    });
 });
-
 
 app.listen(3465, function () {
   console.log('ADSP metadata extractor listening on port 3465!');

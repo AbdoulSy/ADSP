@@ -118,7 +118,6 @@ module.exports = function doLeasot(filePath, FileExplainer, JSHINT, db, tripleSt
 
   //@TODO(asy): remove the console log for #production.
   //console.log(toReturn);
-
   // -> todos now contains the array of todos/fixme parsed
 
   resultsOfParsing.files.push(toReturn);
