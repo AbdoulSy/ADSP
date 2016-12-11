@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Eyedol</string>
+    <string name="abdoul_sy">Abdoul Sy</string>
+    <string name="introduction_text">Welcome to The Eyedol App, this App is the condensed version of my website</string>
+    <string name="the_main_logo">the main logo</string>
+    <string name="main_logo_txt">Main logo</string>
+    <string name="title_activity_menu">Menu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="dreescan_gmail_com">dreescan@gmail.com</string>
+    <string name="app_title_text">Eyedol For Abdoul.info</string>
+    <string name="title_activity_eyedol_navigation">Eyedol for Abdoul.info</string>
+    <string name="ariaIntroductionText">I specialise in finding new ways for users to experience the data around us.\
+After studying computer engineering, and being certified in France;
+        trying to revolutionise the web in London,
+        by creating cutting-edge applications and concepts;
+        and leading a team of developers to using web development and its best practices.
+        I\'ve acquired a wide range of skills,
+        and an abstract thinking making me grasp new languages and paradigms quickly.</string>
+    <string name="hey_i_apos_m_abdoul_sy">Hey ! I\'m Abdoul Sy</string>
+    <string name="this_is_my_cv">
+
+    </string>
+    <string name="title_activity_maps">Map</string>
+</resources>
