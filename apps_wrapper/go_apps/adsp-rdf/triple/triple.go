@@ -1,29 +1,4 @@
-package triple
-
-//UriType is a wrapper structure around a uri
-//TODO: find a uri package to expand the uri definition
-type UriType struct {
-	Protocol string
-	Host string
-	Location string
-	FullUri string
-}
-
-
-//SubjectType is a structure holding subjects
-type SubjectType struct {
-	ShortPrefix string
-	Prefix UriType
-	Name string
-}
-
-//PredicateType is a structure holding predicates
-type PredicateType struct {
-	ShortPrefix string
-	Prefix UriType
-	Name string
-}
-
+package adspRdf
 
 //Triple structure holding triples
 type Triple struct {
@@ -32,28 +7,28 @@ type Triple struct {
 	Object ObjectType
 }
 
-//Triple builder structure
-type TripleBuilder struct {
-	Value interface{}
-}
-
-
 //Build Triple builds a Triple from a subject a predicate and an object structures
 func BuildTriple(s SubjectType, p PredicateType, o ObjectType) (t TripleType, err Error){
-    t := TripleType {
+    g := TripleType {
       Subject: s,
       Predicate: p,
       Object: o
     }
+    newTripleBuilder := TripleElementBuilder {
+      Value: g,
+    }
+
+    t , err := newTripleBuilder.BuildTriple();
+
     return
 }
 
 func BuildTripleForObjectString(s SubjectType, p PredicateType, o string) (t TripleType, err Error) {
-    newObjectBuilder := TripleBuilder {
+    newObjectBuilder := TripleElementBuilder {
       Value: o,
     }
 
-    newObject, err := newObjectBuilder.buildObjectValue()
+    newObject, err := newObjectBuilder.buildObjectValue(s, p);
     if err != nil {
       log.Println(err);
       return
@@ -72,7 +47,7 @@ func BuildTripleForPredicateAndObjectString(s SubjectType, p string, o string) (
     predicteBuilder = TripleBuilder {
       Value: p,
     }
-    newPredicate, predicateError := predicateBuilder.buildPredicateValue()
+    newPredicate, predicateError := predicateBuilder.buildPredicateValue(s);
     t, err := BuildTripleForObjectString(s, newPredicate, o);
     if err != nil {
       log.Println(err);

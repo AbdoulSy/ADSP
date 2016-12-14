@@ -1,9 +1,6 @@
-package nav
+package adspRouterNav
 
-import (
-   "github.com/AbdoulSy/navelement"
-)
-
-type T struct {
-	Elements []navelement.T
+type RouterNav struct {
+    PageName string
+	Elements []Navelement
 }

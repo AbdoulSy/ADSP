@@ -1,4 +1,4 @@
-package adspgo
+package adspgoConfig
 
 type Config struct {
     ID string

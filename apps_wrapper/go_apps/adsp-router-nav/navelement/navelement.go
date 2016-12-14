@@ -1,6 +1,6 @@
-package navelement
+package adspRouterNav
 
-type T struct {
+type NavElement struct {
 	Name string
 	Link string
     Ligature string

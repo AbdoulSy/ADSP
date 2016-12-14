@@ -1,9 +1,7 @@
-package layout
+package adspLayoutBuilder
 
 import (
-  "github.com/AbdoulSy/csslinks"
-  "github.com/AbdoulSy/jsscripts"
-  "github.com/AbdoulSy/logo"
+  "github.com/AbdoulSy/adspgoTheme"
   "github.com/AbdoulSy/nav"
   "github.com/AbdoulSy/userDescriptor"
   "github.com/AbdoulSy/page"

@@ -1,6 +1,6 @@
-package logo
+package adspgoTheme
 
-type T struct {
+type Logo struct {
 	FilePath string
 	Title    string
 }

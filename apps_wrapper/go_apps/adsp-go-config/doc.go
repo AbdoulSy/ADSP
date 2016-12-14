@@ -1,3 +1,3 @@
-//package adspgo
-//import github.com/AbdoulSy/adspgo
-package adspgo
+//package adspgoConfig
+//import github.com/AbdoulSy/adspgoConfig
+package adspgoConfig

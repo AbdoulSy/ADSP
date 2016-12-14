@@ -1,4 +1,4 @@
-package content
+package adspPageTodolist
 
 //Directory is the struct representation of a directory concept
 type Directory struct {

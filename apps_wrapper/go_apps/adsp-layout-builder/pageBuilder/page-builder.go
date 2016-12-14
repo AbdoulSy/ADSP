@@ -1,12 +1,11 @@
-package pageBuilder
+package adspLayoutBuilder
 
 import (
-  "github.com/AbdoulSy/page"
-  "github.com/AbdoulSy/content"
-  "github.com/AbdoulSy/adspgo"
+  "github.com/AbdoulSy/adspgoConfig"
+  "github.com/AbdoulSy/adspPageTodolist"
 )
 
-type T struct {
+type Builder struct {
    Config adspgo.Config
 }
 

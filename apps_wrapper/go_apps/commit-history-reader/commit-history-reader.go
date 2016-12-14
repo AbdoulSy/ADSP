@@ -46,30 +46,3 @@ type T struct {
    Name string
    Host string
 }
-/**
- * Gets the Response of the descriptor T HTTP Request as a synchronous request
- * And unmarshalls the data into a Struct interface
- * TODO: create a go routine to asynchronously retrieve data into a component api
- * @param  {T} descriptor T) GetBodyAsTextSync (item interface{})
- * @return {interface{}} The unmarshalled json Object
- */
-func (descriptor T) GetBodyAsTextSync (item interface{}) () {
-    res, getErr := http.Get(descriptor.Host)
-    if getErr != nil {
-        log.Fatal(getErr)
-    }
-
-    txt, err := ioutil.ReadAll(res.Body)
-    res.Body.Close()
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    erri := json.Unmarshal(txt, &item)
-
-    if erri != nil {
-        log.Fatal(erri)
-    }
-
-    return
-}
